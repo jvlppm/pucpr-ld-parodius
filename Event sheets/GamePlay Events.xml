@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GamePlay Events</name>
+    <events>
+        <event-group description="" sid="8850219158393638" title="Playable Characters">
+            <sub-events>
+                <event-group description="" sid="7673411034528074" title="Controls">
+                    <sub-events>
+                        <event-block sid="8255276067209778">
+                            <conditions>
+                                <condition id="4" name="Has gamepads" sid="8623469226172422" type="Gamepad" />
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="10" name="Set vector Y" sid="8379792283790675" type="PlayableCharacters">
+                                    <param id="0" name="Vector Y">Gamepad.Axis(0, 1)/ 100 * PlayableCharacters.8Direction.MaxSpeed</param>
+                                </action>
+                                <action behavior="8Direction" id="9" name="Set vector X" sid="7272066317457209" type="PlayableCharacters">
+                                    <param id="0" name="Vector X">Gamepad.Axis(0, 0) / 100 * PlayableCharacters.8Direction.MaxSpeed</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block collapsed="1" sid="6148364915900662">
+                                    <conditions>
+                                        <condition id="5" name="Compare axis" sid="2439689205130625" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Axis">1</param>
+                                            <param id="2" name="Comparison">1</param>
+                                            <param id="3" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="511934940486166">
+                                            <conditions>
+                                                <condition id="5" name="Compare axis" sid="4907994750644601" type="Gamepad">
+                                                    <param id="0" name="Gamepad">0</param>
+                                                    <param id="1" name="Axis">1</param>
+                                                    <param id="2" name="Comparison">4</param>
+                                                    <param id="3" name="Value">0.75</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="8332843311777953" type="PlayableCharacters">
+                                                    <param id="0" name="Animation">&quot;TurnDown&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="9628847729616248">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="6267202486077193" type="System" />
+                                                <condition id="5" name="Compare axis" sid="4497427621292611" type="Gamepad">
+                                                    <param id="0" name="Gamepad">0</param>
+                                                    <param id="1" name="Axis">1</param>
+                                                    <param id="2" name="Comparison">2</param>
+                                                    <param id="3" name="Value">-0.75</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="3211017857752136" type="PlayableCharacters">
+                                                    <param id="0" name="Animation">&quot;TurnUp&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block collapsed="1" sid="8326010519874881">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="8539398198906002" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="2390151926935501">
+                                            <conditions>
+                                                <condition id="2" name="Is playing" sid="7318417063366941" type="PlayableCharacters">
+                                                    <param id="0" name="Animation">&quot;TurnUp&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="280542706236305" type="PlayableCharacters">
+                                                    <param id="0" name="Animation">&quot;ResetUp&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="40743473882733">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="4821021850943995" type="System" />
+                                                <condition id="2" name="Is playing" sid="3420242178212979" type="PlayableCharacters">
+                                                    <param id="0" name="Animation">&quot;TurnDown&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="4984120199589962" type="PlayableCharacters">
+                                                    <param id="0" name="Animation">&quot;ResetDown&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block collapsed="1" sid="9248511736702959">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1181181219701767" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="1756120416662239">
+                                    <conditions>
+                                        <condition id="3" name="On key released" sid="2086495348967872" type="Keyboard">
+                                            <param id="0" name="Key">38 (Up arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="8473378254567621" type="PlayableCharacters">
+                                            <param id="0" name="Animation">&quot;ResetUp&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4352124217797021">
+                                    <conditions>
+                                        <condition id="3" name="On key released" sid="9759867720711575" type="Keyboard">
+                                            <param id="0" name="Key">40 (Down arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="592706886097" type="PlayableCharacters">
+                                            <param id="0" name="Animation">&quot;ResetDown&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1546892554271713">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="6177656525610903" type="Keyboard">
+                                            <param id="0" name="Key">38 (Up arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="7663423404672923" type="PlayableCharacters">
+                                            <param id="0" name="Animation">&quot;TurnUp&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4588074750493768">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="3996983275383477" type="Keyboard">
+                                            <param id="0" name="Key">40 (Down arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="7948179747541592" type="PlayableCharacters">
+                                            <param id="0" name="Animation">&quot;TurnDown&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="2568412094682719">
+                            <conditions>
+                                <condition id="5" name="On any finished" sid="2902004038833574" type="PlayableCharacters" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="2021391524809303" type="PlayableCharacters">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
