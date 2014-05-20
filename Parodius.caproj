@@ -15,6 +15,7 @@
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
     </used-behaviors>
@@ -42,7 +43,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="1" name="Playable Characters">
+        <object-folder expanded="0" name="Playable Characters">
             <object-type name="VicViper" sid="2641026747174929">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
@@ -113,6 +114,16 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder expanded="1" name="Bullets">
+            <object-type name="Missile" sid="5708510566616914">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8938309474947762" speed="5">
+                        <frame duration="1" hotspotX="0.555556" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Keyboard" sid="1116132545238104">
             <plugin id="Keyboard" />
         </object-type>
@@ -125,12 +136,30 @@
             <members>
                 <member>VicViper</member>
             </members>
+            <instance-variables>
+                <instance-variable name="Weapon" sid="3224863619130743" type="string" />
+                <instance-variable name="WeaponCounter1" sid="2369615735883903" type="number" />
+                <instance-variable name="WeaponCounter2" sid="514675326920264" type="number" />
+                <instance-variable name="DoubleMissileDelay" sid="6142916549541775" type="number" />
+                <instance-variable name="FiringMainWeapon" sid="1900347869165786" type="boolean" />
+                <instance-variable name="PlayerIndex" sid="3764403569868325" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="1019247201064265">
                     <behavior id="EightDir" />
                 </behavior-type>
                 <behavior-type name="BoundToLayout" sid="3447109703241041">
                     <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="Bullets" plugin-id="Sprite" sid="2334774422848744">
+            <members>
+                <member>Missile</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Bullet" sid="3047183538175411">
+                    <behavior id="Bullet" />
                 </behavior-type>
             </behaviors>
         </family>
