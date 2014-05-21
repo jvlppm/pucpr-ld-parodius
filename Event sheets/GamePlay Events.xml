@@ -3,11 +3,11 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GamePlay Events</name>
     <events>
-        <event-group description="" sid="8850219158393638" title="Playable Characters">
+        <event-group collapsed="1" description="" sid="8850219158393638" title="Playable Characters">
             <sub-events>
-                <event-group description="" sid="7673411034528074" title="Controls">
+                <event-group collapsed="1" description="" sid="7673411034528074" title="Controls">
                     <sub-events>
-                        <event-block sid="8255276067209778">
+                        <event-block collapsed="1" sid="8255276067209778">
                             <conditions>
                                 <condition id="4" name="Has gamepads" sid="8623469226172422" type="Gamepad" />
                             </conditions>
@@ -252,7 +252,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="9502240828399638">
+                        <event-block collapsed="1" sid="9502240828399638">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="125922963770149" type="PlayableCharacters">
                                     <param id="0" name="Instance variable">Weapon</param>
@@ -368,6 +368,48 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="8762513862699187" title="Global">
+            <sub-events>
+                <event-block sid="3477757709207761">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="978756881795997" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="901778775364343" type="Camera">
+                            <param id="0" name="X">Camera.X + dt * Camera.Speed</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4029665745507371">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="1577483680202666" type="PlayableCharacters">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">ViewportLeft(&quot;Level&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="724900378529114" type="PlayableCharacters">
+                                    <param id="0" name="X">ViewportLeft(&quot;Level&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5559780253162101">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="9265305828697745" type="PlayableCharacters">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">ViewportRight(&quot;Level&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="3438314789132454" type="PlayableCharacters">
+                                    <param id="0" name="X">ViewportRight(&quot;Level&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

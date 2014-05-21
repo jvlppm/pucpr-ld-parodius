@@ -11,6 +11,7 @@
     <saved-with-version>16800</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
@@ -18,6 +19,7 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -129,6 +131,38 @@
         </object-type>
         <object-type name="Gamepad" sid="834421067166504">
             <plugin id="gamepad" />
+        </object-type>
+        <object-type name="DarkMountains" sid="6769969481224722">
+            <plugin id="NinePatch" />
+            <texture />
+        </object-type>
+        <object-type name="Stars" sid="6960931072213157">
+            <plugin id="NinePatch" />
+            <texture />
+        </object-type>
+        <object-type name="Camera" sid="1369263461309349">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Speed" sid="2251469430451076" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="1110232367308892">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1190852189170213" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Level1Pillars" sid="1646645057955568">
+            <plugin id="NinePatch" />
+            <texture />
+        </object-type>
+        <object-type name="Level1City" sid="5107567005354705">
+            <plugin id="NinePatch" />
+            <texture />
         </object-type>
     </object-folder>
     <families>
