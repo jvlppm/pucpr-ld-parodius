@@ -370,7 +370,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8762513862699187" title="Global">
+        <event-group collapsed="1" description="" sid="8762513862699187" title="Global">
             <sub-events>
                 <event-block sid="3477757709207761">
                     <conditions>
@@ -433,6 +433,62 @@
                             <actions>
                                 <action id="-2" name="Set Y" sid="3723394837533949" type="PlayableCharacters">
                                     <param id="0" name="Y">ViewportBottom(&quot;Level&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="3528456841208094" title="Enemies">
+            <sub-events>
+                <event-block sid="1799635042287704">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="4182990020967839" type="Enemies" />
+                        <condition id="-16" inverted="1" name="Is on layer" sid="6306642136456753" type="Enemies">
+                            <param id="0" name="Layer">&quot;Level&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="276235395290008" type="Function">
+                            <param id="0" name="Name">&quot;ActivateEnemy&quot;</param>
+                            <param id="1" name="Parameter {n}">Enemies.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4646150867679423">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3634748442343289" type="Function">
+                            <param id="0" name="Name">&quot;ActivateEnemy&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="5884509235880023" type="Enemies">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="1926294947655508" type="Enemies">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="7674558501957969" type="Enemies">
+                            <param id="0" name="X">Enemies.X - ViewportLeft(Enemies.LayerName)</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="5068019536593588" type="Enemies">
+                            <param id="0" name="Layer">&quot;Level&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="7008238454264731">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8126088430062084" type="Enemies">
+                                    <param id="0" name="Instance variable">LinkedUID</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="4304845274295623" type="Function">
+                                    <param id="0" name="Name">&quot;ActivateEnemy&quot;</param>
+                                    <param id="1" name="Parameter {n}">Enemies.LinkedUID</param>
                                 </action>
                             </actions>
                         </event-block>

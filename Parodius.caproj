@@ -10,6 +10,7 @@
     <unique-id>1p9iftj25xcsh</unique-id>
     <saved-with-version>16800</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -44,7 +45,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="1" name="Playable Characters">
+        <object-folder expanded="0" name="Playable Characters">
             <object-type name="VicViper" sid="2641026747174929">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
@@ -125,8 +126,8 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="Scenery">
-            <object-folder expanded="1" name="Level1">
+        <object-folder expanded="0" name="Scenery">
+            <object-folder expanded="0" name="Level1">
                 <object-type name="CircoBillboard" sid="9413054710168224">
                     <plugin id="Sprite" />
                     <animation-folder expanded="1">
@@ -177,6 +178,147 @@
                 </object-type>
             </object-folder>
         </object-folder>
+        <object-folder expanded="1" name="Enemies">
+            <object-folder expanded="1" name="Level1">
+                <object-type name="BlueHead" sid="1238599287601908">
+                    <plugin id="Sprite" />
+                    <animation-folder expanded="1">
+                        <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8140661814047126" speed="20">
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.466667" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.466667" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="WhiteHead" sid="7436401451181489">
+                    <plugin id="Sprite" />
+                    <animation-folder expanded="1">
+                        <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9358275169072137" speed="20">
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.466667" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.466667" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OrangeHead" sid="7055685600430606">
+                    <plugin id="Sprite" />
+                    <animation-folder expanded="1">
+                        <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8591353249893282" speed="20">
+                            <frame duration="1" hotspotX="0.466667" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.466667" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.466667" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="PinkHead" sid="5630980795533157">
+                    <plugin id="Sprite" />
+                    <animation-folder expanded="1">
+                        <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6882976147502839" speed="20">
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.466667" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.466667" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="GreenHead" sid="1478700002311054">
+                    <plugin id="Sprite" />
+                    <animation-folder expanded="1">
+                        <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1329162765721929" speed="20">
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.466667" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.466667" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+        </object-folder>
         <object-type name="Keyboard" sid="1116132545238104">
             <plugin id="Keyboard" />
         </object-type>
@@ -219,6 +361,9 @@
             <plugin id="NinePatch" />
             <texture />
         </object-type>
+        <object-type name="Function" sid="3658215827431778">
+            <plugin id="Function" />
+        </object-type>
     </object-folder>
     <families>
         <family name="PlayableCharacters" plugin-id="Sprite" sid="6659182174539103">
@@ -249,6 +394,35 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="Enemies" plugin-id="Sprite" sid="9619498938020218">
+            <members>
+                <member>BlueHead</member>
+                <member>GreenHead</member>
+                <member>OrangeHead</member>
+                <member>PinkHead</member>
+                <member>WhiteHead</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="LinkedUID" sid="9521571657513087" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="8Direction" sid="2978315605207618">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="Level1Heads" plugin-id="Sprite" sid="9762749402259039">
+            <members>
+                <member>BlueHead</member>
+                <member>GreenHead</member>
+                <member>OrangeHead</member>
+                <member>PinkHead</member>
+                <member>WhiteHead</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="State" sid="999098701893996" type="string" />
+            </instance-variables>
+        </family>
     </families>
     <layout-folder expanded="1">
         <layout>Level1.xml</layout>
@@ -265,6 +439,7 @@
                 <analog-deadzone>25</analog-deadzone>
             </properties>
         </global-instance>
+        <global-instance type="Function" uid="37" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />

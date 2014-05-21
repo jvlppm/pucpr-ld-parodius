@@ -4,5 +4,173 @@
     <name>Level1 Events</name>
     <events>
         <include>GamePlay Events</include>
+        <event-group description="" sid="7440015483106276" title="Heads">
+            <sub-events>
+                <event-block collapsed="1" sid="6820986884477118">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="460992147930038" type="System">
+                            <param id="0" name="Object">Level1Heads</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2414984200560433">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4584304422116675" type="Level1Heads">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Advancing&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="7921268797411519" type="Function">
+                                    <param id="0" name="Name">&quot;AdvanceHead&quot;</param>
+                                    <param id="1" name="Parameter {n}">Level1Heads.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2725541678814667">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7579482687116234" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="2786305796888877" type="Level1Heads">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Aligning&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1545175495717313" type="Function">
+                                    <param id="0" name="Name">&quot;AlignHead&quot;</param>
+                                    <param id="1" name="Parameter {n}">Level1Heads.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6336285272080865">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="4165673960044655" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="6572694047893515" type="Level1Heads">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Retreating&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="3032106389638583" type="Function">
+                                    <param id="0" name="Name">&quot;RetreatHead&quot;</param>
+                                    <param id="1" name="Parameter {n}">Level1Heads.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block collapsed="1" sid="7642866608187792">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3484749194791813" type="Function">
+                            <param id="0" name="Name">&quot;AdvanceHead&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="6899797000155784" type="Enemies">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="1245392233548127" type="Level1Heads">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="6207889338630111" type="Enemies">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1115072110035166">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="749389642905798" type="Enemies">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="X co-ordinate">ViewportLeft(Enemies.LayerName) + (ViewportRight(Enemies.LayerName) - ViewportLeft(Enemies.LayerName)) * 0.2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="8628009389423443" type="Level1Heads">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">&quot;Aligning&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block collapsed="1" sid="7766076010207719">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4973155649636127" type="Function">
+                            <param id="0" name="Name">&quot;AlignHead&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="9729173486760211" type="Enemies">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="9050779911655694" type="Level1Heads">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="2314891055021797" type="Enemies">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="7570317436883317">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="265807733867923" type="Enemies">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">PlayableCharacters.Y + 2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="2253747014933077" type="Enemies">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="141387288996318">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="4311400979530802" type="System" />
+                                <condition id="-2" name="Compare Y" sid="5372528258301293" type="Enemies">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">PlayableCharacters.Y - 2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="6252308701605501" type="Enemies">
+                                    <param id="0" name="Control">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6933047716487243">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8423220084303402" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="4576066677581627" type="Level1Heads">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">&quot;Retreating&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9401331014174587">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7810697110681507" type="Function">
+                            <param id="0" name="Name">&quot;RetreatHead&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="6872159370118763" type="Enemies">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="7646104128955256" type="Enemies">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
