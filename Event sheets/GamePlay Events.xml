@@ -397,6 +397,7 @@
                         </event-block>
                         <event-block sid="5559780253162101">
                             <conditions>
+                                <condition id="-22" name="Else" sid="3780176335070058" type="System" />
                                 <condition id="-1" name="Compare X" sid="9265305828697745" type="PlayableCharacters">
                                     <param id="0" name="Comparison">4</param>
                                     <param id="1" name="X co-ordinate">ViewportRight(&quot;Level&quot;)</param>
@@ -405,6 +406,33 @@
                             <actions>
                                 <action id="-1" name="Set X" sid="3438314789132454" type="PlayableCharacters">
                                     <param id="0" name="X">ViewportRight(&quot;Level&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2632405786908277">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="8898659006872828" type="PlayableCharacters">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">ViewportTop(&quot;Level&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="1184977533890465" type="PlayableCharacters">
+                                    <param id="0" name="Y">ViewportTop(&quot;Level&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8753828645741604">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3739612327370304" type="System" />
+                                <condition id="-2" name="Compare Y" sid="9757022238258729" type="PlayableCharacters">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Level&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="3723394837533949" type="PlayableCharacters">
+                                    <param id="0" name="Y">ViewportBottom(&quot;Level&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>

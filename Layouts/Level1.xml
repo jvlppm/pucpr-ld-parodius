@@ -4,7 +4,7 @@
     <sid>8179929243421977</sid>
     <event-sheet>Level1 Events</event-sheet>
     <size>
-        <width>1708</width>
+        <width>2528</width>
         <height>224</height>
     </size>
     <margins>
@@ -18,7 +18,7 @@
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>0.8</x>
+                <x>1</x>
                 <y>0</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
@@ -45,7 +45,7 @@
                         <x>0</x>
                         <y>0</y>
                         <z>0</z>
-                        <width>1704</width>
+                        <width>2528</width>
                         <height>224</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -53,7 +53,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Level1City" uid="8">
+                <instance type="City" uid="8">
                     <properties>
                         <left-margin>0</left-margin>
                         <right-margin>0</right-margin>
@@ -68,10 +68,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>608</x>
+                        <x>508</x>
                         <y>184</y>
                         <z>0</z>
-                        <width>504</width>
+                        <width>320</width>
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -79,7 +79,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Level1Pillars" uid="7">
+                <instance type="CircusPillars" uid="7">
                     <properties>
                         <left-margin>96</left-margin>
                         <right-margin>96</right-margin>
@@ -97,11 +97,211 @@
                         <x>568</x>
                         <y>0</y>
                         <z>0</z>
-                        <width>672</width>
+                        <width>288</width>
                         <height>224</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Circus" uid="11">
+                    <properties>
+                        <left-margin>0</left-margin>
+                        <right-margin>0</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>824</x>
+                        <y>182</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>40</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="City" uid="12">
+                    <properties>
+                        <left-margin>0</left-margin>
+                        <right-margin>0</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>888</x>
+                        <y>184</y>
+                        <z>0</z>
+                        <width>416</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CircusPillars" uid="10">
+                    <properties>
+                        <left-margin>96</left-margin>
+                        <right-margin>96</right-margin>
+                        <top-margin>96</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1048</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>192</width>
+                        <height>224</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CircoBillboard" uid="9">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>952</x>
+                        <y>40</y>
+                        <z>0</z>
+                        <width>224</width>
+                        <height>79</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.506329119</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Circus" uid="13">
+                    <properties>
+                        <left-margin>0</left-margin>
+                        <right-margin>0</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1304</x>
+                        <y>182</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>40</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="City" uid="14">
+                    <properties>
+                        <left-margin>0</left-margin>
+                        <right-margin>0</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1368</x>
+                        <y>186</y>
+                        <z>0</z>
+                        <width>536</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CircusPillars" uid="15">
+                    <properties>
+                        <left-margin>96</left-margin>
+                        <right-margin>96</right-margin>
+                        <top-margin>96</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1568</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>384</width>
+                        <height>224</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Acropolis" uid="16">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2320</x>
+                        <y>112</y>
+                        <z>0</z>
+                        <width>424</width>
+                        <height>224</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -113,7 +313,7 @@
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>1.5</x>
+                <x>2</x>
                 <y>0</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
@@ -140,7 +340,7 @@
                         <x>0</x>
                         <y>64</y>
                         <z>0</z>
-                        <width>1704</width>
+                        <width>4000</width>
                         <height>128</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -190,11 +390,6 @@
                                 <set-angle>No</set-angle>
                                 <default-controls>Yes</default-controls>
                                 <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="BoundToLayout">
-                            <properties>
-                                <bound-by>Edge</bound-by>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -255,7 +450,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Speed>16</Speed>
+                        <Speed>12</Speed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo">
@@ -267,7 +462,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
+                        <x>136</x>
                         <y>112</y>
                         <z>0</z>
                         <width>24</width>
