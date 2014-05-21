@@ -44,7 +44,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="0" name="Playable Characters">
+        <object-folder expanded="1" name="Playable Characters">
             <object-type name="VicViper" sid="2641026747174929">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
@@ -147,6 +147,34 @@
                     <plugin id="NinePatch" />
                     <texture />
                 </object-type>
+                <object-type name="GreenToys1" sid="7869461854889476">
+                    <plugin id="NinePatch" />
+                    <texture />
+                </object-type>
+                <object-type name="GreenToys2" sid="2634483865646857">
+                    <plugin id="NinePatch" />
+                    <texture />
+                </object-type>
+                <object-type name="CatHead" sid="328664452015193">
+                    <plugin id="NinePatch" />
+                    <texture />
+                </object-type>
+                <object-type name="CollectingTube" sid="4526263000922009">
+                    <plugin id="NinePatch" />
+                    <texture />
+                </object-type>
+                <object-type name="YellowToys1" sid="4740585771734932">
+                    <plugin id="NinePatch" />
+                    <texture />
+                </object-type>
+                <object-type name="CuteToys" sid="9021412900032309">
+                    <plugin id="NinePatch" />
+                    <texture />
+                </object-type>
+                <object-type name="RedToys" sid="456744626165768">
+                    <plugin id="NinePatch" />
+                    <texture />
+                </object-type>
             </object-folder>
         </object-folder>
         <object-type name="Keyboard" sid="1116132545238104">
@@ -186,6 +214,10 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="BlueToys1" sid="6468663091590182">
+            <plugin id="NinePatch" />
+            <texture />
         </object-type>
     </object-folder>
     <families>
