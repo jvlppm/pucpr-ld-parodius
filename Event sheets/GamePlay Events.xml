@@ -681,15 +681,13 @@
         </event-group>
         <event-group description="" sid="6132420569273493" title="Items">
             <sub-events>
-                <event-block collapsed="1" sid="7019949737916141">
+                <event-block sid="7019949737916141">
                     <conditions>
                         <condition id="0" name="On function" sid="693819286010134" type="Function">
                             <param id="0" name="Name">&quot;SpawnItem&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-26" name="Restart layout" sid="1962608531578726" type="System" />
-                    </actions>
+                    <actions />
                     <sub-events>
                         <event-block sid="7240991134590925">
                             <conditions>
