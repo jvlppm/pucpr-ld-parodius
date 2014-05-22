@@ -19,6 +19,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
     <used-effects />
@@ -45,7 +46,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="0" name="Playable Characters">
+        <object-folder expanded="1" name="Playable Characters">
             <object-type name="VicViper" sid="2641026747174929">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
@@ -319,7 +320,7 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-folder expanded="1" name="Explosions">
+        <object-folder expanded="0" name="Explosions">
             <object-type name="SimpleExplosion" sid="1334764524458848">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
@@ -402,10 +403,15 @@
                 <instance-variable name="DoubleMissileDelay" sid="6142916549541775" type="number" />
                 <instance-variable name="FiringMainWeapon" sid="1900347869165786" type="boolean" />
                 <instance-variable name="PlayerIndex" sid="3764403569868325" type="number" />
+                <instance-variable name="SpeedBoosts" sid="2219603582413279" type="number" />
+                <instance-variable name="InitialMaxSpeed" sid="7806497847965467" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="1019247201064265">
                     <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="1967033417781398">
+                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
         </family>
@@ -433,6 +439,7 @@
             <instance-variables>
                 <instance-variable name="LinkedUID" sid="9521571657513087" type="number" />
                 <instance-variable name="Life" sid="9669829118320623" type="number" />
+                <instance-variable name="DropItem" sid="9974623712327004" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="2978315605207618">

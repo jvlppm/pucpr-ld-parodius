@@ -155,7 +155,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="9401331014174587">
+                <event-block collapsed="1" sid="9401331014174587">
                     <conditions>
                         <condition id="0" name="On function" sid="7810697110681507" type="Function">
                             <param id="0" name="Name">&quot;RetreatHead&quot;</param>
