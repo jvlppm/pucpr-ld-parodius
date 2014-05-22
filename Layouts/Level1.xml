@@ -332,7 +332,7 @@
                     <instance-variables>
                         <LinkedUID>38</LinkedUID>
                         <Life>1</Life>
-                        <DropItem>SpeedBoost</DropItem>
+                        <DropItem>Boost</DropItem>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -373,7 +373,7 @@
                     <instance-variables>
                         <LinkedUID>39</LinkedUID>
                         <Life>1</Life>
-                        <DropItem>SpeedBoost</DropItem>
+                        <DropItem>Boost</DropItem>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -414,7 +414,7 @@
                     <instance-variables>
                         <LinkedUID>40</LinkedUID>
                         <Life>1</Life>
-                        <DropItem>SpeedBoost</DropItem>
+                        <DropItem>Boost</DropItem>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -455,7 +455,7 @@
                     <instance-variables>
                         <LinkedUID>41</LinkedUID>
                         <Life>1</Life>
-                        <DropItem>SpeedBoost</DropItem>
+                        <DropItem>Boost</DropItem>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -496,7 +496,7 @@
                     <instance-variables>
                         <LinkedUID>0</LinkedUID>
                         <Life>1</Life>
-                        <DropItem>SpeedBoost</DropItem>
+                        <DropItem>Boost</DropItem>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -537,7 +537,7 @@
                     <instance-variables>
                         <LinkedUID>43</LinkedUID>
                         <Life>1</Life>
-                        <DropItem>SpeedBoost</DropItem>
+                        <DropItem>Boost</DropItem>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -578,7 +578,7 @@
                     <instance-variables>
                         <LinkedUID>44</LinkedUID>
                         <Life>1</Life>
-                        <DropItem>SpeedBoost</DropItem>
+                        <DropItem>Boost</DropItem>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -619,7 +619,7 @@
                     <instance-variables>
                         <LinkedUID>45</LinkedUID>
                         <Life>1</Life>
-                        <DropItem>SpeedBoost</DropItem>
+                        <DropItem>Boost</DropItem>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -660,7 +660,7 @@
                     <instance-variables>
                         <LinkedUID>46</LinkedUID>
                         <Life>1</Life>
-                        <DropItem>SpeedBoost</DropItem>
+                        <DropItem>Boost</DropItem>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -701,7 +701,7 @@
                     <instance-variables>
                         <LinkedUID>0</LinkedUID>
                         <Life>1</Life>
-                        <DropItem>SpeedBoost</DropItem>
+                        <DropItem>Boost</DropItem>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -742,7 +742,7 @@
                     <instance-variables>
                         <LinkedUID>48</LinkedUID>
                         <Life>1</Life>
-                        <DropItem>SpeedBoost</DropItem>
+                        <DropItem>Boost</DropItem>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -783,7 +783,7 @@
                     <instance-variables>
                         <LinkedUID>49</LinkedUID>
                         <Life>1</Life>
-                        <DropItem>SpeedBoost</DropItem>
+                        <DropItem>Boost</DropItem>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -824,7 +824,7 @@
                     <instance-variables>
                         <LinkedUID>50</LinkedUID>
                         <Life>1</Life>
-                        <DropItem>SpeedBoost</DropItem>
+                        <DropItem>Boost</DropItem>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -865,7 +865,7 @@
                     <instance-variables>
                         <LinkedUID>51</LinkedUID>
                         <Life>1</Life>
-                        <DropItem>SpeedBoost</DropItem>
+                        <DropItem>Boost</DropItem>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -906,7 +906,7 @@
                     <instance-variables>
                         <LinkedUID>0</LinkedUID>
                         <Life>1</Life>
-                        <DropItem>SpeedBoost</DropItem>
+                        <DropItem>Boost</DropItem>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -947,7 +947,7 @@
                     <instance-variables>
                         <LinkedUID>53</LinkedUID>
                         <Life>1</Life>
-                        <DropItem>SpeedBoost</DropItem>
+                        <DropItem>Boost</DropItem>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -988,7 +988,7 @@
                     <instance-variables>
                         <LinkedUID>54</LinkedUID>
                         <Life>1</Life>
-                        <DropItem>SpeedBoost</DropItem>
+                        <DropItem>Boost</DropItem>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -1029,7 +1029,7 @@
                     <instance-variables>
                         <LinkedUID>55</LinkedUID>
                         <Life>1</Life>
-                        <DropItem>SpeedBoost</DropItem>
+                        <DropItem>Boost</DropItem>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -1070,7 +1070,7 @@
                     <instance-variables>
                         <LinkedUID>56</LinkedUID>
                         <Life>1</Life>
-                        <DropItem>SpeedBoost</DropItem>
+                        <DropItem>Boost</DropItem>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -1111,7 +1111,7 @@
                     <instance-variables>
                         <LinkedUID>0</LinkedUID>
                         <Life>1</Life>
-                        <DropItem>SpeedBoost</DropItem>
+                        <DropItem>Boost</DropItem>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -1236,7 +1236,7 @@
                     <instance-variables>
                         <LinkedUID>0</LinkedUID>
                         <Life>1</Life>
-                        <DropItem>SpeedBoost</DropItem>
+                        <DropItem>Boost</DropItem>
                         <YOffset>0</YOffset>
                         <GoingUp>false</GoingUp>
                     </instance-variables>
@@ -1268,7 +1268,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SpeedBoost" uid="62">
+                <instance type="Boost" uid="62">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1323,13 +1323,14 @@
                         <PlayerIndex>0</PlayerIndex>
                         <SpeedBoosts>0</SpeedBoosts>
                         <InitialMaxSpeed>0</InitialMaxSpeed>
+                        <AvailableBoost>0</AvailableBoost>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
                             <properties>
                                 <max-speed>75</max-speed>
-                                <acceleration>600</acceleration>
-                                <deceleration>500</deceleration>
+                                <acceleration>2000</acceleration>
+                                <deceleration>2000</deceleration>
                                 <directions>8 directions</directions>
                                 <set-angle>No</set-angle>
                                 <default-controls>No</default-controls>

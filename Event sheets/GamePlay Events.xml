@@ -7,7 +7,7 @@
             <sub-events>
                 <event-group description="" sid="7673411034528074" title="Controls">
                     <sub-events>
-                        <event-block collapsed="1" sid="8255276067209778">
+                        <event-block sid="8255276067209778">
                             <conditions>
                                 <condition id="4" name="Has gamepads" sid="8623469226172422" type="Gamepad" />
                             </conditions>
@@ -39,6 +39,20 @@
                                                 <action id="-13" name="Set boolean" sid="1522410656177115" type="PlayableCharacters">
                                                     <param id="0" name="Instance variable">FiringMainWeapon</param>
                                                     <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="8841741522093482">
+                                            <conditions>
+                                                <condition id="3" name="Is button down" sid="4541553668081507" type="Gamepad">
+                                                    <param id="0" name="Gamepad">PlayableCharacters.PlayerIndex</param>
+                                                    <param id="1" name="Button">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="7792874412331512" type="Function">
+                                                    <param id="0" name="Name">&quot;UseBoost&quot;</param>
+                                                    <param id="1" name="Parameter {n}">PlayableCharacters.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -253,6 +267,19 @@
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block sid="2307982073139037">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="6156420722716815" type="Keyboard">
+                                                    <param id="0" name="Key">83 (S)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="5248380145644845" type="Function">
+                                                    <param id="0" name="Name">&quot;UseBoost&quot;</param>
+                                                    <param id="1" name="Parameter {n}">PlayableCharacters.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                         <event-block sid="4435101713311573">
                                             <conditions>
                                                 <condition id="-22" name="Else" sid="5517072980260396" type="System" />
@@ -390,6 +417,42 @@
                                         </action>
                                         <action id="-10" name="Set value" sid="6474836113597356" type="PlayableCharacters">
                                             <param id="0" name="Instance variable">WeaponCounter2</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="4705084051699132">
+                            <conditions>
+                                <condition id="0" name="On function" sid="4811349919823892" type="Function">
+                                    <param id="0" name="Name">&quot;UseBoost&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="9180191539462587" type="PlayableCharacters">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="8176809286529324">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="2999356985402892" type="PlayableCharacters">
+                                            <param id="0" name="Instance variable">AvailableBoost</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="4" name="Set max speed" sid="7128684369269284" type="PlayableCharacters">
+                                            <param id="0" name="Max Speed">PlayableCharacters.8Direction.MaxSpeed + PlayableCharacters.InitialMaxSpeed / (PlayableCharacters.SpeedBoosts + 1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="633254470397427">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="2143013365456213" type="PlayableCharacters">
+                                            <param id="0" name="Instance variable">AvailableBoost</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
@@ -724,12 +787,12 @@
                                 <condition id="1" name="Compare parameter" sid="4173091385450427" type="Function">
                                     <param id="0" name="Index">0</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;SpeedBoost&quot;</param>
+                                    <param id="2" name="Value">&quot;Boost&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-3" name="Create object" sid="5165607433305228" type="System">
-                                    <param id="0" name="Object to create">SpeedBoost</param>
+                                    <param id="0" name="Object to create">Boost</param>
                                     <param id="1" name="Layer">&quot;Foreground&quot;</param>
                                     <param id="2" name="X">ViewportLeft(&quot;Foreground&quot;) + Function.Param(1)</param>
                                     <param id="3" name="Y">Function.Param(2)</param>
@@ -737,6 +800,20 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="9605908207939106">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="6657986302433602" type="PlayableCharacters">
+                            <param id="0" name="Object">Boost</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="1937995063690696" type="PlayableCharacters">
+                            <param id="0" name="Instance variable">AvailableBoost</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1116391018905598" type="Boost" />
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

@@ -180,7 +180,7 @@
             </object-folder>
         </object-folder>
         <object-folder expanded="1" name="Enemies">
-            <object-folder expanded="1" name="Level1">
+            <object-folder expanded="0" name="Level1">
                 <object-type name="BlueHead" sid="1238599287601908">
                     <plugin id="Sprite" />
                     <animation-folder expanded="1">
@@ -408,7 +408,7 @@
         <object-type name="Function" sid="3658215827431778">
             <plugin id="Function" />
         </object-type>
-        <object-type name="SpeedBoost" sid="4662831886021123">
+        <object-type name="Boost" sid="4662831886021123">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1061833728203167" speed="20">
@@ -433,6 +433,7 @@
                 <instance-variable name="PlayerIndex" sid="3764403569868325" type="number" />
                 <instance-variable name="SpeedBoosts" sid="2219603582413279" type="number" />
                 <instance-variable name="InitialMaxSpeed" sid="7806497847965467" type="number" />
+                <instance-variable name="AvailableBoost" sid="6781071627116072" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="1019247201064265">
