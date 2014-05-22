@@ -456,7 +456,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="4646150867679423">
+                <event-block collapsed="1" sid="4646150867679423">
                     <conditions>
                         <condition id="0" name="On function" sid="3634748442343289" type="Function">
                             <param id="0" name="Name">&quot;ActivateEnemy&quot;</param>
@@ -493,6 +493,75 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="3790975650529856" title="Hits">
+            <sub-events>
+                <event-block collapsed="1" sid="8303597911820412">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="1259523389538673" type="Bullets">
+                            <param id="0" name="Object">Enemies</param>
+                        </condition>
+                        <condition id="-16" name="Is on layer" sid="6761746573609994" type="Bullets">
+                            <param id="0" name="Layer">Enemies.LayerName</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="4737551800132948" type="Enemies">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Value">Bullets.Damage</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="8288556098595241">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9910958321608878" type="Enemies">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="4616057822647988" type="Bullets">
+                                    <param id="0" name="Object">SimpleExplosion</param>
+                                    <param id="1" name="Layer">Enemies.LayerName</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="217146766953271" type="Bullets" />
+                                <action id="-9" name="Destroy" sid="2026804169410469" type="Enemies" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="9658646582508471">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6473699025851477" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="6321534377448259" type="Bullets">
+                                    <param id="0" name="Object">SmallHit</param>
+                                    <param id="1" name="Layer">Enemies.LayerName</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="9338718405179594" type="Bullets" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6551341256459602">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="8647283451170063" type="Explosions" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="1875512440019764" type="Explosions" />
+                    </actions>
+                </event-block>
+                <event-block sid="5435765941801691">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="8496580077221634" type="Bullets" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="5102266604618326" type="Bullets" />
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

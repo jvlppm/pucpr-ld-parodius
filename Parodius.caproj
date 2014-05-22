@@ -178,8 +178,8 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-folder expanded="1" name="Enemies">
-            <object-folder expanded="1" name="Level1">
+        <object-folder expanded="0" name="Enemies">
+            <object-folder expanded="0" name="Level1">
                 <object-type name="BlueHead" sid="1238599287601908">
                     <plugin id="Sprite" />
                     <animation-folder expanded="1">
@@ -319,6 +319,31 @@
                 </object-type>
             </object-folder>
         </object-folder>
+        <object-folder expanded="1" name="Explosions">
+            <object-type name="SimpleExplosion" sid="1334764524458848">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1301146120272052" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.538462" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SmallHit" sid="4061115985811487">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2027358357217188" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Keyboard" sid="1116132545238104">
             <plugin id="Keyboard" />
         </object-type>
@@ -388,6 +413,9 @@
             <members>
                 <member>Missile</member>
             </members>
+            <instance-variables>
+                <instance-variable name="Damage" sid="8980676089487453" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Bullet" sid="3047183538175411">
                     <behavior id="Bullet" />
@@ -404,6 +432,7 @@
             </members>
             <instance-variables>
                 <instance-variable name="LinkedUID" sid="9521571657513087" type="number" />
+                <instance-variable name="Life" sid="9669829118320623" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="2978315605207618">
@@ -422,6 +451,12 @@
             <instance-variables>
                 <instance-variable name="State" sid="999098701893996" type="string" />
             </instance-variables>
+        </family>
+        <family name="Explosions" plugin-id="Sprite" sid="8147156184982895">
+            <members>
+                <member>SimpleExplosion</member>
+                <member>SmallHit</member>
+            </members>
         </family>
     </families>
     <layout-folder expanded="1">

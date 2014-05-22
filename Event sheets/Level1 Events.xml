@@ -169,6 +169,16 @@
                             <param id="0" name="Control">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="7492493315640186">
+                            <conditions>
+                                <condition id="-3" inverted="1" name="Is on-screen" sid="372349387376928" type="Enemies" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="8635523420539737" type="Enemies" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

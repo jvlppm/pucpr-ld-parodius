@@ -331,6 +331,7 @@
                     </properties>
                     <instance-variables>
                         <LinkedUID>38</LinkedUID>
+                        <Life>1</Life>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -370,6 +371,7 @@
                     </properties>
                     <instance-variables>
                         <LinkedUID>39</LinkedUID>
+                        <Life>1</Life>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -409,6 +411,7 @@
                     </properties>
                     <instance-variables>
                         <LinkedUID>40</LinkedUID>
+                        <Life>1</Life>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -448,6 +451,7 @@
                     </properties>
                     <instance-variables>
                         <LinkedUID>41</LinkedUID>
+                        <Life>1</Life>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -487,6 +491,7 @@
                     </properties>
                     <instance-variables>
                         <LinkedUID>0</LinkedUID>
+                        <Life>1</Life>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -526,6 +531,7 @@
                     </properties>
                     <instance-variables>
                         <LinkedUID>43</LinkedUID>
+                        <Life>1</Life>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -565,6 +571,7 @@
                     </properties>
                     <instance-variables>
                         <LinkedUID>44</LinkedUID>
+                        <Life>1</Life>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -604,6 +611,7 @@
                     </properties>
                     <instance-variables>
                         <LinkedUID>45</LinkedUID>
+                        <Life>1</Life>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -643,6 +651,7 @@
                     </properties>
                     <instance-variables>
                         <LinkedUID>46</LinkedUID>
+                        <Life>1</Life>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -682,6 +691,7 @@
                     </properties>
                     <instance-variables>
                         <LinkedUID>0</LinkedUID>
+                        <Life>1</Life>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -721,6 +731,7 @@
                     </properties>
                     <instance-variables>
                         <LinkedUID>48</LinkedUID>
+                        <Life>1</Life>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -760,6 +771,7 @@
                     </properties>
                     <instance-variables>
                         <LinkedUID>49</LinkedUID>
+                        <Life>1</Life>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -799,6 +811,7 @@
                     </properties>
                     <instance-variables>
                         <LinkedUID>50</LinkedUID>
+                        <Life>1</Life>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -838,6 +851,7 @@
                     </properties>
                     <instance-variables>
                         <LinkedUID>51</LinkedUID>
+                        <Life>1</Life>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -877,6 +891,7 @@
                     </properties>
                     <instance-variables>
                         <LinkedUID>0</LinkedUID>
+                        <Life>1</Life>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -916,6 +931,7 @@
                     </properties>
                     <instance-variables>
                         <LinkedUID>53</LinkedUID>
+                        <Life>1</Life>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -955,6 +971,7 @@
                     </properties>
                     <instance-variables>
                         <LinkedUID>54</LinkedUID>
+                        <Life>1</Life>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -994,6 +1011,7 @@
                     </properties>
                     <instance-variables>
                         <LinkedUID>55</LinkedUID>
+                        <Life>1</Life>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -1033,6 +1051,7 @@
                     </properties>
                     <instance-variables>
                         <LinkedUID>56</LinkedUID>
+                        <Life>1</Life>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -1072,6 +1091,7 @@
                     </properties>
                     <instance-variables>
                         <LinkedUID>0</LinkedUID>
+                        <Life>1</Life>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -1169,6 +1189,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Damage>1</Damage>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
@@ -1184,8 +1207,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>192</x>
-                        <y>-8</y>
+                        <x>88</x>
+                        <y>-32</y>
                         <z>0</z>
                         <width>9</width>
                         <height>4</height>
@@ -1221,6 +1244,50 @@
                         <z>0</z>
                         <width>24</width>
                         <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SimpleExplosion" uid="58">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>160</x>
+                        <y>-40</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SmallHit" uid="57">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>144</x>
+                        <y>-40</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
