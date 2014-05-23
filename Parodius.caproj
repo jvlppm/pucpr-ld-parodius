@@ -47,7 +47,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="0" name="Playable Characters">
+        <object-folder expanded="1" name="Playable Characters">
             <object-type name="VicViper" sid="2641026747174929">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
@@ -114,6 +114,11 @@
                         <frame duration="1" hotspotX="0.517241" hotspotY="0.5">
                             <image-point name="MainWeapon" x="1" y="0.5" />
                         </frame>
+                    </animation>
+                    <animation framecount="3" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="7572241657864852" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.533333" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.533333" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.533333" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -409,7 +414,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="HUD">
+        <object-folder expanded="0" name="HUD">
             <object-type name="SpeedIndicator" sid="6365847308617516">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
@@ -547,6 +552,7 @@
                 <instance-variable name="SpeedBoosts" sid="2219603582413279" type="number" />
                 <instance-variable name="InitialMaxSpeed" sid="7806497847965467" type="number" />
                 <instance-variable name="AvailableBoost" sid="6781071627116072" type="number" />
+                <instance-variable name="IsDead" sid="1731321067233131" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="1019247201064265">

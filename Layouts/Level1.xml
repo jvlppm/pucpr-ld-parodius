@@ -4040,6 +4040,7 @@
                         <SpeedBoosts>0</SpeedBoosts>
                         <InitialMaxSpeed>0</InitialMaxSpeed>
                         <AvailableBoost>0</AvailableBoost>
+                        <IsDead>false</IsDead>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
