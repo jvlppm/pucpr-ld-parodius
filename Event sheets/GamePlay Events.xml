@@ -474,9 +474,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8762513862699187" title="Global">
+        <event-group collapsed="1" description="" sid="8762513862699187" title="Global">
             <sub-events>
-                <event-block sid="3477757709207761">
+                <event-block collapsed="1" sid="3477757709207761">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="978756881795997" type="System" />
                     </conditions>
@@ -553,9 +553,117 @@
                         <action behavior="Fade" id="1" name="Start fade" sid="1122019492810851" type="BlackOverlay" />
                     </actions>
                 </event-block>
+                <event-group description="" sid="9479007702651214" title="HUD">
+                    <sub-events>
+                        <event-block sid="7524379399102793">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1729751917824448" type="PlayableCharacters">
+                                    <param id="0" name="Instance variable">AvailableBoost</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="6859257469751447" type="SpeedIndicator">
+                                    <param id="0" name="Animation">&quot;Activated&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3140995754537178">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5554289274423526" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9994128504417096" type="SpeedIndicator">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1544921355358436">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5894982310798958" type="PlayableCharacters">
+                                    <param id="0" name="Instance variable">AvailableBoost</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="5606400280262274" type="MissileIndicator">
+                                    <param id="0" name="Animation">&quot;Activated&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3753499527712887">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3216504279208031" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="8411577632690846" type="MissileIndicator">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9514024415691071">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="463824292052304" type="PlayableCharacters">
+                                    <param id="0" name="Instance variable">AvailableBoost</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="887170149214378" type="DoubleIndicator">
+                                    <param id="0" name="Animation">&quot;Activated&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3888108939676113">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3255297700904304" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="4230075916894791" type="DoubleIndicator">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1447081605755092">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3043809881212364" type="PlayableCharacters">
+                                    <param id="0" name="Instance variable">AvailableBoost</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="3466352426432981" type="LaserIndicator">
+                                    <param id="0" name="Animation">&quot;Activated&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1960418823183069">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="9110022672235132" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="6611367761457268" type="LaserIndicator">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3528456841208094" title="Enemies">
+        <event-group description="" sid="3528456841208094" title="Enemies">
             <sub-events>
                 <event-block sid="1799635042287704">
                     <conditions>
@@ -629,7 +737,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3790975650529856" title="Hits">
+        <event-group description="" sid="3790975650529856" title="Hits">
             <sub-events>
                 <comment>Balas atingindo inimigos</comment>
                 <event-block sid="8303597911820412">
@@ -736,7 +844,7 @@
                                     <actions>
                                         <action id="0" name="Call function" sid="3825421576565742" type="Function">
                                             <param id="0" name="Name">&quot;SpawnItem&quot;</param>
-                                            <param id="1" name="Parameter {n}">Enemies.DropItem{###}Enemies.X{###}Enemies.Y{###}Enemies.DropItemCount</param>
+                                            <param id="1" name="Parameter {n}">Enemies.DropItem{###}Enemies.X -  ViewportLeft(Enemies.LayerNumber){###}Enemies.Y{###}Enemies.DropItemCount</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -812,7 +920,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6132420569273493" title="Items">
+        <event-group description="" sid="6132420569273493" title="Items">
             <sub-events>
                 <event-block sid="7019949737916141">
                     <conditions>
