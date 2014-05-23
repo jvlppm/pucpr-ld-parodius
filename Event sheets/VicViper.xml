@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>VicViper</name>
+    <events>
+        <event-group description="" sid="7655464285447706" title="VicViper">
+            <sub-events>
+                <event-group collapsed="1" description="" sid="1151816588679161" title="VicViper Boosts">
+                    <sub-events>
+                        <event-block collapsed="1" sid="8248100177816901">
+                            <conditions>
+                                <condition id="0" name="On function" sid="9612079706182088" type="Function">
+                                    <param id="0" name="Name">&quot;UseBoost&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="1388944671567413" type="VicViper">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9080920728569603">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="8377658864597999" type="VicViper">
+                                            <param id="0" name="Instance variable">AvailableBoost</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="4" name="Set max speed" sid="5638237667231401" type="VicViper">
+                                            <param id="0" name="Max Speed">VicViper.8Direction.MaxSpeed + VicViper.InitialMaxSpeed / (VicViper.SpeedBoosts + 1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9208726345530145">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="8388071523445467" type="VicViper">
+                                            <param id="0" name="Instance variable">AvailableBoost</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group collapsed="1" description="" sid="5270050491001328" title="VicViper Items Bar">
+                    <sub-events>
+                        <event-block sid="7524379399102793">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1729751917824448" type="VicViper">
+                                    <param id="0" name="Instance variable">AvailableBoost</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="6859257469751447" type="SpeedIndicator">
+                                    <param id="0" name="Animation">&quot;Activated&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3140995754537178">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5554289274423526" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9994128504417096" type="SpeedIndicator">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1544921355358436">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5894982310798958" type="VicViper">
+                                    <param id="0" name="Instance variable">AvailableBoost</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="5606400280262274" type="MissileIndicator">
+                                    <param id="0" name="Animation">&quot;Activated&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3753499527712887">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3216504279208031" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="8411577632690846" type="MissileIndicator">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9514024415691071">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="463824292052304" type="VicViper">
+                                    <param id="0" name="Instance variable">AvailableBoost</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="887170149214378" type="DoubleIndicator">
+                                    <param id="0" name="Animation">&quot;Activated&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3888108939676113">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3255297700904304" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="4230075916894791" type="DoubleIndicator">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1447081605755092">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3043809881212364" type="VicViper">
+                                    <param id="0" name="Instance variable">AvailableBoost</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="3466352426432981" type="LaserIndicator">
+                                    <param id="0" name="Animation">&quot;Activated&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1960418823183069">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="9110022672235132" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="6611367761457268" type="LaserIndicator">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

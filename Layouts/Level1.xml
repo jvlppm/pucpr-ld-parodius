@@ -2,7 +2,7 @@
 <c2layout>
     <name>Level1</name>
     <sid>8179929243421977</sid>
-    <event-sheet>Level1 Events</event-sheet>
+    <event-sheet>GamePlay Events</event-sheet>
     <size>
         <width>2432</width>
         <height>224</height>

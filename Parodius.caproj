@@ -636,8 +636,8 @@
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>GamePlay Events.xml</event-sheet>
-        <event-sheet>Level1 Events.xml</event-sheet>
-        <event-sheet>Level2 Events.xml</event-sheet>
+        <event-sheet>Enemies.xml</event-sheet>
+        <event-sheet>VicViper.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />

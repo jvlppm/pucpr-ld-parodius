@@ -1,9 +1,82 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Level1 Events</name>
+    <name>Enemies</name>
     <events>
-        <include>GamePlay Events</include>
+        <event-group collapsed="1" description="" sid="8257614993568474" title="Enemies Common">
+            <sub-events>
+                <event-block sid="1799635042287704">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="4182990020967839" type="Enemies" />
+                        <condition id="-16" inverted="1" name="Is on layer" sid="6306642136456753" type="Enemies">
+                            <param id="0" name="Layer">&quot;Screen&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="276235395290008" type="Function">
+                            <param id="0" name="Name">&quot;ActivateEnemy&quot;</param>
+                            <param id="1" name="Parameter {n}">Enemies.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block collapsed="1" sid="4646150867679423">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3634748442343289" type="Function">
+                            <param id="0" name="Name">&quot;ActivateEnemy&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="5884509235880023" type="Enemies">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="1926294947655508" type="Enemies">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="7674558501957969" type="Enemies">
+                            <param id="0" name="X">Enemies.X - ViewportLeft(Enemies.LayerName)</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="5068019536593588" type="Enemies">
+                            <param id="0" name="Layer">&quot;Screen&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="7008238454264731">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8126088430062084" type="Enemies">
+                                    <param id="0" name="Instance variable">LinkedUID</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="4304845274295623" type="Function">
+                                    <param id="0" name="Name">&quot;ActivateEnemy&quot;</param>
+                                    <param id="1" name="Parameter {n}">Enemies.LinkedUID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3357033697392681">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7193619321286771" type="Function">
+                            <param id="0" name="Name">&quot;UpdateLinks&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7628526912053162" type="Enemies">
+                            <param id="0" name="Instance variable">LinkedUID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="5045809122698755" type="Enemies">
+                            <param id="0" name="Instance variable">LinkedUID</param>
+                            <param id="1" name="Value">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group collapsed="1" description="" sid="7440015483106276" title="Heads">
             <sub-events>
                 <event-block collapsed="1" sid="6820986884477118">
@@ -383,6 +456,196 @@
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="4329491086821177" title="Hits">
+            <sub-events>
+                <comment>Balas atingindo inimigos</comment>
+                <event-block sid="8303597911820412">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="1259523389538673" type="Bullets">
+                            <param id="0" name="Object">Enemies</param>
+                        </condition>
+                        <condition id="-16" name="Is on layer" sid="6761746573609994" type="Bullets">
+                            <param id="0" name="Layer">Enemies.LayerName</param>
+                        </condition>
+                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="3442916480004816" type="Enemies" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="7941437890321188" type="Function">
+                            <param id="0" name="Name">&quot;Hit&quot;</param>
+                            <param id="1" name="Parameter {n}">Bullets.UID{###}Enemies.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6551341256459602">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="8647283451170063" type="Explosions" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="1875512440019764" type="Explosions" />
+                    </actions>
+                </event-block>
+                <comment>Destruir balas fora da tela</comment>
+                <event-block sid="5435765941801691">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="8496580077221634" type="Bullets" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="5102266604618326" type="Bullets" />
+                    </actions>
+                </event-block>
+                <comment>Jogador morrer ao tocar os inimigos</comment>
+                <event-block sid="1953891852661875">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="1505974564070166" type="Enemies">
+                            <param id="0" name="Object">PlayableCharacters</param>
+                        </condition>
+                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="4741177930741753" type="PlayableCharacters" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="1800813044855587" type="Function">
+                            <param id="0" name="Name">&quot;Destroy&quot;</param>
+                            <param id="1" name="Parameter {n}">Enemies.UID</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="5194446574571528" type="PlayableCharacters">
+                            <param id="0" name="Instance variable">IsDead</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="6912359887645257" type="PlayableCharacters">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <variable constant="0" name="Last" sid="3347080095428453" static="0" type="number">1</variable>
+                <event-block collapsed="1" sid="6099375135136563">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3738993523568975" type="Function">
+                            <param id="0" name="Name">&quot;Destroy&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Verifica se faz parte de um grupo</comment>
+                        <event-block sid="4035338603809353">
+                            <conditions>
+                                <condition id="-34" name="Pick by evaluate" sid="4748516006703395" type="System">
+                                    <param id="0" name="Object">Enemies</param>
+                                    <param id="1" name="Expression">Enemies.LinkedUID = Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="8893154338437112" type="System">
+                                    <param id="0" name="Variable">Last</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1784414555054898">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="8983173946077345" type="Enemies">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1084149295880993" type="Function">
+                                    <param id="0" name="Name">&quot;UpdateLinks&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0){###}Enemies.LinkedUID</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>Valida se é o último do grupo</comment>
+                                <event-block sid="2967312882547448">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="3040862958234981" type="Enemies">
+                                            <param id="0" name="Instance variable">LinkedUID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="7670595733337633" type="System">
+                                            <param id="0" name="Variable">Last</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3825421576565742" type="Function">
+                                            <param id="0" name="Name">&quot;SpawnItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">Enemies.DropItem{###}Enemies.X -  ViewportLeft(Enemies.LayerNumber){###}Enemies.Y{###}Enemies.DropItemCount</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7631366638341198">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="1607644046727172" type="Enemies">
+                                            <param id="0" name="Object">SimpleExplosion</param>
+                                            <param id="1" name="Layer">Enemies.LayerName</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="2026804169410469" type="Enemies" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3859238823017108">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4999532843052865" type="Function">
+                            <param id="0" name="Name">&quot;Hit&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="8423509801354815" type="Bullets">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="3832611625768376" type="Enemies">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="8840268943390915" type="Enemies">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Value">Bullets.Damage</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="8373943886680955">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="670107418759604" type="Enemies">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="5673485128775426" type="Bullets" />
+                                <action id="0" name="Call function" sid="6206973308866279" type="Function">
+                                    <param id="0" name="Name">&quot;Destroy&quot;</param>
+                                    <param id="1" name="Parameter {n}">Enemies.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9802271280317375">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5072844225408946" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="6235967224373378" type="Bullets">
+                                    <param id="0" name="Object">SmallHit</param>
+                                    <param id="1" name="Layer">Enemies.LayerName</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="6327204023616623" type="Bullets" />
+                                <action behavior="Flash" id="0" name="Flash" sid="7408775696801642" type="Enemies">
+                                    <param id="0" name="&apos;On&apos; time">0.01</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.01</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
