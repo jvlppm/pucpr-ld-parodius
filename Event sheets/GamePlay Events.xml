@@ -3,9 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GamePlay Events</name>
     <events>
-        <event-group description="" sid="8850219158393638" title="Playable Characters">
+        <event-group collapsed="1" description="" sid="8850219158393638" title="Playable Characters">
             <sub-events>
-                <event-group description="" sid="7673411034528074" title="Controls">
+                <event-group collapsed="1" description="" sid="7673411034528074" title="Controls">
                     <sub-events>
                         <event-block sid="8255276067209778">
                             <conditions>
@@ -629,49 +629,14 @@
                         <condition id="-16" name="Is on layer" sid="6761746573609994" type="Bullets">
                             <param id="0" name="Layer">Enemies.LayerName</param>
                         </condition>
+                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="3442916480004816" type="Enemies" />
                     </conditions>
                     <actions>
-                        <action id="-12" name="Subtract from" sid="4737551800132948" type="Enemies">
-                            <param id="0" name="Instance variable">Life</param>
-                            <param id="1" name="Value">Bullets.Damage</param>
+                        <action id="0" name="Call function" sid="7941437890321188" type="Function">
+                            <param id="0" name="Name">&quot;Hit&quot;</param>
+                            <param id="1" name="Parameter {n}">Bullets.UID{###}Enemies.UID</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="8288556098595241">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="9910958321608878" type="Enemies">
-                                    <param id="0" name="Instance variable">Life</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="4616057822647988" type="Bullets">
-                                    <param id="0" name="Object">SimpleExplosion</param>
-                                    <param id="1" name="Layer">Enemies.LayerName</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-9" name="Destroy" sid="217146766953271" type="Bullets" />
-                                <action id="0" name="Call function" sid="9909729772178619" type="Function">
-                                    <param id="0" name="Name">&quot;Destroy&quot;</param>
-                                    <param id="1" name="Parameter {n}">Enemies.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9658646582508471">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="6473699025851477" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="6321534377448259" type="Bullets">
-                                    <param id="0" name="Object">SmallHit</param>
-                                    <param id="1" name="Layer">Enemies.LayerName</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-9" name="Destroy" sid="9338718405179594" type="Bullets" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <event-block sid="6551341256459602">
                     <conditions>
@@ -726,7 +691,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="1784414555054898">
+                        <event-block collapsed="1" sid="1784414555054898">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="8983173946077345" type="Enemies">
                                     <param id="0" name="Unique ID">Function.Param(0)</param>
@@ -756,7 +721,7 @@
                                     <actions>
                                         <action id="0" name="Call function" sid="3825421576565742" type="Function">
                                             <param id="0" name="Name">&quot;SpawnItem&quot;</param>
-                                            <param id="1" name="Parameter {n}">Enemies.DropItem{###}Enemies.X{###}Enemies.Y</param>
+                                            <param id="1" name="Parameter {n}">Enemies.DropItem{###}Enemies.X{###}Enemies.Y{###}Enemies.DropItemCount</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -767,6 +732,66 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block collapsed="1" sid="3859238823017108">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4999532843052865" type="Function">
+                            <param id="0" name="Name">&quot;Hit&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="8423509801354815" type="Bullets">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="3832611625768376" type="Enemies">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="8840268943390915" type="Enemies">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Value">Bullets.Damage</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="8373943886680955">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="670107418759604" type="Enemies">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="1607644046727172" type="Bullets">
+                                    <param id="0" name="Object">SimpleExplosion</param>
+                                    <param id="1" name="Layer">Enemies.LayerName</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="5673485128775426" type="Bullets" />
+                                <action id="0" name="Call function" sid="6206973308866279" type="Function">
+                                    <param id="0" name="Name">&quot;Destroy&quot;</param>
+                                    <param id="1" name="Parameter {n}">Enemies.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9802271280317375">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5072844225408946" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="6235967224373378" type="Bullets">
+                                    <param id="0" name="Object">SmallHit</param>
+                                    <param id="1" name="Layer">Enemies.LayerName</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="6327204023616623" type="Bullets" />
+                                <action behavior="Flash" id="0" name="Flash" sid="7408775696801642" type="Enemies">
+                                    <param id="0" name="&apos;On&apos; time">0.01</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.01</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -782,8 +807,36 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="2849543724575141">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="1388881872192637" type="Function">
+                                    <param id="0" name="Index">3</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="9206358944405947" type="Function">
+                                    <param id="0" name="Name">&quot;SpawnItem&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1) - 12{###}Function.Param(2) - 12{###}1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="9894572970872196" type="Function">
+                                    <param id="0" name="Name">&quot;SpawnItem&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1) + 12{###}Function.Param(2) - 12{###}1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="9431612892229244" type="Function">
+                                    <param id="0" name="Name">&quot;SpawnItem&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1) - 12{###}Function.Param(2) + 12{###}1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="2670811376683704" type="Function">
+                                    <param id="0" name="Name">&quot;SpawnItem&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1) + 12{###}Function.Param(2) + 12{###}1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="7240991134590925">
                             <conditions>
+                                <condition id="-22" name="Else" sid="3999339598586381" type="System" />
                                 <condition id="1" name="Compare parameter" sid="4173091385450427" type="Function">
                                     <param id="0" name="Index">0</param>
                                     <param id="1" name="Comparison">0</param>

@@ -35,7 +35,7 @@
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Orientations">Any</prop>
@@ -45,7 +45,7 @@
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-folder expanded="0" name="Playable Characters">
             <object-type name="VicViper" sid="2641026747174929">
                 <plugin id="Sprite" />
@@ -179,7 +179,7 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-folder expanded="1" name="Enemies">
+        <object-folder expanded="0" name="Enemies">
             <object-folder expanded="0" name="Level1">
                 <object-type name="BlueHead" sid="1238599287601908">
                     <plugin id="Sprite" />
@@ -418,6 +418,39 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="BigBird" sid="3570588967487432">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="State" sid="9930205414112325" type="string" />
+            </instance-variables>
+            <animation-folder expanded="1">
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="18207932173795" speed="8">
+                    <frame duration="1" hotspotX="0.128205" hotspotY="0.636364" />
+                    <frame duration="1" hotspotX="0.128205" hotspotY="0.659091" />
+                    <frame duration="1" hotspotX="0.295455" hotspotY="0.636364" />
+                    <frame duration="1" hotspotX="0.272727" hotspotY="0.636364" />
+                </animation>
+                <animation framecount="4" loop="0" name="Charge" pingpong="0" repeatcount="5" repeatto="0" sid="5717617976544261" speed="15">
+                    <frame duration="1" hotspotX="0.227273" hotspotY="0.636364" />
+                    <frame duration="1" hotspotX="0.227273" hotspotY="0.659091" />
+                    <frame duration="1" hotspotX="0.295455" hotspotY="0.636364" />
+                    <frame duration="1" hotspotX="0.272727" hotspotY="0.636364" />
+                </animation>
+                <animation framecount="4" loop="0" name="Hit" pingpong="0" repeatcount="3" repeatto="0" sid="3825972351703309" speed="10">
+                    <frame duration="1" hotspotX="0.227273" hotspotY="0.636364">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.6875" />
+                            <point x="0" y="0.6875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.138889" hotspotY="0.693878" />
+                    <frame duration="1" hotspotX="0.295455" hotspotY="0.732143" />
+                    <frame duration="1" hotspotX="0.295455" hotspotY="0.659091" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="PlayableCharacters" plugin-id="Sprite" sid="6659182174539103">
@@ -459,6 +492,7 @@
         </family>
         <family name="Enemies" plugin-id="Sprite" sid="9619498938020218">
             <members>
+                <member>BigBird</member>
                 <member>BlueHead</member>
                 <member>Chicken</member>
                 <member>GreenHead</member>
@@ -471,10 +505,14 @@
                 <instance-variable name="LinkedUID" sid="9521571657513087" type="number" />
                 <instance-variable name="Life" sid="9669829118320623" type="number" />
                 <instance-variable name="DropItem" sid="9974623712327004" type="string" />
+                <instance-variable name="DropItemCount" sid="3050973556556742" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="2978315605207618">
                     <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="5514716192359862">
+                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
         </family>

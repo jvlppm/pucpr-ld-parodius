@@ -333,6 +333,7 @@
                         <LinkedUID>38</LinkedUID>
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -347,11 +348,12 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>328</x>
+                        <x>400</x>
                         <y>48</y>
                         <z>0</z>
                         <width>15</width>
@@ -374,6 +376,7 @@
                         <LinkedUID>39</LinkedUID>
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -388,11 +391,12 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>344</x>
+                        <x>416</x>
                         <y>48</y>
                         <z>0</z>
                         <width>15</width>
@@ -415,6 +419,7 @@
                         <LinkedUID>40</LinkedUID>
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -429,11 +434,12 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>360</x>
+                        <x>432</x>
                         <y>48</y>
                         <z>0</z>
                         <width>15</width>
@@ -456,6 +462,7 @@
                         <LinkedUID>41</LinkedUID>
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -470,11 +477,12 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>376</x>
+                        <x>448</x>
                         <y>48</y>
                         <z>0</z>
                         <width>15</width>
@@ -497,6 +505,7 @@
                         <LinkedUID>0</LinkedUID>
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -511,14 +520,15 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>392</x>
+                        <x>464</x>
                         <y>48</y>
                         <z>0</z>
-                        <width>15</width>
+                        <width>16</width>
                         <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.533333361</hotspotX>
@@ -538,6 +548,7 @@
                         <LinkedUID>43</LinkedUID>
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -552,11 +563,12 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>376</x>
+                        <x>416</x>
                         <y>200</y>
                         <z>0</z>
                         <width>15</width>
@@ -579,6 +591,7 @@
                         <LinkedUID>44</LinkedUID>
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -593,11 +606,12 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>392</x>
+                        <x>432</x>
                         <y>200</y>
                         <z>0</z>
                         <width>15</width>
@@ -620,6 +634,7 @@
                         <LinkedUID>45</LinkedUID>
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -634,11 +649,12 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>408</x>
+                        <x>448</x>
                         <y>200</y>
                         <z>0</z>
                         <width>15</width>
@@ -661,6 +677,7 @@
                         <LinkedUID>46</LinkedUID>
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -675,11 +692,12 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>424</x>
+                        <x>464</x>
                         <y>200</y>
                         <z>0</z>
                         <width>15</width>
@@ -702,6 +720,7 @@
                         <LinkedUID>0</LinkedUID>
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -716,11 +735,12 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>440</x>
+                        <x>480</x>
                         <y>200</y>
                         <z>0</z>
                         <width>15</width>
@@ -743,6 +763,7 @@
                         <LinkedUID>48</LinkedUID>
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -757,6 +778,7 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -784,6 +806,7 @@
                         <LinkedUID>49</LinkedUID>
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -798,6 +821,7 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -825,6 +849,7 @@
                         <LinkedUID>50</LinkedUID>
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -839,6 +864,7 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -866,6 +892,7 @@
                         <LinkedUID>51</LinkedUID>
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -880,6 +907,7 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -907,6 +935,7 @@
                         <LinkedUID>0</LinkedUID>
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -921,6 +950,7 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -948,6 +978,7 @@
                         <LinkedUID>53</LinkedUID>
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -962,6 +993,7 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -989,6 +1021,7 @@
                         <LinkedUID>54</LinkedUID>
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -1003,6 +1036,7 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1030,6 +1064,7 @@
                         <LinkedUID>55</LinkedUID>
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -1044,6 +1079,7 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1071,6 +1107,7 @@
                         <LinkedUID>56</LinkedUID>
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -1085,14 +1122,15 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>592</x>
+                        <x>592.533325195</x>
                         <y>200</y>
                         <z>0</z>
-                        <width>15</width>
+                        <width>16</width>
                         <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.533333361</hotspotX>
@@ -1112,6 +1150,7 @@
                         <LinkedUID>0</LinkedUID>
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -1126,6 +1165,7 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1153,6 +1193,7 @@
                         <LinkedUID>0</LinkedUID>
                         <Life>1</Life>
                         <DropItem></DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <YOffset>-16</YOffset>
                         <GoingUp>false</GoingUp>
                     </instance-variables>
@@ -1168,11 +1209,12 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>280</x>
+                        <x>344</x>
                         <y>48</y>
                         <z>0</z>
                         <width>16</width>
@@ -1195,6 +1237,7 @@
                         <LinkedUID>0</LinkedUID>
                         <Life>1</Life>
                         <DropItem></DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <YOffset>16</YOffset>
                         <GoingUp>false</GoingUp>
                     </instance-variables>
@@ -1210,11 +1253,12 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>280</x>
+                        <x>344</x>
                         <y>80</y>
                         <z>0</z>
                         <width>16</width>
@@ -1237,6 +1281,7 @@
                         <LinkedUID>0</LinkedUID>
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
                         <YOffset>0</YOffset>
                         <GoingUp>false</GoingUp>
                     </instance-variables>
@@ -1252,11 +1297,12 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>280</x>
+                        <x>344</x>
                         <y>64</y>
                         <z>0</z>
                         <width>16</width>
@@ -1287,6 +1333,224 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LittleChicken" uid="63">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LinkedUID>0</LinkedUID>
+                        <Life>1</Life>
+                        <DropItem></DropItem>
+                        <DropItemCount>1</DropItemCount>
+                        <YOffset>-16</YOffset>
+                        <GoingUp>false</GoingUp>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>400</x>
+                        <y>152</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5625</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LittleChicken" uid="64">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LinkedUID>0</LinkedUID>
+                        <Life>1</Life>
+                        <DropItem></DropItem>
+                        <DropItemCount>1</DropItemCount>
+                        <YOffset>16</YOffset>
+                        <GoingUp>false</GoingUp>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>400</x>
+                        <y>184</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5625</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Chicken" uid="65">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LinkedUID>0</LinkedUID>
+                        <Life>1</Life>
+                        <DropItem>Boost</DropItem>
+                        <DropItemCount>1</DropItemCount>
+                        <YOffset>0</YOffset>
+                        <GoingUp>false</GoingUp>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>400</x>
+                        <y>168</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5625</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="BigBird" uid="66">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LinkedUID>0</LinkedUID>
+                        <Life>4</Life>
+                        <DropItem>Boost</DropItem>
+                        <DropItemCount>4</DropItemCount>
+                        <State>Advancing</State>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>20</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>320</x>
+                        <y>120</y>
+                        <z>0</z>
+                        <width>39</width>
+                        <height>44</height>
+                        <depth>0</depth>
+                        <hotspotX>0.128205135</hotspotX>
+                        <hotspotY>0.636363626</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="WorldBackground" sid="818508412398919">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>2</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="Stars" uid="5">
+                    <properties>
+                        <left-margin>0</left-margin>
+                        <right-margin>0</right-margin>
+                        <top-margin>0</top-margin>
+                        <bottom-margin>0</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>64</x>
+                        <y>64</y>
+                        <z>0</z>
+                        <width>3936</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -1484,32 +1748,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Stars" uid="5">
-                    <properties>
-                        <left-margin>0</left-margin>
-                        <right-margin>0</right-margin>
-                        <top-margin>0</top-margin>
-                        <bottom-margin>0</bottom-margin>
-                        <edges>Tile</edges>
-                        <fill>Tile</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>64</x>
-                        <y>64</y>
-                        <z>0</z>
-                        <width>3936</width>
-                        <height>128</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="GreenToys1" uid="17">
                     <properties>
                         <left-margin>0</left-margin>

@@ -4,7 +4,7 @@
     <name>Level1 Events</name>
     <events>
         <include>GamePlay Events</include>
-        <event-group collapsed="1" description="" sid="7440015483106276" title="Heads">
+        <event-group description="" sid="7440015483106276" title="Heads">
             <sub-events>
                 <event-block collapsed="1" sid="6820986884477118">
                     <conditions>
@@ -63,7 +63,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="7642866608187792">
+                <event-block sid="7642866608187792">
                     <conditions>
                         <condition id="0" name="On function" sid="3484749194791813" type="Function">
                             <param id="0" name="Name">&quot;AdvanceHead&quot;</param>
@@ -158,7 +158,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="9401331014174587">
+                <event-block sid="9401331014174587">
                     <conditions>
                         <condition id="0" name="On function" sid="7810697110681507" type="Function">
                             <param id="0" name="Name">&quot;RetreatHead&quot;</param>
@@ -187,7 +187,7 @@
         </event-group>
         <event-group collapsed="1" description="" sid="8908347693546878" title="Chickens">
             <sub-events>
-                <event-block disabled="1" sid="1918873118270862">
+                <event-block sid="1918873118270862">
                     <conditions>
                         <condition id="-1" name="Compare X" sid="7255061716084517" type="Level1Chickens">
                             <param id="0" name="Comparison">2</param>
@@ -198,7 +198,7 @@
                         <action id="-9" name="Destroy" sid="9008783143665927" type="Level1Chickens" />
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="7500740662913884">
+                <event-block sid="7500740662913884">
                     <conditions>
                         <condition id="-11" name="For Each" sid="302806189388674" type="System">
                             <param id="0" name="Object">Level1Chickens</param>
@@ -264,6 +264,107 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="6301054243292651" title="BigBird">
+            <sub-events>
+                <event-block collapsed="1" sid="3571859625333593">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5370212570588784" type="BigBird">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Advancing&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="5873852718554783" type="BigBird">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1048330605428424">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="9372133311654296" type="BigBird">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="X co-ordinate">ViewportLeft(BigBird.LayerName) + (ViewportRight(BigBird.LayerName) - ViewportLeft(BigBird.LayerName)) * 0.8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="7330483852328379" type="BigBird">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">&quot;Charging&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="8519374244758571" type="BigBird">
+                                    <param id="0" name="Animation">&quot;Charge&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2002866742232821">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="8292889310937637" type="BigBird" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="464587589185638" type="BigBird">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5216380068858729">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="6539488673920707" type="BigBird" />
+                        <condition id="-7" name="Compare instance variable" sid="7450867245060363" type="BigBird">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Charging&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="2552072445244339" type="BigBird">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;Running&quot;</param>
+                        </action>
+                        <action behavior="8Direction" id="5" name="Set acceleration" sid="8357867544956837" type="BigBird">
+                            <param id="0" name="Acceleration">BigBird.8Direction.MaxSpeed</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="3796342740938699" type="BigBird">
+                            <param id="0" name="Max Speed">BigBird.8Direction.MaxSpeed * 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8381997590410157">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="940554991825285" type="BigBird">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Running&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="3291520408028635" type="BigBird">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8003510203149034">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2880554674363796" type="Function">
+                            <param id="0" name="Name">&quot;Hit&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="2644878280960643" type="BigBird">
+                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2786682146520299" type="BigBird">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
