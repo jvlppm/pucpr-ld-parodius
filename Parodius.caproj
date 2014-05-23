@@ -19,6 +19,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
@@ -45,7 +46,7 @@
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="0">
+    <object-folder expanded="1">
         <object-folder expanded="0" name="Playable Characters">
             <object-type name="VicViper" sid="2641026747174929">
                 <plugin id="Sprite" />
@@ -127,7 +128,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="Scenery">
+        <object-folder expanded="1" name="Scenery">
             <object-folder expanded="0" name="Level1">
                 <object-type name="CircoBillboard" sid="9413054710168224">
                     <plugin id="Sprite" />
@@ -177,10 +178,22 @@
                     <plugin id="NinePatch" />
                     <texture />
                 </object-type>
+                <object-type name="Acropolis" sid="6831543706038511">
+                    <plugin id="Sprite" />
+                    <animation-folder expanded="1">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4702353571604696" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Circus" sid="6723195784247393">
+                    <plugin id="NinePatch" />
+                    <texture />
+                </object-type>
             </object-folder>
         </object-folder>
-        <object-folder expanded="0" name="Enemies">
-            <object-folder expanded="0" name="Level1">
+        <object-folder expanded="1" name="Enemies">
+            <object-folder expanded="1" name="Level1">
                 <object-type name="BlueHead" sid="1238599287601908">
                     <plugin id="Sprite" />
                     <animation-folder expanded="1">
@@ -336,6 +349,39 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="BigBird" sid="3570588967487432">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="State" sid="9930205414112325" type="string" />
+                    </instance-variables>
+                    <animation-folder expanded="1">
+                        <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="18207932173795" speed="8">
+                            <frame duration="1" hotspotX="0.128205" hotspotY="0.636364" />
+                            <frame duration="1" hotspotX="0.128205" hotspotY="0.659091" />
+                            <frame duration="1" hotspotX="0.295455" hotspotY="0.636364" />
+                            <frame duration="1" hotspotX="0.272727" hotspotY="0.636364" />
+                        </animation>
+                        <animation framecount="4" loop="0" name="Charge" pingpong="0" repeatcount="5" repeatto="0" sid="5717617976544261" speed="15">
+                            <frame duration="1" hotspotX="0.227273" hotspotY="0.636364" />
+                            <frame duration="1" hotspotX="0.227273" hotspotY="0.659091" />
+                            <frame duration="1" hotspotX="0.295455" hotspotY="0.636364" />
+                            <frame duration="1" hotspotX="0.272727" hotspotY="0.636364" />
+                        </animation>
+                        <animation framecount="4" loop="0" name="Hit" pingpong="0" repeatcount="3" repeatto="0" sid="3825972351703309" speed="10">
+                            <frame duration="1" hotspotX="0.227273" hotspotY="0.636364">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.6875" />
+                                    <point x="0" y="0.6875" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.138889" hotspotY="0.693878" />
+                            <frame duration="1" hotspotX="0.295455" hotspotY="0.732143" />
+                            <frame duration="1" hotspotX="0.295455" hotspotY="0.659091" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
         </object-folder>
         <object-folder expanded="0" name="Explosions">
@@ -389,18 +435,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Circus" sid="6723195784247393">
-            <plugin id="NinePatch" />
-            <texture />
-        </object-type>
-        <object-type name="Acropolis" sid="6831543706038511">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4702353571604696" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="BlueToys1" sid="6468663091590182">
             <plugin id="NinePatch" />
             <texture />
@@ -418,36 +452,16 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="BigBird" sid="3570588967487432">
+        <object-type name="BlackOverlay" sid="1092698505629636">
             <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="State" sid="9930205414112325" type="string" />
-            </instance-variables>
+            <behaviors>
+                <behavior-type name="Fade" sid="3589255330634536">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="18207932173795" speed="8">
-                    <frame duration="1" hotspotX="0.128205" hotspotY="0.636364" />
-                    <frame duration="1" hotspotX="0.128205" hotspotY="0.659091" />
-                    <frame duration="1" hotspotX="0.295455" hotspotY="0.636364" />
-                    <frame duration="1" hotspotX="0.272727" hotspotY="0.636364" />
-                </animation>
-                <animation framecount="4" loop="0" name="Charge" pingpong="0" repeatcount="5" repeatto="0" sid="5717617976544261" speed="15">
-                    <frame duration="1" hotspotX="0.227273" hotspotY="0.636364" />
-                    <frame duration="1" hotspotX="0.227273" hotspotY="0.659091" />
-                    <frame duration="1" hotspotX="0.295455" hotspotY="0.636364" />
-                    <frame duration="1" hotspotX="0.272727" hotspotY="0.636364" />
-                </animation>
-                <animation framecount="4" loop="0" name="Hit" pingpong="0" repeatcount="3" repeatto="0" sid="3825972351703309" speed="10">
-                    <frame duration="1" hotspotX="0.227273" hotspotY="0.636364">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="0.6875" />
-                            <point x="0" y="0.6875" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.138889" hotspotY="0.693878" />
-                    <frame duration="1" hotspotX="0.295455" hotspotY="0.732143" />
-                    <frame duration="1" hotspotX="0.295455" hotspotY="0.659091" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8330256885831483" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
                 </animation>
             </animation-folder>
         </object-type>

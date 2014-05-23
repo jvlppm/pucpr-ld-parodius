@@ -185,7 +185,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8908347693546878" title="Chickens">
+        <event-group description="" sid="8908347693546878" title="Chickens">
             <sub-events>
                 <event-block sid="1918873118270862">
                     <conditions>
@@ -197,6 +197,52 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="9008783143665927" type="Level1Chickens" />
                     </actions>
+                </event-block>
+                <event-block sid="1758280291925947">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="6951014644576827" type="System">
+                            <param id="0" name="Interval (seconds)">0.75</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2050481677535658">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="6489396572368301" type="Level1Chickens">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">PlayableCharacters.Y + Level1Chickens.YOffset - 32</param>
+                                </condition>
+                                <condition disabled="1" id="-2" name="Compare Y" sid="8581885239266846" type="Level1Chickens">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">PlayableCharacters.Y </param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="9949966793880063" type="Level1Chickens">
+                                    <param id="0" name="Instance variable">GoingUp</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3287967865944151">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="4718191419812385" type="Level1Chickens">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">PlayableCharacters.Y + Level1Chickens.YOffset + 32</param>
+                                </condition>
+                                <condition disabled="1" id="-2" name="Compare Y" sid="6742958835859561" type="Level1Chickens">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">PlayableCharacters.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="1607634181144339" type="Level1Chickens">
+                                    <param id="0" name="Instance variable">GoingUp</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="7500740662913884">
                     <conditions>
@@ -213,34 +259,6 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="2050481677535658">
-                            <conditions>
-                                <condition id="-2" name="Compare Y" sid="6489396572368301" type="Level1Chickens">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="Y co-ordinate">PlayableCharacters.Y + Level1Chickens.YOffset - 32</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="9949966793880063" type="Level1Chickens">
-                                    <param id="0" name="Instance variable">GoingUp</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="3287967865944151">
-                            <conditions>
-                                <condition id="-2" name="Compare Y" sid="4718191419812385" type="Level1Chickens">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="Y co-ordinate">PlayableCharacters.Y + Level1Chickens.YOffset + 32</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="1607634181144339" type="Level1Chickens">
-                                    <param id="0" name="Instance variable">GoingUp</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="5857537423691115">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="6149133131927191" type="Level1Chickens">
@@ -267,9 +285,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6301054243292651" title="BigBird">
+        <event-group collapsed="1" description="" sid="6301054243292651" title="BigBird">
             <sub-events>
-                <event-block collapsed="1" sid="3571859625333593">
+                <event-block sid="3571859625333593">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="5370212570588784" type="BigBird">
                             <param id="0" name="Instance variable">State</param>
@@ -287,7 +305,7 @@
                             <conditions>
                                 <condition id="-1" name="Compare X" sid="9372133311654296" type="BigBird">
                                     <param id="0" name="Comparison">3</param>
-                                    <param id="1" name="X co-ordinate">ViewportLeft(BigBird.LayerName) + (ViewportRight(BigBird.LayerName) - ViewportLeft(BigBird.LayerName)) * 0.8</param>
+                                    <param id="1" name="X co-ordinate">ViewportLeft(BigBird.LayerName) + (ViewportRight(BigBird.LayerName) - ViewportLeft(BigBird.LayerName)) * 0.9</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -328,11 +346,11 @@
                             <param id="0" name="Instance variable">State</param>
                             <param id="1" name="Value">&quot;Running&quot;</param>
                         </action>
-                        <action behavior="8Direction" id="5" name="Set acceleration" sid="8357867544956837" type="BigBird">
+                        <action behavior="8Direction" disabled="1" id="5" name="Set acceleration" sid="8357867544956837" type="BigBird">
                             <param id="0" name="Acceleration">BigBird.8Direction.MaxSpeed</param>
                         </action>
                         <action behavior="8Direction" id="4" name="Set max speed" sid="3796342740938699" type="BigBird">
-                            <param id="0" name="Max Speed">BigBird.8Direction.MaxSpeed * 2</param>
+                            <param id="0" name="Max Speed">BigBird.8Direction.MaxSpeed * 8</param>
                         </action>
                     </actions>
                 </event-block>
