@@ -449,7 +449,32 @@
                                     <param id="0" name="Seconds">2</param>
                                 </action>
                                 <action id="-26" name="Restart layout" sid="8007956260962778" type="System" />
+                                <action id="-11" name="Subtract from" sid="5496388582044907" type="System">
+                                    <param id="0" name="Variable">ExtraLives</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="6070744794411842">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="6313040147580673" type="System">
+                                            <param id="0" name="Variable">ExtraLives</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="8525384025742056" type="System">
+                                            <param id="0" name="Variable">ExtraLives</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="6551465989990889" type="System">
+                                            <param id="0" name="Variable">Score</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -478,6 +503,9 @@
                         </action>
                         <action id="-1" name="Set X" sid="5343449634599872" type="BlackOverlay">
                             <param id="0" name="X">ViewportLeft(BlackOverlay.LayerNumber)</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="3924977179484029" type="ExtraLives">
+                            <param id="0" name="Width">8*ExtraLives</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -551,7 +579,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6132420569273493" title="Items">
+        <event-group collapsed="1" description="" sid="6132420569273493" title="Items">
             <sub-events>
                 <event-block sid="7019949737916141">
                     <conditions>

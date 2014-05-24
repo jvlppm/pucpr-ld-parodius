@@ -987,6 +987,10 @@
         <object-type name="WebStorage" sid="9844802317318673">
             <plugin id="WebStorage" />
         </object-type>
+        <object-type name="ExtraLives" sid="1759914274620113">
+            <plugin id="NinePatch" />
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="PlayableCharacters" plugin-id="Sprite" sid="6659182174539103">

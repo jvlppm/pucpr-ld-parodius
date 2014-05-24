@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Enemies</name>
     <events>
+        <variable constant="0" name="ExtraLives" sid="1861744788144475" static="0" type="number">2</variable>
         <event-group description="" sid="8257614993568474" title="Enemies Common">
             <sub-events>
                 <event-block sid="1799635042287704">
@@ -122,7 +123,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="7941437890321188" type="Function">
                             <param id="0" name="Name">&quot;Hit&quot;</param>
-                            <param id="1" name="Parameter {n}">Bullets.UID{###}Enemies.UID</param>
+                            <param id="1" name="Parameter {n}">Enemies.UID{###}Bullets.Damage</param>
                         </action>
                     </actions>
                 </event-block>
@@ -150,6 +151,9 @@
                             <param id="0" name="Object">PlayableCharacters</param>
                         </condition>
                         <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="4741177930741753" type="PlayableCharacters" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3144807604355343" type="PlayableCharacters">
+                            <param id="0" name="Instance variable">IsDead</param>
+                        </condition>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4176242941690469" type="Enemies">
                             <param id="0" name="Instance variable">IsDead</param>
                         </condition>
@@ -170,23 +174,23 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block disabled="1" sid="2626931126189201">
+                        <event-block sid="2626931126189201">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="2629126151097532" type="Enemies">
                                     <param id="0" name="Instance variable">SimpleHits</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="1800813044855587" type="Function">
-                                    <param id="0" name="Name">&quot;Destroy&quot;</param>
-                                    <param id="1" name="Parameter {n}">Enemies.UID</param>
+                                <action id="0" name="Call function" sid="7963890322162452" type="Function">
+                                    <param id="0" name="Name">&quot;Hit&quot;</param>
+                                    <param id="1" name="Parameter {n}">Enemies.UID{###}1</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
                 <variable constant="0" name="Last" sid="3347080095428453" static="0" type="number">1</variable>
-                <event-block sid="6099375135136563">
+                <event-block collapsed="1" sid="6099375135136563">
                     <conditions>
                         <condition id="0" name="On function" sid="3738993523568975" type="Function">
                             <param id="0" name="Name">&quot;Destroy&quot;</param>
@@ -267,17 +271,14 @@
                         <condition id="0" name="On function" sid="4999532843052865" type="Function">
                             <param id="0" name="Name">&quot;Hit&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="8423509801354815" type="Bullets">
-                            <param id="0" name="Unique ID">Function.Param(0)</param>
-                        </condition>
                         <condition id="-14" name="Pick by unique ID" sid="3832611625768376" type="Enemies">
-                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-12" name="Subtract from" sid="8840268943390915" type="Enemies">
                             <param id="0" name="Instance variable">Life</param>
-                            <param id="1" name="Value">Bullets.Damage</param>
+                            <param id="1" name="Value">Function.Param(1)</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -601,7 +602,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6301054243292651" title="BigBird">
+        <event-group collapsed="1" description="" sid="6301054243292651" title="BigBird">
             <sub-events>
                 <event-block sid="3571859625333593">
                     <conditions>
@@ -690,7 +691,7 @@
                             <param id="0" name="Name">&quot;Hit&quot;</param>
                         </condition>
                         <condition id="-14" name="Pick by unique ID" sid="2644878280960643" type="BigBird">
-                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
                     </conditions>
                     <actions>
