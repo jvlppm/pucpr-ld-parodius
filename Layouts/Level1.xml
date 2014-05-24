@@ -355,6 +355,52 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="Boss1" uid="129">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LinkedUID>0</LinkedUID>
+                        <Life>5</Life>
+                        <DropItem>Boost</DropItem>
+                        <DropItemCount>0</DropItemCount>
+                        <SimpleHits>false</SimpleHits>
+                        <ActiveLayer>Foreground</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
+                        <State></State>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>60</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2432</x>
+                        <y>256</y>
+                        <z>0</z>
+                        <width>96</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5078125</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="BlueHead" uid="36">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -367,6 +413,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -410,6 +459,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -453,6 +505,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -496,6 +551,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -539,6 +597,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -582,6 +643,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -625,6 +689,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -668,6 +735,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -711,6 +781,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -754,6 +827,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -797,6 +873,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -840,6 +919,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -883,6 +965,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -926,6 +1011,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -969,6 +1057,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -1012,6 +1103,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -1055,6 +1149,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -1098,6 +1195,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -1141,6 +1241,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -1184,6 +1287,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -1227,6 +1333,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>-16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -1271,6 +1380,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -1315,6 +1427,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>0</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -1381,6 +1496,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>-16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -1425,6 +1543,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -1469,6 +1590,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>0</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -1513,6 +1637,9 @@
                         <Life>4</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>4</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -1556,6 +1683,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>-16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -1600,6 +1730,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -1644,6 +1777,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>0</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -1688,6 +1824,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>-16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -1732,6 +1871,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -1776,6 +1918,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>0</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -1820,6 +1965,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>0</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -1864,6 +2012,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>8</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -1908,6 +2059,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>-8</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -1952,6 +2106,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>0</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -1996,6 +2153,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>0</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2040,6 +2200,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>-16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2084,6 +2247,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2128,6 +2294,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>0</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2172,6 +2341,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>-16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2216,6 +2388,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2260,6 +2435,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>0</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2304,6 +2482,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>-16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2348,6 +2529,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2392,6 +2576,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>0</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2436,6 +2623,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>-16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2480,6 +2670,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2524,6 +2717,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>-16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2568,6 +2764,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2612,6 +2811,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>-16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2656,6 +2858,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2700,6 +2905,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>0</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2744,6 +2952,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>-16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2788,6 +2999,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2832,6 +3046,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>0</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2876,6 +3093,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>-16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2920,6 +3140,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -2964,6 +3187,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>0</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -3008,6 +3234,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -3052,6 +3281,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>0</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -3096,6 +3328,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>-16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -3140,6 +3375,9 @@
                         <Life>4</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>4</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <State>Advancing</State>
                     </instance-variables>
                     <behavior-instances>
@@ -3183,6 +3421,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>-16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -3227,6 +3468,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -3271,6 +3515,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>0</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -3315,6 +3562,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>0</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -3359,6 +3609,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>-16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -3403,6 +3656,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -3447,6 +3703,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>-16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -3491,6 +3750,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -3535,6 +3797,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>0</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -3579,6 +3844,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>8</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -3623,6 +3891,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>-8</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -3667,6 +3938,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>-16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -3711,6 +3985,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -3755,6 +4032,9 @@
                         <Life>1</Life>
                         <DropItem>Boost</DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>0</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -3799,6 +4079,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>-16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -3843,6 +4126,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -3887,6 +4173,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>-16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -3931,6 +4220,9 @@
                         <Life>1</Life>
                         <DropItem></DropItem>
                         <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>true</MoveToActiveLayer>
                         <YOffset>16</YOffset>
                         <GoingUp>true</GoingUp>
                     </instance-variables>
@@ -4128,8 +4420,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
-                        <y>120</y>
+                        <x>2120</x>
+                        <y>112</y>
                         <z>0</z>
                         <width>24</width>
                         <height>24</height>
