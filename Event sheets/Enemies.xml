@@ -123,7 +123,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="7941437890321188" type="Function">
                             <param id="0" name="Name">&quot;Hit&quot;</param>
-                            <param id="1" name="Parameter {n}">Enemies.UID{###}Bullets.Damage</param>
+                            <param id="1" name="Parameter {n}">Enemies.UID{###}Bullets.UID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -183,20 +183,25 @@
                             <actions>
                                 <action id="0" name="Call function" sid="7963890322162452" type="Function">
                                     <param id="0" name="Name">&quot;Hit&quot;</param>
-                                    <param id="1" name="Parameter {n}">Enemies.UID{###}1</param>
+                                    <param id="1" name="Parameter {n}">Enemies.UID</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <variable constant="0" name="Last" sid="3347080095428453" static="0" type="number">1</variable>
-                <event-block collapsed="1" sid="6099375135136563">
+                <variable constant="0" name="Last" sid="3347080095428453" static="0" type="number">0</variable>
+                <event-block sid="6099375135136563">
                     <conditions>
                         <condition id="0" name="On function" sid="3738993523568975" type="Function">
                             <param id="0" name="Name">&quot;Destroy&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="7122177678612857" type="System">
+                            <param id="0" name="Variable">Last</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <comment>Verifica se faz parte de um grupo</comment>
                         <event-block sid="4035338603809353">
@@ -266,7 +271,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="3859238823017108">
+                <event-block sid="3859238823017108">
                     <conditions>
                         <condition id="0" name="On function" sid="4999532843052865" type="Function">
                             <param id="0" name="Name">&quot;Hit&quot;</param>
@@ -276,12 +281,61 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-12" name="Subtract from" sid="8840268943390915" type="Enemies">
-                            <param id="0" name="Instance variable">Life</param>
-                            <param id="1" name="Value">Function.Param(1)</param>
+                        <action behavior="Flash" id="0" name="Flash" sid="7408775696801642" type="Enemies">
+                            <param id="0" name="&apos;On&apos; time">0.01</param>
+                            <param id="1" name="&apos;Off&apos; time">0.01</param>
+                            <param id="2" name="Duration">1.0</param>
                         </action>
                     </actions>
                     <sub-events>
+                        <event-block sid="3524821986879823">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="8359114419405525" type="Bullets">
+                                    <param id="0" name="Unique ID">Function.Param(1)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="3715990845167451" type="Enemies">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Value">Bullets.Damage</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="1952360209443793">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="2682984041943312" type="Enemies">
+                                            <param id="0" name="Instance variable">Life</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="6235967224373378" type="Bullets">
+                                            <param id="0" name="Object">SmallHit</param>
+                                            <param id="1" name="Layer">Enemies.LayerName</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9116631676807418">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="6327204023616623" type="Bullets" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="3831449503923539">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="449986355117354" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="8840268943390915" type="Enemies">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="8373943886680955">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="670107418759604" type="Enemies">
@@ -291,28 +345,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="5673485128775426" type="Bullets" />
                                 <action id="0" name="Call function" sid="6206973308866279" type="Function">
                                     <param id="0" name="Name">&quot;Destroy&quot;</param>
-                                    <param id="1" name="Parameter {n}">Enemies.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9802271280317375">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="5072844225408946" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="6235967224373378" type="Bullets">
-                                    <param id="0" name="Object">SmallHit</param>
-                                    <param id="1" name="Layer">Enemies.LayerName</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-9" name="Destroy" sid="6327204023616623" type="Bullets" />
-                                <action behavior="Flash" id="0" name="Flash" sid="7408775696801642" type="Enemies">
-                                    <param id="0" name="&apos;On&apos; time">0.01</param>
-                                    <param id="1" name="&apos;Off&apos; time">0.01</param>
-                                    <param id="2" name="Duration">1.0</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -526,7 +561,7 @@
                             <conditions>
                                 <condition id="-2" name="Compare Y" sid="6489396572368301" type="Level1Chickens">
                                     <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="Y co-ordinate">PlayableCharacters.Y + Level1Chickens.YOffset - 32</param>
+                                    <param id="1" name="Y co-ordinate">PlayableCharacters.Y + Level1Chickens.YOffset</param>
                                 </condition>
                                 <condition disabled="1" id="-2" name="Compare Y" sid="8581885239266846" type="Level1Chickens">
                                     <param id="0" name="Comparison">2</param>
@@ -544,7 +579,7 @@
                             <conditions>
                                 <condition id="-2" name="Compare Y" sid="4718191419812385" type="Level1Chickens">
                                     <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="Y co-ordinate">PlayableCharacters.Y + Level1Chickens.YOffset + 32</param>
+                                    <param id="1" name="Y co-ordinate">PlayableCharacters.Y + Level1Chickens.YOffset</param>
                                 </condition>
                                 <condition disabled="1" id="-2" name="Compare Y" sid="6742958835859561" type="Level1Chickens">
                                     <param id="0" name="Comparison">4</param>
