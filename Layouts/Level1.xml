@@ -5228,6 +5228,7 @@
                     </properties>
                     <instance-variables>
                         <Boosts>1</Boosts>
+                        <IsEnabled>true</IsEnabled>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5253,6 +5254,7 @@
                     </properties>
                     <instance-variables>
                         <Boosts>2</Boosts>
+                        <IsEnabled>true</IsEnabled>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5278,6 +5280,7 @@
                     </properties>
                     <instance-variables>
                         <Boosts>3</Boosts>
+                        <IsEnabled>true</IsEnabled>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5303,6 +5306,7 @@
                     </properties>
                     <instance-variables>
                         <Boosts>4</Boosts>
+                        <IsEnabled>true</IsEnabled>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

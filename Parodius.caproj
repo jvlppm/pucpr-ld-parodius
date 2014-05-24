@@ -49,7 +49,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="1" name="Playable Characters">
+        <object-folder expanded="0" name="Playable Characters">
             <object-type name="VicViper" sid="2641026747174929">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -868,7 +868,10 @@
                     <animation framecount="1" loop="0" name="Activated" pingpong="0" repeatcount="1" repeatto="0" sid="5558802924649261" speed="5">
                         <frame duration="1" hotspotX="0.125" hotspotY="0.625" />
                     </animation>
-                    <animation framecount="1" loop="0" name="Disabled" pingpong="0" repeatcount="1" repeatto="0" sid="5029652148730622" speed="5">
+                    <animation framecount="1" loop="0" name="Empty" pingpong="0" repeatcount="1" repeatto="0" sid="5029652148730622" speed="5">
+                        <frame duration="1" hotspotX="0.125" hotspotY="0.625" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="EmptyActivated" pingpong="0" repeatcount="1" repeatto="0" sid="6673119785072485" speed="5">
                         <frame duration="1" hotspotX="0.125" hotspotY="0.625" />
                     </animation>
                 </animation-folder>
@@ -882,7 +885,10 @@
                     <animation framecount="1" loop="0" name="Activated" pingpong="0" repeatcount="1" repeatto="0" sid="1682620419478602" speed="5">
                         <frame duration="1" hotspotX="0.125" hotspotY="0.625" />
                     </animation>
-                    <animation framecount="1" loop="0" name="Disabled" pingpong="0" repeatcount="1" repeatto="0" sid="1745598755417065" speed="5">
+                    <animation framecount="1" loop="0" name="Empty" pingpong="0" repeatcount="1" repeatto="0" sid="1745598755417065" speed="5">
+                        <frame duration="1" hotspotX="0.125" hotspotY="0.625" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="EmptyActivated" pingpong="0" repeatcount="1" repeatto="0" sid="6814369883048337" speed="5">
                         <frame duration="1" hotspotX="0.125" hotspotY="0.625" />
                     </animation>
                 </animation-folder>
@@ -896,7 +902,10 @@
                     <animation framecount="1" loop="0" name="Activated" pingpong="0" repeatcount="1" repeatto="0" sid="8773796869380231" speed="5">
                         <frame duration="1" hotspotX="0.125" hotspotY="0.625" />
                     </animation>
-                    <animation framecount="1" loop="0" name="Disabled" pingpong="0" repeatcount="1" repeatto="0" sid="9819492547321051" speed="5">
+                    <animation framecount="1" loop="0" name="Empty" pingpong="0" repeatcount="1" repeatto="0" sid="8782090756796299" speed="5">
+                        <frame duration="1" hotspotX="0.125" hotspotY="0.625" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="EmptyActivated" pingpong="0" repeatcount="1" repeatto="0" sid="9819492547321051" speed="5">
                         <frame duration="1" hotspotX="0.125" hotspotY="0.625" />
                     </animation>
                 </animation-folder>
@@ -910,8 +919,11 @@
                     <animation framecount="1" loop="0" name="Activated" pingpong="0" repeatcount="1" repeatto="0" sid="1471465226426239" speed="5">
                         <frame duration="1" hotspotX="0.125" hotspotY="0.625" />
                     </animation>
-                    <animation framecount="1" loop="0" name="Disabled" pingpong="0" repeatcount="1" repeatto="0" sid="391939581535945" speed="5">
+                    <animation framecount="1" loop="0" name="Empty" pingpong="0" repeatcount="1" repeatto="0" sid="391939581535945" speed="5">
                         <frame duration="1" hotspotX="0.125" hotspotY="0.625" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="EmptyActivated" pingpong="0" repeatcount="1" repeatto="0" sid="2618176801236782" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1103,6 +1115,7 @@
             </members>
             <instance-variables>
                 <instance-variable name="Boosts" sid="7554296502865399" type="number" />
+                <instance-variable name="IsEnabled" sid="5208777421557004" type="boolean" />
             </instance-variables>
         </family>
     </families>

@@ -190,7 +190,7 @@
                     </sub-events>
                 </event-block>
                 <variable constant="0" name="Last" sid="3347080095428453" static="0" type="number">0</variable>
-                <event-block sid="6099375135136563">
+                <event-block collapsed="1" sid="6099375135136563">
                     <conditions>
                         <condition id="0" name="On function" sid="3738993523568975" type="Function">
                             <param id="0" name="Name">&quot;Destroy&quot;</param>
@@ -312,7 +312,7 @@
                                     <actions>
                                         <action id="0" name="Spawn another object" sid="6235967224373378" type="Bullets">
                                             <param id="0" name="Object">SmallHit</param>
-                                            <param id="1" name="Layer">Enemies.LayerName</param>
+                                            <param id="1" name="Layer">Bullets.LayerName</param>
                                             <param id="2" name="Image point">0</param>
                                         </action>
                                     </actions>
