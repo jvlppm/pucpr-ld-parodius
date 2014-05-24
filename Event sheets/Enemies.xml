@@ -11,6 +11,9 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="6306642136456753" type="Enemies">
                             <param id="0" name="Instance variable">MoveToActiveLayer</param>
                         </condition>
+                        <condition id="-11" name="For Each" sid="999527161293755" type="System">
+                            <param id="0" name="Object">Enemies</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-13" name="Set boolean" sid="2723667085558811" type="Enemies">
@@ -23,7 +26,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="4646150867679423">
+                <event-block collapsed="1" sid="4646150867679423">
                     <conditions>
                         <condition id="0" name="On function" sid="3634748442343289" type="Function">
                             <param id="0" name="Name">&quot;ActivateEnemy&quot;</param>
@@ -79,6 +82,25 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="8799271212371809">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="3013495211246622" type="Enemies">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">ViewportLeft(Enemies.LayerNumber)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8333488246548309">
+                            <conditions>
+                                <condition id="-3" inverted="1" name="Is on-screen" sid="6387025257996281" type="Enemies" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="7985912730518778" type="Enemies" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="4329491086821177" title="Hits">
@@ -89,7 +111,7 @@
                         <condition id="1" name="Is overlapping another object" sid="1259523389538673" type="Bullets">
                             <param id="0" name="Object">Enemies</param>
                         </condition>
-                        <condition id="-16" name="Is on layer" sid="6761746573609994" type="Bullets">
+                        <condition disabled="1" id="-16" name="Is on layer" sid="6761746573609994" type="Bullets">
                             <param id="0" name="Layer">Enemies.LayerName</param>
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="3215085852222155" type="Enemies">
@@ -124,20 +146,21 @@
                 <comment>Jogador morrer ao tocar os inimigos</comment>
                 <event-block sid="1953891852661875">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="2629126151097532" type="Enemies">
-                            <param id="0" name="Instance variable">SimpleHits</param>
-                        </condition>
                         <condition id="1" name="Is overlapping another object" sid="1505974564070166" type="Enemies">
                             <param id="0" name="Object">PlayableCharacters</param>
                         </condition>
                         <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="4741177930741753" type="PlayableCharacters" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4176242941690469" type="Enemies">
+                            <param id="0" name="Instance variable">IsDead</param>
+                        </condition>
+                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="8749350989155799" type="Enemies" />
+                        <condition id="-10" name="Compare opacity" sid="3317020831440826" type="Enemies">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Opacity">100</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="1800813044855587" type="Function">
-                            <param id="0" name="Name">&quot;Destroy&quot;</param>
-                            <param id="1" name="Parameter {n}">Enemies.UID</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="5194446574571528" type="PlayableCharacters">
+                        <action breakpoint="1" id="-13" name="Set boolean" sid="5194446574571528" type="PlayableCharacters">
                             <param id="0" name="Instance variable">IsDead</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -146,6 +169,21 @@
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block disabled="1" sid="2626931126189201">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="2629126151097532" type="Enemies">
+                                    <param id="0" name="Instance variable">SimpleHits</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1800813044855587" type="Function">
+                                    <param id="0" name="Name">&quot;Destroy&quot;</param>
+                                    <param id="1" name="Parameter {n}">Enemies.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <variable constant="0" name="Last" sid="3347080095428453" static="0" type="number">1</variable>
                 <event-block collapsed="1" sid="6099375135136563">
@@ -471,7 +509,7 @@
                         <action id="-9" name="Destroy" sid="9008783143665927" type="Level1Chickens" />
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="1758280291925947">
+                <event-block sid="1758280291925947">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="6951014644576827" type="System">
                             <param id="0" name="Interval (seconds)">0.75</param>
@@ -517,7 +555,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="7500740662913884">
+                <event-block sid="7500740662913884">
                     <conditions>
                         <condition id="-11" name="For Each" sid="302806189388674" type="System">
                             <param id="0" name="Object">Level1Chickens</param>
@@ -826,7 +864,21 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block collapsed="1" sid="6706510580682389">
+                        <event-block sid="8152468448686335">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2294915969202903" type="Boss1">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Dying&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Set speed" sid="2567899024445053" type="Boss1">
+                                    <param id="0" name="Speed">Boss1.AnimationSpeed - (Boss1.AnimationSpeed * dt)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6706510580682389">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="5876579091410863" type="Boss1">
                                     <param id="0" name="Instance variable">State</param>
@@ -888,7 +940,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="4075435788472844">
+                        <event-block collapsed="1" sid="4075435788472844">
                             <conditions>
                                 <condition id="1" name="Is overlapping another object" sid="4302997033023519" type="Bullets">
                                     <param id="0" name="Object">Boss1</param>
@@ -959,12 +1011,19 @@
                                 <condition id="-14" name="Pick by unique ID" sid="2273715988346045" type="Boss1">
                                     <param id="0" name="Unique ID">Function.Param(1)</param>
                                 </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="9618068608569582" type="Enemies">
+                                    <param id="0" name="Unique ID">Function.Param(1)</param>
+                                </condition>
                                 <condition id="-7" name="Compare instance variable" sid="5572545549832009" type="Boss1">
                                     <param id="0" name="Instance variable">State</param>
                                     <param id="1" name="Comparison">1</param>
                                     <param id="2" name="Value">&quot;Hit&quot;</param>
                                 </condition>
                                 <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="6352961322961837" type="Boss1" />
+                                <condition id="-10" name="Compare opacity" sid="3054279627015069" type="Boss1">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Opacity">100</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
@@ -976,10 +1035,8 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Flash" id="0" name="Flash" sid="4942575524647381" type="Boss1">
-                                            <param id="0" name="&apos;On&apos; time">0.01</param>
-                                            <param id="1" name="&apos;Off&apos; time">0.01</param>
-                                            <param id="2" name="Duration">3.0</param>
+                                        <action id="-16" name="Set opacity" sid="3305118926779964" type="Boss1">
+                                            <param id="0" name="Opacity">80</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="9367455923017611" type="System">
                                             <param id="0" name="Variable">OriginalState</param>
@@ -1005,26 +1062,68 @@
                                             <param id="0" name="Layer">&quot;Foreground&quot;</param>
                                         </action>
                                         <action id="-9" name="Destroy" sid="7232459618191167" type="Bullets" />
-                                        <action id="4" name="Set animation" sid="4351491616156447" type="Boss1">
-                                            <param id="0" name="Animation">&quot;Hit&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="-12" name="Subtract from" sid="4495316352754958" type="Boss1">
-                                            <param id="0" name="Instance variable">Life</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="5061686949894295" type="System">
-                                            <param id="0" name="Seconds">1</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="2383523698460514" type="Boss1">
-                                            <param id="0" name="Animation">&quot;Walking&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="9997335511129143" type="Boss1">
-                                            <param id="0" name="Instance variable">State</param>
-                                            <param id="1" name="Value">OriginalState</param>
-                                        </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="9115306335618733">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="870600413112532" type="Boss1">
+                                                    <param id="0" name="Instance variable">Life</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="4351491616156447" type="Boss1">
+                                                    <param id="0" name="Animation">&quot;Hit&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-12" name="Subtract from" sid="4495316352754958" type="Boss1">
+                                                    <param id="0" name="Instance variable">Life</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="5061686949894295" type="System">
+                                                    <param id="0" name="Seconds">1</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="2383523698460514" type="Boss1">
+                                                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="9997335511129143" type="Boss1">
+                                                    <param id="0" name="Instance variable">State</param>
+                                                    <param id="1" name="Value">OriginalState</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="8714885467183938" type="System">
+                                                    <param id="0" name="Seconds">1</param>
+                                                </action>
+                                                <action id="-16" name="Set opacity" sid="4871318263154023" type="Boss1">
+                                                    <param id="0" name="Opacity">100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="7620439182793343">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="8391696325545368" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="1128853128170336" type="Boss1">
+                                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="2117399949591626" type="Boss1">
+                                                    <param id="0" name="Instance variable">State</param>
+                                                    <param id="1" name="Value">&quot;Dying&quot;</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="9357157284281448" type="System">
+                                                    <param id="0" name="Seconds">2</param>
+                                                </action>
+                                                <action id="-9" name="Destroy" sid="987918624723224" type="Boss1" />
+                                                <action id="-13" name="Set boolean" sid="485837703826752" type="Enemies">
+                                                    <param id="0" name="Instance variable">IsDead</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
