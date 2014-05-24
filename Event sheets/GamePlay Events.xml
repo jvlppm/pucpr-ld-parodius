@@ -3,9 +3,11 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GamePlay Events</name>
     <events>
+        <variable constant="0" name="HighScore" sid="1551581350836536" static="0" type="number">0</variable>
+        <variable constant="0" name="Score" sid="2083927557107547" static="0" type="number">0</variable>
         <include>Enemies</include>
         <include>VicViper</include>
-        <event-group description="" sid="8850219158393638" title="Playable Characters">
+        <event-group collapsed="1" description="" sid="8850219158393638" title="Playable Characters">
             <sub-events>
                 <event-group collapsed="1" description="" sid="7673411034528074" title="Controls">
                     <sub-events>
@@ -541,6 +543,10 @@
                     </conditions>
                     <actions>
                         <action behavior="Fade" id="1" name="Start fade" sid="1122019492810851" type="BlackOverlay" />
+                        <action id="-9" name="Set value" sid="170686934690327" type="System">
+                            <param id="0" name="Variable">HighScore</param>
+                            <param id="1" name="Value">int(WebStorage.LocalValue(&quot;HighScore&quot;))</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -614,6 +620,75 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-9" name="Destroy" sid="1116391018905598" type="Boost" />
+                        <action id="-10" name="Add to" sid="7810237732178933" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="266630034233229" title="HUD">
+            <sub-events>
+                <event-block sid="4594867311967395">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5229173831813728" type="Label">
+                            <param id="0" name="Instance variable">Binding</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Player&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="5704424702480357" type="Label">
+                            <param id="0" name="Text">(PlayableCharacters.PlayerIndex + 1) &amp; &quot;P&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5738092429738857">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3353476481071369" type="Label">
+                            <param id="0" name="Instance variable">Binding</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Score&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="8214449451462088" type="Label">
+                            <param id="0" name="Text">Score</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7328164536102436">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1259089950619522" type="Label">
+                            <param id="0" name="Instance variable">Binding</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;HighScore&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="6483881497571706" type="Label">
+                            <param id="0" name="Text">HighScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7887973415253292">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6369759204676921" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">HighScore</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5581503655595217" type="System">
+                            <param id="0" name="Variable">HighScore</param>
+                            <param id="1" name="Value">Score</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="4486984177231317" type="WebStorage">
+                            <param id="0" name="Key">&quot;HighScore&quot;</param>
+                            <param id="1" name="Value">HighScore</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>

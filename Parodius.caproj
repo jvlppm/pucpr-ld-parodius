@@ -14,6 +14,8 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
@@ -42,12 +44,12 @@
         <prop name="Orientations">Any</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D web</prop>
-        <prop name="Preview browser">Node-Webkit</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="1" name="Playable Characters">
+        <object-folder expanded="0" name="Playable Characters">
             <object-type name="VicViper" sid="2641026747174929">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
@@ -368,7 +370,7 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-folder expanded="1" name="Enemies">
+        <object-folder expanded="0" name="Enemies">
             <object-type name="BigBird" sid="3570588967487432">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -975,6 +977,16 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Label" sid="6646705970169473">
+            <plugin id="Spritefont2" />
+            <instance-variables>
+                <instance-variable name="Binding" sid="4646491858121462" type="string" />
+            </instance-variables>
+            <texture />
+        </object-type>
+        <object-type name="WebStorage" sid="9844802317318673">
+            <plugin id="WebStorage" />
+        </object-type>
     </object-folder>
     <families>
         <family name="PlayableCharacters" plugin-id="Sprite" sid="6659182174539103">
@@ -1036,6 +1048,7 @@
                 <instance-variable name="ActiveLayer" sid="6976648190348408" type="string" />
                 <instance-variable name="MoveToActiveLayer" sid="7856342173511696" type="boolean" />
                 <instance-variable name="IsDead" sid="1521581253788451" type="boolean" />
+                <instance-variable name="Points" sid="1581716585049351" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="2978315605207618">
@@ -1091,6 +1104,7 @@
             </properties>
         </global-instance>
         <global-instance type="Function" uid="37" />
+        <global-instance type="WebStorage" uid="134" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
