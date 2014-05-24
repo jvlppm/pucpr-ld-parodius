@@ -5,9 +5,9 @@
     <events>
         <event-group description="" sid="7655464285447706" title="VicViper">
             <sub-events>
-                <event-group description="" sid="1151816588679161" title="VicViper Boosts">
+                <event-group collapsed="1" description="" sid="1151816588679161" title="VicViper Boosts">
                     <sub-events>
-                        <event-block sid="8248100177816901">
+                        <event-block collapsed="1" sid="8248100177816901">
                             <conditions>
                                 <condition id="0" name="On function" sid="9612079706182088" type="Function">
                                     <param id="0" name="Name">&quot;UseBoost&quot;</param>
@@ -57,6 +57,26 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="1368105614542375">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="8011982763948619" type="MissileIndicator">
+                                            <param id="0" name="Animation">&quot;Activated&quot;</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="9773828521482435" type="MissileIndicator">
+                                            <param id="0" name="Instance variable">IsEnabled</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="5328715839661909" type="VicViper">
+                                            <param id="0" name="Instance variable">DropMissile</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="587371555285426" type="VicViper">
+                                            <param id="0" name="Instance variable">AvailableBoost</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
@@ -78,7 +98,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block any="1" sid="5577929714118978">
+                        <event-block any="1" collapsed="1" sid="5577929714118978">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="6308824704014192" type="VicViper">
                                     <param id="0" name="Instance variable">Weapon</param>
@@ -152,18 +172,35 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="425555063985922">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="3439320888004327" type="VicViper">
+                                    <param id="0" name="Instance variable">DropMissile</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="1128898712131864" type="VicViper">
+                                    <param id="0" name="Object">DropMissile</param>
+                                    <param id="1" name="Layer">VicViper.LayerNumber</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Platform" id="8" name="Set vector X" sid="437082773519141" type="DropMissile">
+                                    <param id="0" name="Vector X">50</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="2633276771921851">
+                <event-block sid="2682703028344034">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="3365324193255564" type="VicViper">
+                        <condition id="-7" name="Compare instance variable" sid="5612769796241752" type="VicViper">
                             <param id="0" name="Instance variable">Weapon</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;Double&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="5786385286136912" type="DoubleIndicator">
+                        <action id="-13" name="Set boolean" sid="3408057461595643" type="DoubleIndicator">
                             <param id="0" name="Instance variable">IsEnabled</param>
                             <param id="1" name="Value">0</param>
                         </action>
@@ -180,7 +217,61 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="2633276771921851">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="3365324193255564" type="VicViper">
+                            <param id="0" name="Instance variable">DropMissile</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="5786385286136912" type="MissileIndicator">
+                            <param id="0" name="Instance variable">IsEnabled</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1451953168756452">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="6580187538875339" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="131516788386607" type="MissileIndicator">
+                            <param id="0" name="Instance variable">IsEnabled</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7673029158361878">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="6498991315252474" type="DropMissile" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="5830265449153369" type="DropMissile">
+                            <param id="0" name="Vector X">75</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="4831780147516786" type="DropMissile">
+                            <param id="0" name="Animation">&quot;Running&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="1139121908001303">
+            <conditions>
+                <condition behavior="Platform" id="1" name="Compare speed" sid="6168179457668656" type="DropMissile">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Speed">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="7562944471286889" type="DropMissile">
+                    <param id="0" name="Object">SimpleExplosion</param>
+                    <param id="1" name="Layer">DropMissile.LayerNumber</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="6513270439315053" type="DropMissile" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

@@ -23,6 +23,8 @@
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
     <used-effects />
@@ -54,6 +56,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="State" sid="8501065602324809" type="string" />
+                    <instance-variable name="DropMissile" sid="9454541169193298" type="boolean" />
                 </instance-variables>
                 <animation-folder expanded="1">
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9262602033363283" speed="10">
@@ -347,10 +350,6 @@
                     <plugin id="NinePatch" />
                     <texture />
                 </object-type>
-                <object-type name="YellowToys1" sid="4740585771734932">
-                    <plugin id="NinePatch" />
-                    <texture />
-                </object-type>
                 <object-type name="CuteToys" sid="9021412900032309">
                     <plugin id="NinePatch" />
                     <texture />
@@ -371,7 +370,32 @@
                     <plugin id="NinePatch" />
                     <texture />
                 </object-type>
+                <object-type name="YellowToys" sid="6823872891019425">
+                    <plugin id="Sprite" />
+                    <animation-folder expanded="1">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7162833808098918" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.364746" y="0.675781" />
+                                    <point x="0.523926" y="0.119141" />
+                                    <point x="0.833984" y="0.144531" />
+                                    <point x="0.996094" y="0.984375" />
+                                    <point x="0.00390625" y="0.984375" />
+                                    <point x="0.03125" y="0.699219" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
+            <object-type name="JumpThru" sid="5247466731069576">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9950449586459634" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder expanded="0" name="Enemies">
             <object-type name="BigBird" sid="3570588967487432">
@@ -858,7 +882,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="HUD">
+        <object-folder expanded="0" name="HUD">
             <object-type name="SpeedIndicator" sid="6365847308617516">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
@@ -1006,6 +1030,24 @@
             <plugin id="NinePatch" />
             <texture />
         </object-type>
+        <object-type name="DropMissile" sid="5603443824550954">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="2266434506187842">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6922594260785958" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="3" loop="1" name="Running" pingpong="1" repeatcount="1" repeatto="0" sid="2671605166279074" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="PlayableCharacters" plugin-id="Sprite" sid="6659182174539103">
@@ -1023,6 +1065,7 @@
                 <instance-variable name="InitialMaxSpeed" sid="7806497847965467" type="number" />
                 <instance-variable name="AvailableBoost" sid="6781071627116072" type="number" />
                 <instance-variable name="IsDead" sid="1731321067233131" type="boolean" />
+                <instance-variable name="Invincible" sid="6909267011122383" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="1019247201064265">
@@ -1035,6 +1078,7 @@
         </family>
         <family name="Bullets" plugin-id="Sprite" sid="2334774422848744">
             <members>
+                <member>DropMissile</member>
                 <member>Missile</member>
             </members>
             <instance-variables>
@@ -1117,6 +1161,17 @@
                 <instance-variable name="Boosts" sid="7554296502865399" type="number" />
                 <instance-variable name="IsEnabled" sid="5208777421557004" type="boolean" />
             </instance-variables>
+        </family>
+        <family name="Platforms" plugin-id="Sprite" sid="6715186568577773">
+            <members>
+                <member>JumpThru</member>
+                <member>YellowToys</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="4823404942488812">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder expanded="1">

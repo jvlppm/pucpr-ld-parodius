@@ -150,7 +150,6 @@
                         <condition id="1" name="Is overlapping another object" sid="1505974564070166" type="Enemies">
                             <param id="0" name="Object">PlayableCharacters</param>
                         </condition>
-                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="4741177930741753" type="PlayableCharacters" />
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3144807604355343" type="PlayableCharacters">
                             <param id="0" name="Instance variable">IsDead</param>
                         </condition>
@@ -163,17 +162,26 @@
                             <param id="1" name="Opacity">100</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action breakpoint="1" id="-13" name="Set boolean" sid="5194446574571528" type="PlayableCharacters">
-                            <param id="0" name="Instance variable">IsDead</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="6912359887645257" type="PlayableCharacters">
-                            <param id="0" name="Animation">&quot;Death&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
+                        <event-block sid="8092774479293935">
+                            <conditions>
+                                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="4741177930741753" type="PlayableCharacters" />
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2091291474083115" type="PlayableCharacters">
+                                    <param id="0" name="Instance variable">Invincible</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action breakpoint="1" id="-13" name="Set boolean" sid="5194446574571528" type="PlayableCharacters">
+                                    <param id="0" name="Instance variable">IsDead</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="6912359887645257" type="PlayableCharacters">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="2626931126189201">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="2629126151097532" type="Enemies">

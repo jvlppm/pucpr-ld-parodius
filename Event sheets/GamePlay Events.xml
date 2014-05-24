@@ -7,11 +7,11 @@
         <variable constant="0" name="Score" sid="2083927557107547" static="0" type="number">0</variable>
         <include>Enemies</include>
         <include>VicViper</include>
-        <event-group collapsed="1" description="" sid="8850219158393638" title="Playable Characters">
+        <event-group description="" sid="8850219158393638" title="Playable Characters">
             <sub-events>
-                <event-group description="" sid="7673411034528074" title="Controls">
+                <event-group collapsed="1" description="" sid="7673411034528074" title="Controls">
                     <sub-events>
-                        <event-block sid="7535746931583424">
+                        <event-block collapsed="1" sid="7535746931583424">
                             <conditions>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3564680948473943" type="PlayableCharacters">
                                     <param id="0" name="Instance variable">IsDead</param>
@@ -185,7 +185,7 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="9096403076042417">
+                                        <event-block collapsed="1" sid="9096403076042417">
                                             <conditions>
                                                 <condition id="-7" name="Compare instance variable" sid="8358980510906363" type="PlayableCharacters">
                                                     <param id="0" name="Instance variable">PlayerIndex</param>
@@ -323,7 +323,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="711934247872175">
+                        <event-block collapsed="1" sid="711934247872175">
                             <conditions>
                                 <condition id="4" name="On finished" sid="4288277385253677" type="PlayableCharacters">
                                     <param id="0" name="Animation">&quot;Death&quot;</param>
@@ -465,7 +465,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6132420569273493" title="Items">
+        <event-group collapsed="1" description="" sid="6132420569273493" title="Items">
             <sub-events>
                 <event-block collapsed="1" sid="7019949737916141">
                     <conditions>
@@ -542,7 +542,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="266630034233229" title="HUD">
+        <event-group collapsed="1" description="" sid="266630034233229" title="HUD">
             <sub-events>
                 <event-block sid="4594867311967395">
                     <conditions>
