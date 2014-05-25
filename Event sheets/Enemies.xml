@@ -135,6 +135,23 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Balas atingindo obstáculos</comment>
+                <event-block sid="2315585503860729">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9685511629761351" type="Bullets">
+                            <param id="0" name="Object">Walls</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="4175728818007577" type="Bullets">
+                            <param id="0" name="Object">SmallHit</param>
+                            <param id="1" name="Layer">Bullets.LayerName</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="6685383826642371" type="Bullets" />
+                    </actions>
+                </event-block>
+                <comment>Remover explosões</comment>
                 <event-block sid="6551341256459602">
                     <conditions>
                         <condition id="5" name="On any finished" sid="8647283451170063" type="Explosions" />
@@ -158,9 +175,6 @@
                         <condition id="0" name="On collision with another object" sid="1505974564070166" type="Enemies">
                             <param id="0" name="Object">PlayableCharacters</param>
                         </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3144807604355343" type="PlayableCharacters">
-                            <param id="0" name="Instance variable">IsDead</param>
-                        </condition>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4176242941690469" type="Enemies">
                             <param id="0" name="Instance variable">IsDead</param>
                         </condition>
@@ -170,26 +184,13 @@
                             <param id="1" name="Opacity">100</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Call function" sid="1511924435975764" type="Function">
+                            <param id="0" name="Name">&quot;HitPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}">PlayableCharacters.UID</param>
+                        </action>
+                    </actions>
                     <sub-events>
-                        <event-block sid="8092774479293935">
-                            <conditions>
-                                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="4741177930741753" type="PlayableCharacters" />
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2091291474083115" type="PlayableCharacters">
-                                    <param id="0" name="Instance variable">Invincible</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action breakpoint="1" id="-13" name="Set boolean" sid="5194446574571528" type="PlayableCharacters">
-                                    <param id="0" name="Instance variable">IsDead</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="6912359887645257" type="PlayableCharacters">
-                                    <param id="0" name="Animation">&quot;Death&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="2626931126189201">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="2629126151097532" type="Enemies">
@@ -205,7 +206,22 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>Jogador morrer ao tocar obstáculos</comment>
+                <event-block sid="4040153378015884">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1094313537498469" type="PlayableCharacters">
+                            <param id="0" name="Object">Walls</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="6079530014996152" type="Function">
+                            <param id="0" name="Name">&quot;HitPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}">PlayableCharacters.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <variable constant="0" name="Last" sid="3347080095428453" static="0" type="number">0</variable>
+                <comment>Destruir inimigos e grupos</comment>
                 <event-block collapsed="1" sid="6099375135136563">
                     <conditions>
                         <condition id="0" name="On function" sid="3738993523568975" type="Function">
@@ -287,7 +303,8 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="3859238823017108">
+                <comment>Atingir inimigos</comment>
+                <event-block collapsed="1" sid="3859238823017108">
                     <conditions>
                         <condition id="0" name="On function" sid="4999532843052865" type="Function">
                             <param id="0" name="Name">&quot;Hit&quot;</param>
@@ -306,7 +323,7 @@
                                 <action behavior="Flash" id="0" name="Flash" sid="2444267486518073" type="Enemies">
                                     <param id="0" name="&apos;On&apos; time">0.01</param>
                                     <param id="1" name="&apos;Off&apos; time">0.01</param>
-                                    <param id="2" name="Duration">0.5</param>
+                                    <param id="2" name="Duration">1</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -661,7 +678,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6301054243292651" title="BigBird">
+        <event-group collapsed="1" description="" sid="6301054243292651" title="BigBird">
             <sub-events>
                 <event-block sid="3571859625333593">
                     <conditions>
@@ -762,11 +779,18 @@
                             <param id="0" name="Instance variable">State</param>
                             <param id="1" name="Value">&quot;Charging&quot;</param>
                         </action>
+                        <action id="-16" name="Wait" sid="8907650214619852" type="System">
+                            <param id="0" name="Seconds">0.25</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3507148698292157" type="BigBird">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;Running&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8145193696911308" title="Boss1">
+        <event-group collapsed="1" description="" sid="8145193696911308" title="Boss1">
             <sub-events>
                 <event-block sid="6613316875722015">
                     <conditions>
@@ -1223,7 +1247,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4574535754925802" title="Claws">
+        <event-group description="" sid="4574535754925802" title="Claws">
             <sub-events>
                 <event-block sid="1329500806156582">
                     <conditions>
@@ -1272,7 +1296,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="9969776828647289">
+                <event-block collapsed="1" sid="9969776828647289">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="5904948230649601" type="Claw">
                             <param id="0" name="Instance variable">State</param>
@@ -1303,7 +1327,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="7708075682644504">
+                <event-block collapsed="1" sid="7708075682644504">
                     <conditions>
                         <condition id="-11" name="For Each" sid="684794322596186" type="System">
                             <param id="0" name="Object">Toys</param>
@@ -1379,7 +1403,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="4566225435314462">
+                <event-block collapsed="1" sid="4566225435314462">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="3825205153464581" type="Claw">
                             <param id="0" name="Instance variable">State</param>
@@ -1412,7 +1436,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="8682514922118343">
+                <event-block collapsed="1" sid="8682514922118343">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="9613948719343556" type="Claw">
                             <param id="0" name="Instance variable">State</param>
@@ -1451,7 +1475,7 @@
                                 <action id="-9" name="Destroy" sid="7640948316682423" type="Toys" />
                             </actions>
                         </event-block>
-                        <event-block sid="7946897102855326">
+                        <event-block disabled="1" sid="7946897102855326">
                             <conditions>
                                 <condition id="-31" inverted="1" name="Object UID exists" sid="8831005065345443" type="System">
                                     <param id="0" name="UID">Claw.HoldId</param>
@@ -1547,7 +1571,7 @@
                         <action id="-24" name="Move to top" sid="189341260601636" type="ClawPole" />
                     </actions>
                 </event-block>
-                <event-block sid="1036544452673084">
+                <event-block collapsed="1" sid="1036544452673084">
                     <conditions>
                         <condition id="0" name="On function" sid="1416611605046054" type="Function">
                             <param id="0" name="Name">&quot;Destroy&quot;</param>
@@ -1580,6 +1604,46 @@
                             </conditions>
                             <actions>
                                 <action behavior="Platform" id="11" name="Set enabled" sid="6761167332288614" type="Toys">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block collapsed="1" sid="2537724499708813">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1219952883498393" type="Function">
+                            <param id="0" name="Name">&quot;Destroy&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="3085348429850385" type="Claw">
+                            <param id="0" name="Instance variable">BaseId</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="1348120864754787" type="ClawPole">
+                            <param id="0" name="Instance variable">ClawId</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Claw.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="8105775993759248" type="ClawPole" />
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="2711694066673135" type="Claw">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="5678870128123912" type="Claw">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1376172085101535">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="6331940227178004" type="Toys">
+                                    <param id="0" name="Unique ID">Claw.HoldId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="4614507880377997" type="Toys">
                                     <param id="0" name="State">1</param>
                                 </action>
                             </actions>
@@ -1628,6 +1692,17 @@
                         <action id="-10" name="Set value" sid="6284035172783526" type="Claw">
                             <param id="0" name="Instance variable">State</param>
                             <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="809439449107014">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="8316285079338526" type="Claw" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="3853328063639209" type="Function">
+                            <param id="0" name="Name">&quot;Destroy&quot;</param>
+                            <param id="1" name="Parameter {n}">Claw.UID</param>
                         </action>
                     </actions>
                 </event-block>
