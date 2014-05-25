@@ -40,7 +40,7 @@
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Orientations">Any</prop>
@@ -444,7 +444,7 @@
                         <frame duration="1" hotspotX="0.295455" hotspotY="0.636364" />
                         <frame duration="1" hotspotX="0.272727" hotspotY="0.636364" />
                     </animation>
-                    <animation framecount="4" loop="0" name="Charge" pingpong="0" repeatcount="5" repeatto="0" sid="5717617976544261" speed="15">
+                    <animation framecount="4" loop="0" name="Charge" pingpong="0" repeatcount="2" repeatto="0" sid="5717617976544261" speed="15">
                         <frame duration="1" hotspotX="0.227273" hotspotY="0.636364" />
                         <frame duration="1" hotspotX="0.227273" hotspotY="0.659091" />
                         <frame duration="1" hotspotX="0.295455" hotspotY="0.636364" />
@@ -893,9 +893,9 @@
             <object-type name="ClawBase" sid="2906778510225304">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
-                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="565715330040917" speed="5">
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="565715330040917" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.555556" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -910,14 +910,68 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="BaseId" sid="2424945721482779" type="number" />
+                    <instance-variable name="State" sid="697819372373513" type="string" />
+                    <instance-variable name="HoldId" sid="2155004737811387" type="number" />
                 </instance-variables>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1904237037505251" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0" />
                     </animation>
+                    <animation framecount="2" loop="0" name="Descending" pingpong="0" repeatcount="1" repeatto="0" sid="222814399184094" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                    </animation>
                     <animation framecount="2" loop="0" name="Closing" pingpong="0" repeatcount="1" repeatto="0" sid="9532917641010262" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Doll1" sid="4882466567642188">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5517903347889275" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Doll2" sid="5366439562320529">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8652443001667888" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Doll3" sid="5982640140813411">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6779147639165633" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Doll4" sid="2706503173494774">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7355249290260543" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Doll5" sid="268211598300893">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9750221494575782" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Doll6" sid="4415591505798708">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5191812662003061" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1087,6 +1141,14 @@
         <object-type name="WebStorage" sid="9844802317318673">
             <plugin id="WebStorage" />
         </object-type>
+        <object-type name="DropToy" sid="2013475163434488">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6990803006735085" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="PlayableCharacters" plugin-id="Sprite" sid="6659182174539103">
@@ -1137,6 +1199,12 @@
                 <member>Chicken</member>
                 <member>Claw</member>
                 <member>ClawBase</member>
+                <member>Doll1</member>
+                <member>Doll2</member>
+                <member>Doll3</member>
+                <member>Doll4</member>
+                <member>Doll5</member>
+                <member>Doll6</member>
                 <member>GreenHead</member>
                 <member>LittleChicken</member>
                 <member>OrangeHead</member>
@@ -1211,6 +1279,24 @@
             <behaviors>
                 <behavior-type name="Jumpthru" sid="4823404942488812">
                     <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="Toys" plugin-id="Sprite" sid="9849962073242398">
+            <members>
+                <member>Doll1</member>
+                <member>Doll2</member>
+                <member>Doll3</member>
+                <member>Doll4</member>
+                <member>Doll5</member>
+                <member>Doll6</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="ClawId" sid="7442284938028831" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="2342463459279724">
+                    <behavior id="Platform" />
                 </behavior-type>
             </behaviors>
         </family>

@@ -4,23 +4,16 @@
     <name>Enemies</name>
     <events>
         <variable constant="0" name="ExtraLives" sid="1861744788144475" static="0" type="number">2</variable>
-        <event-group collapsed="1" description="" sid="8257614993568474" title="Enemies Common">
+        <event-group description="" sid="8257614993568474" title="Enemies Common">
             <sub-events>
                 <event-block sid="1799635042287704">
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="4182990020967839" type="Enemies" />
-                        <condition id="-8" name="Is boolean instance variable set" sid="6306642136456753" type="Enemies">
-                            <param id="0" name="Instance variable">MoveToActiveLayer</param>
-                        </condition>
                         <condition id="-11" name="For Each" sid="999527161293755" type="System">
                             <param id="0" name="Object">Enemies</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="2723667085558811" type="Enemies">
-                            <param id="0" name="Instance variable">MoveToActiveLayer</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
                         <action id="0" name="Call function" sid="276235395290008" type="Function">
                             <param id="0" name="Name">&quot;ActivateEnemy&quot;</param>
                             <param id="1" name="Parameter {n}">Enemies.UID</param>
@@ -40,14 +33,27 @@
                         <action behavior="8Direction" id="8" name="Set enabled" sid="1926294947655508" type="Enemies">
                             <param id="0" name="State">1</param>
                         </action>
-                        <action id="-1" name="Set X" sid="7674558501957969" type="Enemies">
-                            <param id="0" name="X">Enemies.X - ViewportLeft(Enemies.LayerName) + ViewportLeft(Enemies.ActiveLayer)</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="5068019536593588" type="Enemies">
-                            <param id="0" name="Layer">Enemies.ActiveLayer</param>
-                        </action>
                     </actions>
                     <sub-events>
+                        <event-block sid="2612608546753108">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="6306642136456753" type="Enemies">
+                                    <param id="0" name="Instance variable">MoveToActiveLayer</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="2723667085558811" type="Enemies">
+                                    <param id="0" name="Instance variable">MoveToActiveLayer</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="7674558501957969" type="Enemies">
+                                    <param id="0" name="X">Enemies.X - ViewportLeft(Enemies.LayerName) + ViewportLeft(Enemies.ActiveLayer)</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="5068019536593588" type="Enemies">
+                                    <param id="0" name="Layer">Enemies.ActiveLayer</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="7008238454264731">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="8126088430062084" type="Enemies">
@@ -83,11 +89,14 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="8799271212371809">
+                <event-block collapsed="1" sid="8799271212371809">
                     <conditions>
                         <condition id="-1" name="Compare X" sid="3013495211246622" type="Enemies">
                             <param id="0" name="Comparison">2</param>
                             <param id="1" name="X co-ordinate">ViewportLeft(Enemies.LayerNumber)</param>
+                        </condition>
+                        <condition id="-16" name="Is on layer" sid="7303219998243193" type="Enemies">
+                            <param id="0" name="Layer">PlayableCharacters.LayerNumber</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -104,7 +113,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4329491086821177" title="Hits">
+        <event-group description="" sid="4329491086821177" title="Hits">
             <sub-events>
                 <comment>Balas atingindo inimigos</comment>
                 <event-block sid="8303597911820412">
@@ -118,7 +127,6 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="3215085852222155" type="Enemies">
                             <param id="0" name="Instance variable">SimpleHits</param>
                         </condition>
-                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="3442916480004816" type="Enemies" />
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="7941437890321188" type="Function">
@@ -147,7 +155,7 @@
                 <comment>Jogador morrer ao tocar os inimigos</comment>
                 <event-block sid="1953891852661875">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="1505974564070166" type="Enemies">
+                        <condition id="0" name="On collision with another object" sid="1505974564070166" type="Enemies">
                             <param id="0" name="Object">PlayableCharacters</param>
                         </condition>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3144807604355343" type="PlayableCharacters">
@@ -288,61 +296,69 @@
                             <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Flash" id="0" name="Flash" sid="7408775696801642" type="Enemies">
-                            <param id="0" name="&apos;On&apos; time">0.01</param>
-                            <param id="1" name="&apos;Off&apos; time">0.01</param>
-                            <param id="2" name="Duration">1.0</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="3524821986879823">
+                        <event-block sid="335535912464532">
                             <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="8359114419405525" type="Bullets">
-                                    <param id="0" name="Unique ID">Function.Param(1)</param>
-                                </condition>
+                                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="5488841918378264" type="Enemies" />
                             </conditions>
                             <actions>
-                                <action id="-12" name="Subtract from" sid="3715990845167451" type="Enemies">
-                                    <param id="0" name="Instance variable">Life</param>
-                                    <param id="1" name="Value">Bullets.Damage</param>
+                                <action behavior="Flash" id="0" name="Flash" sid="2444267486518073" type="Enemies">
+                                    <param id="0" name="&apos;On&apos; time">0.01</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.01</param>
+                                    <param id="2" name="Duration">0.5</param>
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="1952360209443793">
+                                <event-block sid="3524821986879823">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="2682984041943312" type="Enemies">
-                                            <param id="0" name="Instance variable">Life</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">0</param>
+                                        <condition id="-14" name="Pick by unique ID" sid="8359114419405525" type="Bullets">
+                                            <param id="0" name="Unique ID">Function.Param(1)</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="6235967224373378" type="Bullets">
-                                            <param id="0" name="Object">SmallHit</param>
-                                            <param id="1" name="Layer">Bullets.LayerName</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="-12" name="Subtract from" sid="3715990845167451" type="Enemies">
+                                            <param id="0" name="Instance variable">Life</param>
+                                            <param id="1" name="Value">Bullets.Damage</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="1952360209443793">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="2682984041943312" type="Enemies">
+                                                    <param id="0" name="Instance variable">Life</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="6235967224373378" type="Bullets">
+                                                    <param id="0" name="Object">SmallHit</param>
+                                                    <param id="1" name="Layer">Bullets.LayerName</param>
+                                                    <param id="2" name="Image point">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="9116631676807418">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="6327204023616623" type="Bullets" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="3831449503923539">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="449986355117354" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="8840268943390915" type="Enemies">
+                                            <param id="0" name="Instance variable">Life</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="9116631676807418">
-                                    <conditions />
-                                    <actions>
-                                        <action id="-9" name="Destroy" sid="6327204023616623" type="Bullets" />
-                                    </actions>
-                                </event-block>
                             </sub-events>
-                        </event-block>
-                        <event-block sid="3831449503923539">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="449986355117354" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-12" name="Subtract from" sid="8840268943390915" type="Enemies">
-                                    <param id="0" name="Instance variable">Life</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
                         </event-block>
                         <event-block sid="8373943886680955">
                             <conditions>
@@ -645,7 +661,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6301054243292651" title="BigBird">
+        <event-group description="" sid="6301054243292651" title="BigBird">
             <sub-events>
                 <event-block sid="3571859625333593">
                     <conditions>
@@ -710,7 +726,7 @@
                             <param id="0" name="Acceleration">BigBird.8Direction.MaxSpeed</param>
                         </action>
                         <action behavior="8Direction" id="4" name="Set max speed" sid="3796342740938699" type="BigBird">
-                            <param id="0" name="Max Speed">BigBird.8Direction.MaxSpeed * 8</param>
+                            <param id="0" name="Max Speed">BigBird.8Direction.MaxSpeed * 2</param>
                         </action>
                     </actions>
                 </event-block>
@@ -750,7 +766,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8145193696911308" title="Boss1">
+        <event-group description="" sid="8145193696911308" title="Boss1">
             <sub-events>
                 <event-block sid="6613316875722015">
                     <conditions>
@@ -1207,7 +1223,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4574535754925802" title="Claws">
+        <event-group collapsed="1" description="" sid="4574535754925802" title="Claws">
             <sub-events>
                 <event-block sid="1329500806156582">
                     <conditions>
@@ -1238,7 +1254,380 @@
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" sid="8781032285574524" type="ClawBase">
-                            <param id="0" name="X">Claw.X - ClawBase.Width / 2</param>
+                            <param id="0" name="X">Claw.X</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4364644673338044">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1695448594791894" type="Claw">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="1527008566990269" type="Claw">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9969776828647289">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5904948230649601" type="Claw">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Descending&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="3582878327008401" type="Claw">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="556046080672457">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="9382551277370455" type="Claw">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">ViewportBottom(Camera.LayerNumber)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="3626122314339685" type="Claw">
+                                    <param id="0" name="Object">Doll1</param>
+                                    <param id="1" name="Layer">Claw.LayerNumber</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7708075682644504">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="684794322596186" type="System">
+                            <param id="0" name="Object">Toys</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="1881012005588589" type="System">
+                            <param id="0" name="Object">Claw</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="6254740170604555" type="Claw">
+                            <param id="0" name="Object">Toys</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="3438392111205205" type="Claw">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;Dropping&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="5592025850796653">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5760736022392148" type="Claw">
+                                    <param id="0" name="Instance variable">HoldId</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Toys.UID</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="6849168668817331" type="Claw">
+                                    <param id="0" name="Instance variable">HoldId</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="6029859861920888">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="5478620502896635" type="Toys">
+                                            <param id="0" name="Instance variable">ClawId</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">Claw.UID</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="1485453475585263" type="Toys">
+                                            <param id="0" name="Instance variable">ClawId</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="2600170769838251" type="Toys">
+                                            <param id="0" name="Instance variable">ClawId</param>
+                                            <param id="1" name="Value">Claw.UID</param>
+                                        </action>
+                                        <action id="-1" name="Set X" sid="8292097253725082" type="Toys">
+                                            <param id="0" name="X">Claw.X</param>
+                                        </action>
+                                        <action id="-2" name="Set Y" sid="8470898592269513" type="Toys">
+                                            <param id="0" name="Y">Claw.Y+Toys.Height</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="5104939355924645" type="Toys">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="1433257170831341" type="Claw">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Value">&quot;Ascending&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="4473659309858401" type="Claw">
+                                            <param id="0" name="Instance variable">HoldId</param>
+                                            <param id="1" name="Value">Toys.UID</param>
+                                        </action>
+                                        <action disabled="1" id="-25" name="Move to bottom" sid="7832463848086452" type="Toys" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4566225435314462">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3825205153464581" type="Claw">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Ascending&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="9824484426571896" type="Claw">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="8154564480466896">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="9493035055519059" type="Claw">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">16</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="2863188257280851" type="Claw">
+                                    <param id="0" name="Y">16</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="1165950125754948" type="Claw">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">&quot;Bringing&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8682514922118343">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9613948719343556" type="Claw">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Bringing&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="9525046405917584" type="Claw">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5886166413984931">
+                            <conditions>
+                                <condition id="-3" inverted="1" name="Is on-screen" sid="7046463495954019" type="Claw" />
+                                <condition id="-11" name="For Each" sid="9384906996183198" type="System">
+                                    <param id="0" name="Object">Claw</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="5984790565500202" type="ClawBase">
+                                    <param id="0" name="Unique ID">Claw.BaseId</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="3312558078221088" type="ClawPole">
+                                    <param id="0" name="Instance variable">ClawId</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Claw.UID</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="2842804920450571" type="Toys">
+                                    <param id="0" name="Unique ID">Claw.HoldId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="3555872083780005" type="ClawBase" />
+                                <action id="-9" name="Destroy" sid="6019874349544702" type="Claw" />
+                                <action id="-9" name="Destroy" sid="7618700120311872" type="ClawPole" />
+                                <action id="-9" name="Destroy" sid="7640948316682423" type="Toys" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="7946897102855326">
+                            <conditions>
+                                <condition id="-31" inverted="1" name="Object UID exists" sid="8831005065345443" type="System">
+                                    <param id="0" name="UID">Claw.HoldId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="4112729253148001" type="Claw">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="267307524335166" type="Claw">
+                                    <param id="0" name="Instance variable">HoldId</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9632669054156357">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6324169365811771" type="Claw">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Searching&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="3332204894396145" type="Claw">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6719502707746825">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="5804822409890152" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="9699005969758184" type="Claw" />
+                        <condition id="-7" name="Compare instance variable" sid="4970671864561917" type="Claw">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="3464542237817527" type="Claw">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;Descending&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="2263124958467943" type="Claw">
+                            <param id="0" name="Animation">&quot;Descendng&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7133892423386138">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="2693064818538693" type="System" />
+                        <condition id="-11" name="For Each" sid="5891089083677377" type="System">
+                            <param id="0" name="Object">Claw</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2876943202019945" type="Claw">
+                            <param id="0" name="Instance variable">BaseId</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="9630853668355177" type="Claw">
+                            <param id="0" name="Object">ClawBase</param>
+                            <param id="1" name="Layer">Claw.LayerNumber</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="9290908490473416" type="ClawBase">
+                            <param id="0" name="Y">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5858706687128959" type="Claw">
+                            <param id="0" name="Instance variable">BaseId</param>
+                            <param id="1" name="Value">ClawBase.UID</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="3383500502173896" type="Claw">
+                            <param id="0" name="Object">ClawPole</param>
+                            <param id="1" name="Layer">Claw.LayerNumber</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="2272563613055289" type="ClawPole">
+                            <param id="0" name="Y">12</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2835156598436192" type="ClawPole">
+                            <param id="0" name="Instance variable">ClawId</param>
+                            <param id="1" name="Value">Claw.UID</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="189341260601636" type="ClawPole" />
+                    </actions>
+                </event-block>
+                <event-block sid="1036544452673084">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1416611605046054" type="Function">
+                            <param id="0" name="Name">&quot;Destroy&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="342382351056838" type="Claw">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="6763238564393152" type="ClawBase">
+                            <param id="0" name="Unique ID">Claw.BaseId</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="3174574937932846" type="ClawPole">
+                            <param id="0" name="Instance variable">ClawId</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Claw.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="9488874891841474" type="Function">
+                            <param id="0" name="Name">&quot;Destroy&quot;</param>
+                            <param id="1" name="Parameter {n}">ClawBase.UID</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="2554897640463566" type="ClawPole" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="7223267801198034">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="6043844356656279" type="Toys">
+                                    <param id="0" name="Unique ID">Claw.HoldId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="6761167332288614" type="Toys">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8928045656474206">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8074017851863355" type="Claw">
+                            <param id="0" name="Object">DropToy</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="3966869766527819" type="Toys">
+                            <param id="0" name="Unique ID">Claw.HoldId</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="8294109852953075" type="Toys">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="8624868118708664" type="Claw">
+                            <param id="0" name="Animation">&quot;Descending&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8530283325326116" type="Claw">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;Dropping&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="8318301608913394" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="8819674149737654" type="Claw">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2564375384841614" type="Claw">
+                            <param id="0" name="Instance variable">HoldId</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3332431856867844" type="Claw">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;Searching&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7411893568021411" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6284035172783526" type="Claw">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>

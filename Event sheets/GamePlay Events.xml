@@ -7,9 +7,9 @@
         <variable constant="0" name="Score" sid="2083927557107547" static="0" type="number">0</variable>
         <include>Enemies</include>
         <include>VicViper</include>
-        <event-group collapsed="1" description="" sid="8850219158393638" title="Playable Characters">
+        <event-group description="" sid="8850219158393638" title="Playable Characters">
             <sub-events>
-                <event-group collapsed="1" description="" sid="7673411034528074" title="Controls">
+                <event-group description="" sid="7673411034528074" title="Controls">
                     <sub-events>
                         <event-block collapsed="1" sid="7535746931583424">
                             <conditions>
@@ -185,139 +185,127 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block collapsed="1" sid="9096403076042417">
+                                        <event-block sid="1756120416662239">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="8358980510906363" type="PlayableCharacters">
-                                                    <param id="0" name="Instance variable">PlayerIndex</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">0</param>
+                                                <condition id="3" name="On key released" sid="2086495348967872" type="Keyboard">
+                                                    <param id="0" name="Key">38 (Up arrow)</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="1756120416662239">
-                                                    <conditions>
-                                                        <condition id="3" name="On key released" sid="2086495348967872" type="Keyboard">
-                                                            <param id="0" name="Key">38 (Up arrow)</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="8473378254567621" type="PlayableCharacters">
-                                                            <param id="0" name="Animation">&quot;ResetUp&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="4352124217797021">
-                                                    <conditions>
-                                                        <condition id="3" name="On key released" sid="9759867720711575" type="Keyboard">
-                                                            <param id="0" name="Key">40 (Down arrow)</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="592706886097" type="PlayableCharacters">
-                                                            <param id="0" name="Animation">&quot;ResetDown&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="1546892554271713">
-                                                    <conditions>
-                                                        <condition id="2" name="Key is down" sid="6177656525610903" type="Keyboard">
-                                                            <param id="0" name="Key">37 (Left arrow)</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action behavior="8Direction" id="7" name="Simulate control" sid="4053629013614674" type="PlayableCharacters">
-                                                            <param id="0" name="Control">0</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="6440803090606601">
-                                                    <conditions>
-                                                        <condition id="2" name="Key is down" sid="4570856286440684" type="Keyboard">
-                                                            <param id="0" name="Key">39 (Right arrow)</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action behavior="8Direction" id="7" name="Simulate control" sid="5113430999228071" type="PlayableCharacters">
-                                                            <param id="0" name="Control">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="7652062290623818">
-                                                    <conditions>
-                                                        <condition id="2" name="Key is down" sid="8390479627656254" type="Keyboard">
-                                                            <param id="0" name="Key">38 (Up arrow)</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="6375934225753842" type="PlayableCharacters">
-                                                            <param id="0" name="Animation">&quot;TurnUp&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action behavior="8Direction" id="7" name="Simulate control" sid="2155548310382125" type="PlayableCharacters">
-                                                            <param id="0" name="Control">2</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="4588074750493768">
-                                                    <conditions>
-                                                        <condition id="2" name="Key is down" sid="3996983275383477" type="Keyboard">
-                                                            <param id="0" name="Key">40 (Down arrow)</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="7948179747541592" type="PlayableCharacters">
-                                                            <param id="0" name="Animation">&quot;TurnDown&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action behavior="8Direction" id="7" name="Simulate control" sid="2059766354123902" type="PlayableCharacters">
-                                                            <param id="0" name="Control">3</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="5848820897567805">
-                                                    <conditions>
-                                                        <condition id="2" name="Key is down" sid="8773129891371048" type="Keyboard">
-                                                            <param id="0" name="Key">88 (X)</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-13" name="Set boolean" sid="5103456830586651" type="PlayableCharacters">
-                                                            <param id="0" name="Instance variable">FiringMainWeapon</param>
-                                                            <param id="1" name="Value">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="2307982073139037">
-                                                    <conditions>
-                                                        <condition id="2" name="Key is down" sid="6156420722716815" type="Keyboard">
-                                                            <param id="0" name="Key">83 (S)</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="0" name="Call function" sid="5248380145644845" type="Function">
-                                                            <param id="0" name="Name">&quot;UseBoost&quot;</param>
-                                                            <param id="1" name="Parameter {n}">PlayableCharacters.UID</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="4435101713311573">
-                                                    <conditions>
-                                                        <condition id="-22" name="Else" sid="5517072980260396" type="System" />
-                                                        <condition id="2" inverted="1" name="Key is down" sid="7085014728574517" type="Keyboard">
-                                                            <param id="0" name="Key">88 (X)</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-13" name="Set boolean" sid="6460804763621084" type="PlayableCharacters">
-                                                            <param id="0" name="Instance variable">FiringMainWeapon</param>
-                                                            <param id="1" name="Value">0</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="8473378254567621" type="PlayableCharacters">
+                                                    <param id="0" name="Animation">&quot;ResetUp&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="4352124217797021">
+                                            <conditions>
+                                                <condition id="3" name="On key released" sid="9759867720711575" type="Keyboard">
+                                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="592706886097" type="PlayableCharacters">
+                                                    <param id="0" name="Animation">&quot;ResetDown&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="1546892554271713">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="6177656525610903" type="Keyboard">
+                                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="4053629013614674" type="PlayableCharacters">
+                                                    <param id="0" name="Control">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="6440803090606601">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="4570856286440684" type="Keyboard">
+                                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="5113430999228071" type="PlayableCharacters">
+                                                    <param id="0" name="Control">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="7652062290623818">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="8390479627656254" type="Keyboard">
+                                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="6375934225753842" type="PlayableCharacters">
+                                                    <param id="0" name="Animation">&quot;TurnUp&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="2155548310382125" type="PlayableCharacters">
+                                                    <param id="0" name="Control">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="4588074750493768">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="3996983275383477" type="Keyboard">
+                                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="7948179747541592" type="PlayableCharacters">
+                                                    <param id="0" name="Animation">&quot;TurnDown&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="2059766354123902" type="PlayableCharacters">
+                                                    <param id="0" name="Control">3</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="5848820897567805">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="8773129891371048" type="Keyboard">
+                                                    <param id="0" name="Key">88 (X)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="5103456830586651" type="PlayableCharacters">
+                                                    <param id="0" name="Instance variable">FiringMainWeapon</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="2307982073139037">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="6156420722716815" type="Keyboard">
+                                                    <param id="0" name="Key">83 (S)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="5248380145644845" type="Function">
+                                                    <param id="0" name="Name">&quot;UseBoost&quot;</param>
+                                                    <param id="1" name="Parameter {n}">PlayableCharacters.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="4435101713311573">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="5517072980260396" type="System" />
+                                                <condition id="2" inverted="1" name="Key is down" sid="7085014728574517" type="Keyboard">
+                                                    <param id="0" name="Key">88 (X)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="6460804763621084" type="PlayableCharacters">
+                                                    <param id="0" name="Instance variable">FiringMainWeapon</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -361,6 +349,18 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="4257486072680466">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="8133808673038949" type="Keyboard">
+                                    <param id="0" name="Key">13 (Return)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="5427029998523608" type="Camera">
+                                    <param id="0" name="X">Camera.X + 300</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
