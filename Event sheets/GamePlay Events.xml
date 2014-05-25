@@ -7,7 +7,7 @@
         <variable constant="0" name="Score" sid="2083927557107547" static="0" type="number">0</variable>
         <include>Enemies</include>
         <include>VicViper</include>
-        <event-group description="" sid="8850219158393638" title="Playable Characters">
+        <event-group collapsed="1" description="" sid="8850219158393638" title="Playable Characters">
             <sub-events>
                 <event-group collapsed="1" description="" sid="7673411034528074" title="Controls">
                     <sub-events>

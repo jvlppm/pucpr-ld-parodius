@@ -311,6 +311,24 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="DropMissile" sid="5603443824550954">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Platform" sid="2266434506187842">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6922594260785958" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="3" loop="1" name="Running" pingpong="1" repeatcount="1" repeatto="0" sid="2671605166279074" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder expanded="0" name="Scenery">
             <object-folder expanded="0" name="Level1">
@@ -387,6 +405,18 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="BlueToys1" sid="6468663091590182">
+                    <plugin id="NinePatch" />
+                    <texture />
+                </object-type>
+                <object-type name="Pipe" sid="6722926690437309">
+                    <plugin id="NinePatch" />
+                    <texture />
+                </object-type>
+                <object-type name="PipeSupport" sid="4652676093070657">
+                    <plugin id="NinePatch" />
+                    <texture />
+                </object-type>
             </object-folder>
             <object-type name="JumpThru" sid="5247466731069576">
                 <plugin id="Sprite" />
@@ -395,6 +425,10 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="Stars" sid="6960931072213157">
+                <plugin id="NinePatch" />
+                <texture />
             </object-type>
         </object-folder>
         <object-folder expanded="0" name="Enemies">
@@ -856,6 +890,37 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="ClawBase" sid="2906778510225304">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="565715330040917" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.555556" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ClawPole" sid="8155184540407901">
+                <plugin id="NinePatch" />
+                <instance-variables>
+                    <instance-variable name="ClawId" sid="2835936258307463" type="number" />
+                </instance-variables>
+                <texture />
+            </object-type>
+            <object-type name="Claw" sid="1763846767865382">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="BaseId" sid="2424945721482779" type="number" />
+                </instance-variables>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1904237037505251" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                    </animation>
+                    <animation framecount="2" loop="0" name="Closing" pingpong="0" repeatcount="1" repeatto="0" sid="9532917641010262" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder expanded="0" name="Explosions">
             <object-type name="SimpleExplosion" sid="1334764524458848">
@@ -951,16 +1016,31 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="ExtraLives" sid="1759914274620113">
+                <plugin id="NinePatch" />
+                <texture />
+            </object-type>
+            <object-type name="Label" sid="6646705970169473">
+                <plugin id="Spritefont2" />
+                <instance-variables>
+                    <instance-variable name="Binding" sid="4646491858121462" type="string" />
+                </instance-variables>
+                <texture />
+            </object-type>
+            <object-type name="MenuBar" sid="9664821453868634">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8494122306565982" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="Keyboard" sid="1116132545238104">
             <plugin id="Keyboard" />
         </object-type>
         <object-type name="Gamepad" sid="834421067166504">
             <plugin id="gamepad" />
-        </object-type>
-        <object-type name="Stars" sid="6960931072213157">
-            <plugin id="NinePatch" />
-            <texture />
         </object-type>
         <object-type name="Camera" sid="1369263461309349">
             <plugin id="Sprite" />
@@ -977,10 +1057,6 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="BlueToys1" sid="6468663091590182">
-            <plugin id="NinePatch" />
-            <texture />
         </object-type>
         <object-type name="Function" sid="3658215827431778">
             <plugin id="Function" />
@@ -1008,45 +1084,8 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="MenuBar" sid="9664821453868634">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8494122306565982" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Label" sid="6646705970169473">
-            <plugin id="Spritefont2" />
-            <instance-variables>
-                <instance-variable name="Binding" sid="4646491858121462" type="string" />
-            </instance-variables>
-            <texture />
-        </object-type>
         <object-type name="WebStorage" sid="9844802317318673">
             <plugin id="WebStorage" />
-        </object-type>
-        <object-type name="ExtraLives" sid="1759914274620113">
-            <plugin id="NinePatch" />
-            <texture />
-        </object-type>
-        <object-type name="DropMissile" sid="5603443824550954">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Platform" sid="2266434506187842">
-                    <behavior id="Platform" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6922594260785958" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-                <animation framecount="3" loop="1" name="Running" pingpong="1" repeatcount="1" repeatto="0" sid="2671605166279074" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
         </object-type>
     </object-folder>
     <families>
@@ -1096,6 +1135,8 @@
                 <member>BlueHead</member>
                 <member>Boss1</member>
                 <member>Chicken</member>
+                <member>Claw</member>
+                <member>ClawBase</member>
                 <member>GreenHead</member>
                 <member>LittleChicken</member>
                 <member>OrangeHead</member>
