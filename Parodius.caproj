@@ -431,7 +431,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="Enemies">
+        <object-folder expanded="0" name="Enemies">
             <object-type name="BigBird" sid="3570588967487432">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -1070,6 +1070,22 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="CrazyPenguin" sid="6846771842967788">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6075080613214596" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Pick" x="0.5" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Pick" x="0.5" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Pick" x="0.5" y="0.5" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder expanded="0" name="Explosions">
             <object-type name="SimpleExplosion" sid="1334764524458848">
@@ -1316,6 +1332,7 @@
                 <member>Claw</member>
                 <member>ClawBase</member>
                 <member>Crab</member>
+                <member>CrazyPenguin</member>
                 <member>Doll1</member>
                 <member>Doll2</member>
                 <member>Doll3</member>
@@ -1404,6 +1421,7 @@
         <family name="PlatformEnemies" plugin-id="Sprite" sid="9849962073242398">
             <members>
                 <member>Crab</member>
+                <member>CrazyPenguin</member>
                 <member>Doll1</member>
                 <member>Doll2</member>
                 <member>Doll3</member>
@@ -1414,6 +1432,7 @@
             </members>
             <instance-variables>
                 <instance-variable name="ClawId" sid="7442284938028831" type="number" />
+                <instance-variable name="EnableOnScreen" sid="9443084498882792" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="2342463459279724">

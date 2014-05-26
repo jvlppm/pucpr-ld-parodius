@@ -4,7 +4,7 @@
     <name>Enemies</name>
     <events>
         <variable constant="0" name="ExtraLives" sid="1861744788144475" static="0" type="number">2</variable>
-        <event-group description="" sid="8257614993568474" title="Enemies Common">
+        <event-group collapsed="1" description="" sid="8257614993568474" title="Enemies Common">
             <sub-events>
                 <event-block sid="1799635042287704">
                     <conditions>
@@ -73,6 +73,9 @@
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="7167396503971009" type="PlatformEnemies">
                                     <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="3073366405256795" type="PlatformEnemies">
+                                    <param id="0" name="Instance variable">EnableOnScreen</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -699,7 +702,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6301054243292651" title="BigBird">
+        <event-group description="" sid="6301054243292651" title="BigBird">
             <sub-events>
                 <event-block sid="3571859625333593">
                     <conditions>
@@ -730,6 +733,9 @@
                                 <action id="4" name="Set animation" sid="8519374244758571" type="BigBird">
                                     <param id="0" name="Animation">&quot;Charge&quot;</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="8Direction" id="4" name="Set max speed" sid="3796342740938699" type="BigBird">
+                                    <param id="0" name="Max Speed">150</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -762,9 +768,6 @@
                         </action>
                         <action behavior="8Direction" disabled="1" id="5" name="Set acceleration" sid="8357867544956837" type="BigBird">
                             <param id="0" name="Acceleration">BigBird.8Direction.MaxSpeed</param>
-                        </action>
-                        <action behavior="8Direction" id="4" name="Set max speed" sid="3796342740938699" type="BigBird">
-                            <param id="0" name="Max Speed">BigBird.8Direction.MaxSpeed * 2</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1268,7 +1271,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4574535754925802" title="Claws">
+        <event-group collapsed="1" description="" sid="4574535754925802" title="Claws">
             <sub-events>
                 <event-block sid="1329500806156582">
                     <conditions>
@@ -1348,7 +1351,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="7708075682644504">
+                <event-block collapsed="1" sid="7708075682644504">
                     <conditions>
                         <condition id="-11" name="For Each" sid="684794322596186" type="System">
                             <param id="0" name="Object">PlatformEnemies</param>
@@ -1736,6 +1739,7 @@
                         <condition id="-11" name="For Each" sid="8236300410775487" type="System">
                             <param id="0" name="Object">Crab</param>
                         </condition>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="9015679702033843" type="Crab" />
                     </conditions>
                     <actions />
                     <sub-events>
@@ -1923,7 +1927,7 @@
         </event-group>
         <event-group collapsed="1" description="" sid="7165723092744453" title="PenguinGun">
             <sub-events>
-                <event-block sid="2041129807353332">
+                <event-block collapsed="1" sid="2041129807353332">
                     <conditions>
                         <condition id="-11" name="For Each" sid="3551034914335327" type="System">
                             <param id="0" name="Object">PenguinGun</param>
@@ -2029,6 +2033,43 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="3579786134521312" title="CrazyPenguin">
+            <sub-events>
+                <event-block sid="3441208224771584">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="1594359800409444" type="CrazyPenguin">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">ViewportLeft(CrazyPenguin.LayerNumber) + PlayableCharacters.X+20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="8463676384449955" type="CrazyPenguin">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3486569565948063">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="413340495728069" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="3852726705295598" type="CrazyPenguin">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7979128534354737">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="1053944391817121" type="CrazyPenguin" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="32963518456304" type="CrazyPenguin">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
