@@ -69,6 +69,18 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="8031615727520081">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="7167396503971009" type="PlatformEnemies">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="4412408993436786" type="PlatformEnemies">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="3357033697392681">
@@ -111,9 +123,18 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block disabled="1" sid="5747536649853942">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="3365885709092843" type="PlatformEnemies" />
+                        <condition behavior="Platform" id="4" name="Is falling" sid="5772013498788129" type="PlatformEnemies" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="3014354093636693" type="PlatformEnemies" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4329491086821177" title="Hits">
+        <event-group collapsed="1" description="" sid="4329491086821177" title="Hits">
             <sub-events>
                 <comment>Balas atingindo inimigos</comment>
                 <event-block sid="8303597911820412">
@@ -1327,16 +1348,16 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="7708075682644504">
+                <event-block sid="7708075682644504">
                     <conditions>
                         <condition id="-11" name="For Each" sid="684794322596186" type="System">
-                            <param id="0" name="Object">Toys</param>
+                            <param id="0" name="Object">PlatformEnemies</param>
                         </condition>
                         <condition id="-11" name="For Each" sid="1881012005588589" type="System">
                             <param id="0" name="Object">Claw</param>
                         </condition>
                         <condition id="1" name="Is overlapping another object" sid="6254740170604555" type="Claw">
-                            <param id="0" name="Object">Toys</param>
+                            <param id="0" name="Object">PlatformEnemies</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="3438392111205205" type="Claw">
                             <param id="0" name="Instance variable">State</param>
@@ -1351,7 +1372,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="5760736022392148" type="Claw">
                                     <param id="0" name="Instance variable">HoldId</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">Toys.UID</param>
+                                    <param id="2" name="Value">PlatformEnemies.UID</param>
                                 </condition>
                                 <condition id="-7" name="Compare instance variable" sid="6849168668817331" type="Claw">
                                     <param id="0" name="Instance variable">HoldId</param>
@@ -1363,29 +1384,29 @@
                             <sub-events>
                                 <event-block any="1" sid="6029859861920888">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="5478620502896635" type="Toys">
+                                        <condition id="-7" name="Compare instance variable" sid="5478620502896635" type="PlatformEnemies">
                                             <param id="0" name="Instance variable">ClawId</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">Claw.UID</param>
                                         </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="1485453475585263" type="Toys">
+                                        <condition id="-7" name="Compare instance variable" sid="1485453475585263" type="PlatformEnemies">
                                             <param id="0" name="Instance variable">ClawId</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="2600170769838251" type="Toys">
+                                        <action id="-10" name="Set value" sid="2600170769838251" type="PlatformEnemies">
                                             <param id="0" name="Instance variable">ClawId</param>
                                             <param id="1" name="Value">Claw.UID</param>
                                         </action>
-                                        <action id="-1" name="Set X" sid="8292097253725082" type="Toys">
+                                        <action id="-1" name="Set X" sid="8292097253725082" type="PlatformEnemies">
                                             <param id="0" name="X">Claw.X</param>
                                         </action>
-                                        <action id="-2" name="Set Y" sid="8470898592269513" type="Toys">
-                                            <param id="0" name="Y">Claw.Y+Toys.Height</param>
+                                        <action id="-2" name="Set Y" sid="8470898592269513" type="PlatformEnemies">
+                                            <param id="0" name="Y">Claw.Y+ Claw.Height + (PlatformEnemies.Y - PlatformEnemies.ImagePointY(&quot;Pick&quot;))</param>
                                         </action>
-                                        <action behavior="Platform" id="11" name="Set enabled" sid="5104939355924645" type="Toys">
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="5104939355924645" type="PlatformEnemies">
                                             <param id="0" name="State">0</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="1433257170831341" type="Claw">
@@ -1394,9 +1415,9 @@
                                         </action>
                                         <action id="-10" name="Set value" sid="4473659309858401" type="Claw">
                                             <param id="0" name="Instance variable">HoldId</param>
-                                            <param id="1" name="Value">Toys.UID</param>
+                                            <param id="1" name="Value">PlatformEnemies.UID</param>
                                         </action>
-                                        <action disabled="1" id="-25" name="Move to bottom" sid="7832463848086452" type="Toys" />
+                                        <action disabled="1" id="-25" name="Move to bottom" sid="7832463848086452" type="PlatformEnemies" />
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -1464,7 +1485,7 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">Claw.UID</param>
                                 </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="2842804920450571" type="Toys">
+                                <condition id="-14" name="Pick by unique ID" sid="2842804920450571" type="PlatformEnemies">
                                     <param id="0" name="Unique ID">Claw.HoldId</param>
                                 </condition>
                             </conditions>
@@ -1472,7 +1493,7 @@
                                 <action id="-9" name="Destroy" sid="3555872083780005" type="ClawBase" />
                                 <action id="-9" name="Destroy" sid="6019874349544702" type="Claw" />
                                 <action id="-9" name="Destroy" sid="7618700120311872" type="ClawPole" />
-                                <action id="-9" name="Destroy" sid="7640948316682423" type="Toys" />
+                                <action id="-9" name="Destroy" sid="7640948316682423" type="PlatformEnemies" />
                             </actions>
                         </event-block>
                         <event-block disabled="1" sid="7946897102855326">
@@ -1598,12 +1619,12 @@
                     <sub-events>
                         <event-block sid="7223267801198034">
                             <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="6043844356656279" type="Toys">
+                                <condition id="-14" name="Pick by unique ID" sid="6043844356656279" type="PlatformEnemies">
                                     <param id="0" name="Unique ID">Claw.HoldId</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="6761167332288614" type="Toys">
+                                <action behavior="Platform" id="11" name="Set enabled" sid="6761167332288614" type="PlatformEnemies">
                                     <param id="0" name="State">1</param>
                                 </action>
                             </actions>
@@ -1638,12 +1659,12 @@
                     <sub-events>
                         <event-block sid="1376172085101535">
                             <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="6331940227178004" type="Toys">
+                                <condition id="-14" name="Pick by unique ID" sid="6331940227178004" type="PlatformEnemies">
                                     <param id="0" name="Unique ID">Claw.HoldId</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="4614507880377997" type="Toys">
+                                <action behavior="Platform" id="11" name="Set enabled" sid="4614507880377997" type="PlatformEnemies">
                                     <param id="0" name="State">1</param>
                                 </action>
                             </actions>
@@ -1655,12 +1676,12 @@
                         <condition id="0" name="On collision with another object" sid="8074017851863355" type="Claw">
                             <param id="0" name="Object">DropToy</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="3966869766527819" type="Toys">
+                        <condition id="-14" name="Pick by unique ID" sid="3966869766527819" type="PlatformEnemies">
                             <param id="0" name="Unique ID">Claw.HoldId</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="8294109852953075" type="Toys">
+                        <action behavior="Platform" id="11" name="Set enabled" sid="8294109852953075" type="PlatformEnemies">
                             <param id="0" name="State">1</param>
                         </action>
                         <action id="4" name="Set animation" sid="8624868118708664" type="Claw">
@@ -1705,6 +1726,309 @@
                             <param id="1" name="Parameter {n}">Claw.UID</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="206210011512321" title="Crab">
+            <sub-events>
+                <event-block collapsed="1" sid="9817001036806">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="8236300410775487" type="System">
+                            <param id="0" name="Object">Crab</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4901417800865963">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="9615099795537542" type="System">
+                                    <param id="0" name="First value">abs(Crab.X - ViewportLeft(Crab.LayerNumber) - PlayableCharacters.X)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">20</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="3021304886362591" type="Crab">
+                                    <param id="0" name="Instance variable">CanPinch</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9866842061576177" type="Crab">
+                                    <param id="0" name="Animation">&quot;Pinching&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8076112710471232">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3610036455878507" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="1764439428810431" type="Crab">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="1738952249404621">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="2247226976534751" type="Crab">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">ViewportLeft(Crab.LayerNumber) + PlayableCharacters.X+20</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="7957464370817613" type="Crab">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="8471739502379609" type="Crab">
+                                            <param id="0" name="Instance variable">CanPinch</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6143583032402718">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="9494030809792018" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="8019667944622157" type="Crab">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="6302347508206659" type="Crab">
+                                            <param id="0" name="Instance variable">CanPinch</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="6627572830634042" title="PlatformPenguin">
+            <sub-events>
+                <event-block sid="9817001036806">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="8236300410775487" type="System">
+                            <param id="0" name="Object">PlatformPenguin</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4459495096270189" type="PlatformPenguin">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4901417800865963">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="9615099795537542" type="System">
+                                    <param id="0" name="First value">abs(PlatformPenguin.X - ViewportLeft(PlatformPenguin.LayerNumber) - PlayableCharacters.X)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">20</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="3021304886362591" type="PlatformPenguin">
+                                    <param id="0" name="Instance variable">CanPinch</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9866842061576177" type="PlatformPenguin">
+                                    <param id="0" name="Animation">&quot;Jumping&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="8211370230573742" type="PlatformPenguin">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8076112710471232">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3610036455878507" type="System" />
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="4" name="Set animation" sid="1764439428810431" type="PlatformPenguin">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="1738952249404621">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="2247226976534751" type="PlatformPenguin">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">ViewportLeft(PlatformPenguin.LayerNumber) + PlayableCharacters.X+20</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="7957464370817613" type="PlatformPenguin">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="8471739502379609" type="PlatformPenguin">
+                                            <param id="0" name="Instance variable">CanPinch</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="4594818310827557" type="PlatformPenguin">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6143583032402718">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="9494030809792018" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="8019667944622157" type="PlatformPenguin">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="6302347508206659" type="PlatformPenguin">
+                                            <param id="0" name="Instance variable">CanPinch</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="7449846961275664" type="PlatformPenguin">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2048201113664933">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="5211611100838789" type="PlatformPenguin" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="9055765672966283" type="PlatformPenguin">
+                            <param id="0" name="Animation">&quot;Falling&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2122456415956014" type="PlatformPenguin">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;Falling&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="4462983779326015" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1493695429486402" type="PlatformPenguin">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="3390257656396169" type="PlatformPenguin">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="7165723092744453" title="PenguinGun">
+            <sub-events>
+                <event-block sid="2041129807353332">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="3551034914335327" type="System">
+                            <param id="0" name="Object">PenguinGun</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1987927005149239">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7079280506626611" type="System">
+                                    <param id="0" name="First value">abs(PenguinGun.X - ViewportLeft(PenguinGun.LayerNumber) - PlayableCharacters.X)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="7785978116000746" type="PenguinGun">
+                                    <param id="0" name="Animation">&quot;Top&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8741651634905146">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1383792130253879" type="System" />
+                                <condition id="-8" name="Compare two values" sid="1233003908425184" type="System">
+                                    <param id="0" name="First value">abs(PenguinGun.X - ViewportLeft(PenguinGun.LayerNumber) - PlayableCharacters.X)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">60</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="540728138705498" type="PenguinGun">
+                                    <param id="0" name="Animation">&quot;LeftTop&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9981723835586428">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="378015137877747" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="2906116658695801" type="PenguinGun">
+                                    <param id="0" name="Animation">&quot;Left&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4597302563896035">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="8705073857792188" type="PenguinGun">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">ViewportLeft(PenguinGun.LayerNumber) + PlayableCharacters.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="926231463018609" type="PenguinGun">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3838495717914129">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1405404146201537" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="371966944046356" type="PenguinGun">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Implementado porém no jogo original eles não atiram...</comment>
+                        <event-block disabled="1" sid="9954217743926319">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3222209071479686" type="PenguinGun">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                                <condition id="-3" name="Is on-screen" sid="5087487418941852" type="PenguinGun" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="5446236806082524" type="PenguinGun">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">&quot;Firing&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="917415771663918" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="6693125267688521" type="PenguinGun">
+                                    <param id="0" name="Object">EnemyBullet</param>
+                                    <param id="1" name="Layer">PenguinGun.LayerNumber</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="4404801732414928" type="EnemyBullet">
+                                    <param id="0" name="Angle">angle(PenguinGun.X - ViewportLeft(PenguinGun.LayerNumber), PenguinGun.Y, PlayableCharacters.X + 20, PlayableCharacters.Y)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5552961260944488" type="PenguinGun">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

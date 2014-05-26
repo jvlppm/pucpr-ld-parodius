@@ -936,7 +936,9 @@
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5517903347889275" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Pick" x="0.5" y="0.5" />
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -944,7 +946,9 @@
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8652443001667888" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Pick" x="0.5" y="0.5" />
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -952,7 +956,9 @@
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6779147639165633" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Pick" x="0.5" y="0.5" />
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -960,7 +966,9 @@
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7355249290260543" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Pick" x="0.5" y="0.5" />
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -968,7 +976,9 @@
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9750221494575782" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Pick" x="0.5" y="0.5" />
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -976,7 +986,87 @@
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5191812662003061" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Pick" x="0.5" y="0.5" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Crab" sid="742451081274191">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="CanPinch" sid="3065497989039875" type="boolean" />
+                </instance-variables>
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2089094326316973" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Pick" x="0.5" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Pick" x="0.5" y="0.5" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="Pinching" pingpong="0" repeatcount="1" repeatto="0" sid="7444756265631861" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Pick" x="0.5" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Pick" x="0.5" y="0.5" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PenguinGun" sid="3324529084296055">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="State" sid="2027763708244443" type="string" />
+                </instance-variables>
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="0" name="Left" pingpong="0" repeatcount="1" repeatto="0" sid="2638469921299522" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="LeftTop" pingpong="0" repeatcount="1" repeatto="0" sid="7869803478832998" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Top" pingpong="0" repeatcount="1" repeatto="0" sid="8608252233757163" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PlatformPenguin" sid="935960343050657">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="CanPinch" sid="6520975834713683" type="boolean" />
+                    <instance-variable name="State" sid="6804805696752601" type="string" />
+                </instance-variables>
+                <animation-folder expanded="1">
+                    <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6951715727610041" speed="5">
+                        <frame duration="1" hotspotX="0.529412" hotspotY="1">
+                            <image-point name="Pick" x="0.529412" y="0.52381" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.529412" hotspotY="1">
+                            <image-point name="Pick" x="0.529412" y="0.52381" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.529412" hotspotY="1">
+                            <image-point name="Pick" x="0.529412" y="0.521739" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="Jumping" pingpong="0" repeatcount="1" repeatto="0" sid="4743266441789742" speed="5">
+                        <frame duration="1" hotspotX="0.529412" hotspotY="1">
+                            <image-point name="Pick" x="0.529412" y="0.541667" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.529412" hotspotY="1">
+                            <image-point name="Pick" x="0.529412" y="0.541667" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="Falling" pingpong="0" repeatcount="1" repeatto="0" sid="6099454778366813" speed="5">
+                        <frame duration="1" hotspotX="0.541667" hotspotY="1">
+                            <image-point name="Pick" x="0.541667" y="0.529412" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.541667" hotspotY="1">
+                            <image-point name="Pick" x="0.541667" y="0.529412" />
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1162,6 +1252,19 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="EnemyBullet" sid="7098667815712415">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="2661266992391851">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3809494137208528" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="PlayableCharacters" plugin-id="Sprite" sid="6659182174539103">
@@ -1212,6 +1315,7 @@
                 <member>Chicken</member>
                 <member>Claw</member>
                 <member>ClawBase</member>
+                <member>Crab</member>
                 <member>Doll1</member>
                 <member>Doll2</member>
                 <member>Doll3</member>
@@ -1221,7 +1325,9 @@
                 <member>GreenHead</member>
                 <member>LittleChicken</member>
                 <member>OrangeHead</member>
+                <member>PenguinGun</member>
                 <member>PinkHead</member>
+                <member>PlatformPenguin</member>
                 <member>WhiteHead</member>
             </members>
             <instance-variables>
@@ -1295,14 +1401,16 @@
                 </behavior-type>
             </behaviors>
         </family>
-        <family name="Toys" plugin-id="Sprite" sid="9849962073242398">
+        <family name="PlatformEnemies" plugin-id="Sprite" sid="9849962073242398">
             <members>
+                <member>Crab</member>
                 <member>Doll1</member>
                 <member>Doll2</member>
                 <member>Doll3</member>
                 <member>Doll4</member>
                 <member>Doll5</member>
                 <member>Doll6</member>
+                <member>PlatformPenguin</member>
             </members>
             <instance-variables>
                 <instance-variable name="ClawId" sid="7442284938028831" type="number" />
