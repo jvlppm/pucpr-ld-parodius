@@ -5,9 +5,9 @@
     <events>
         <event-group collapsed="1" description="" sid="7655464285447706" title="VicViper">
             <sub-events>
-                <event-group collapsed="1" description="" sid="1151816588679161" title="VicViper Boosts">
+                <event-group description="" sid="1151816588679161" title="VicViper Boosts">
                     <sub-events>
-                        <event-block collapsed="1" sid="8248100177816901">
+                        <event-block sid="8248100177816901">
                             <conditions>
                                 <condition id="0" name="On function" sid="9612079706182088" type="Function">
                                     <param id="0" name="Name">&quot;UseBoost&quot;</param>
@@ -29,11 +29,16 @@
                                     </conditions>
                                     <actions>
                                         <action behavior="8Direction" id="4" name="Set max speed" sid="5638237667231401" type="VicViper">
-                                            <param id="0" name="Max Speed">VicViper.8Direction.MaxSpeed + VicViper.InitialMaxSpeed / (VicViper.SpeedBoosts + 1)</param>
+                                            <param id="0" name="Max Speed">VicViper.8Direction.MaxSpeed + VicViper.InitialMaxSpeed / (VicViper.SpeedBoosts + 2)</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="8388071523445467" type="VicViper">
                                             <param id="0" name="Instance variable">AvailableBoost</param>
                                             <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action behavior="Flash" id="0" name="Flash" sid="3049177828510464" type="VicViper">
+                                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                            <param id="2" name="Duration">1.0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -55,6 +60,11 @@
                                             <param id="0" name="Instance variable">AvailableBoost</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
+                                        <action behavior="Flash" id="0" name="Flash" sid="4423437778160901" type="VicViper">
+                                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                            <param id="2" name="Duration">1.0</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="1368105614542375">
@@ -74,6 +84,11 @@
                                         <action id="-10" name="Set value" sid="587371555285426" type="VicViper">
                                             <param id="0" name="Instance variable">AvailableBoost</param>
                                             <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action behavior="Flash" id="0" name="Flash" sid="9979089339501012" type="VicViper">
+                                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                            <param id="2" name="Duration">1.0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -98,7 +113,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block any="1" collapsed="1" sid="5577929714118978">
+                        <event-block any="1" sid="5577929714118978">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="6308824704014192" type="VicViper">
                                     <param id="0" name="Instance variable">Weapon</param>

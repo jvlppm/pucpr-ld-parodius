@@ -50,7 +50,7 @@
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="0">
+    <object-folder expanded="1">
         <object-folder expanded="0" name="Playable Characters">
             <object-type name="VicViper" sid="2641026747174929">
                 <plugin id="Sprite" />
@@ -479,7 +479,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="Enemies">
+        <object-folder expanded="1" name="Enemies">
             <object-type name="BigBird" sid="3570588967487432">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -1551,7 +1551,7 @@
     <layout-folder expanded="1">
         <layout>Level1.xml</layout>
     </layout-folder>
-    <event-folder expanded="1">
+    <event-folder expanded="0">
         <event-sheet>GamePlay Events.xml</event-sheet>
         <event-sheet>Enemies.xml</event-sheet>
         <event-sheet>VicViper.xml</event-sheet>

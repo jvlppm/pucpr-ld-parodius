@@ -4,7 +4,7 @@
     <name>Enemies</name>
     <events>
         <variable constant="0" name="ExtraLives" sid="1861744788144475" static="0" type="number">2</variable>
-        <event-group collapsed="1" description="" sid="8257614993568474" title="Enemies Common">
+        <event-group description="" sid="8257614993568474" title="Enemies Common">
             <sub-events>
                 <event-block sid="1799635042287704">
                     <conditions>
@@ -137,7 +137,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4329491086821177" title="Hits">
+        <event-group description="" sid="4329491086821177" title="Hits">
             <sub-events>
                 <comment>Balas atingindo inimigos</comment>
                 <event-block sid="8303597911820412">
@@ -196,7 +196,7 @@
                 <comment>Jogador morrer ao tocar os inimigos</comment>
                 <event-block sid="1953891852661875">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="1505974564070166" type="Enemies">
+                        <condition id="1" name="Is overlapping another object" sid="1505974564070166" type="Enemies">
                             <param id="0" name="Object">PlayableCharacters</param>
                         </condition>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4176242941690469" type="Enemies">
@@ -346,8 +346,8 @@
                             <actions>
                                 <action behavior="Flash" id="0" name="Flash" sid="2444267486518073" type="Enemies">
                                     <param id="0" name="&apos;On&apos; time">0.01</param>
-                                    <param id="1" name="&apos;Off&apos; time">0.01</param>
-                                    <param id="2" name="Duration">1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0</param>
+                                    <param id="2" name="Duration">0.75</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -814,7 +814,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8145193696911308" title="Boss1">
+        <event-group description="" sid="8145193696911308" title="Boss1">
             <sub-events>
                 <event-block sid="6613316875722015">
                     <conditions>
@@ -1169,7 +1169,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block collapsed="1" sid="9481016669122788">
+                        <event-block sid="9481016669122788">
                             <conditions>
                                 <condition id="0" name="On function" sid="5749173329458023" type="Function">
                                     <param id="0" name="Name">&quot;HitBoss1&quot;</param>
@@ -1263,6 +1263,9 @@
                                                 </action>
                                                 <action id="-16" name="Set opacity" sid="4871318263154023" type="Boss1">
                                                     <param id="0" name="Opacity">100</param>
+                                                </action>
+                                                <action behavior="8Direction" id="4" name="Set max speed" sid="6179282315764071" type="Boss1">
+                                                    <param id="0" name="Max Speed">Boss1.8Direction.MaxSpeed + 5</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1365,7 +1368,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4574535754925802" title="Claws">
+        <event-group collapsed="1" description="" sid="4574535754925802" title="Claws">
             <sub-events>
                 <event-block sid="1329500806156582">
                     <conditions>
