@@ -50,7 +50,7 @@
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-folder expanded="0" name="Playable Characters">
             <object-type name="VicViper" sid="2641026747174929">
                 <plugin id="Sprite" />
@@ -1281,6 +1281,30 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="BossToys" sid="4027657868237887">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="2" loop="1" name="Toy1" pingpong="0" repeatcount="1" repeatto="0" sid="6917020117632153" speed="5">
+                    <frame duration="1" hotspotX="0.517241" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.52381" hotspotY="0.526316" />
+                </animation>
+                <animation framecount="1" loop="1" name="Toy2" pingpong="0" repeatcount="1" repeatto="0" sid="9077213658868848" speed="5">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="0.5" />
+                </animation>
+                <animation framecount="2" loop="1" name="Toy3" pingpong="0" repeatcount="1" repeatto="0" sid="6997520255801805" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.533333" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.533333" />
+                </animation>
+                <animation framecount="2" loop="1" name="Toy4" pingpong="0" repeatcount="1" repeatto="0" sid="3568539163334479" speed="5">
+                    <frame duration="1" hotspotX="0.545455" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="2" loop="1" name="Toy5" pingpong="0" repeatcount="1" repeatto="0" sid="9283165231614795" speed="5">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="0.526316" />
+                    <frame duration="1" hotspotX="0.533333" hotspotY="0.526316" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="PlayableCharacters" plugin-id="Sprite" sid="6659182174539103">
@@ -1328,6 +1352,7 @@
                 <member>BigBird</member>
                 <member>BlueHead</member>
                 <member>Boss1</member>
+                <member>BossToys</member>
                 <member>Chicken</member>
                 <member>Claw</member>
                 <member>ClawBase</member>
@@ -1420,6 +1445,7 @@
         </family>
         <family name="PlatformEnemies" plugin-id="Sprite" sid="9849962073242398">
             <members>
+                <member>BossToys</member>
                 <member>Crab</member>
                 <member>CrazyPenguin</member>
                 <member>Doll1</member>

@@ -702,7 +702,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6301054243292651" title="BigBird">
+        <event-group collapsed="1" description="" sid="6301054243292651" title="BigBird">
             <sub-events>
                 <event-block sid="3571859625333593">
                     <conditions>
@@ -814,7 +814,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8145193696911308" title="Boss1">
+        <event-group description="" sid="8145193696911308" title="Boss1">
             <sub-events>
                 <event-block sid="6613316875722015">
                     <conditions>
@@ -878,7 +878,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block collapsed="1" sid="6141029047303595">
+                        <event-block sid="6141029047303595">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="9349161438453872" type="Boss1">
                                     <param id="0" name="Instance variable">State</param>
@@ -914,8 +914,33 @@
                                             <param id="0" name="Animation">&quot;Default&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
-                                        <action id="-16" name="Wait" sid="2619354824627143" type="System">
-                                            <param id="0" name="Seconds">4</param>
+                                        <action id="0" name="Call function" sid="7671809956251826" type="Function">
+                                            <param id="0" name="Name">&quot;ThrowToy&quot;</param>
+                                            <param id="1" name="Parameter {n}">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="7737327792643255" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="9839410838538591" type="Function">
+                                            <param id="0" name="Name">&quot;ThrowToy&quot;</param>
+                                            <param id="1" name="Parameter {n}">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="860717971398539" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="1578702411158453" type="Function">
+                                            <param id="0" name="Name">&quot;ThrowToy&quot;</param>
+                                            <param id="1" name="Parameter {n}">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="9906399488976258" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="7417737951657568" type="Function">
+                                            <param id="0" name="Name">&quot;ThrowToy&quot;</param>
+                                            <param id="1" name="Parameter {n}">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="5352496482786557" type="System">
+                                            <param id="0" name="Seconds">2.5</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="8980772003564962" type="Boss1">
                                             <param id="0" name="Instance variable">State</param>
@@ -965,8 +990,33 @@
                                             <param id="0" name="Animation">&quot;Default&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
-                                        <action id="-16" name="Wait" sid="1673941147762363" type="System">
-                                            <param id="0" name="Seconds">4</param>
+                                        <action id="0" name="Call function" sid="6158268917096555" type="Function">
+                                            <param id="0" name="Name">&quot;ThrowToy&quot;</param>
+                                            <param id="1" name="Parameter {n}">-1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="9843902637740007" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="2860845810593544" type="Function">
+                                            <param id="0" name="Name">&quot;ThrowToy&quot;</param>
+                                            <param id="1" name="Parameter {n}">-1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="9166357044783319" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="3375972193264167" type="Function">
+                                            <param id="0" name="Name">&quot;ThrowToy&quot;</param>
+                                            <param id="1" name="Parameter {n}">-1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="5277036307527088" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="2918667806348134" type="Function">
+                                            <param id="0" name="Name">&quot;ThrowToy&quot;</param>
+                                            <param id="1" name="Parameter {n}">-1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="1217366132424838" type="System">
+                                            <param id="0" name="Seconds">2.5</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="8435979922580668" type="Boss1">
                                             <param id="0" name="Instance variable">State</param>
@@ -994,7 +1044,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="6706510580682389">
+                        <event-block collapsed="1" sid="6706510580682389">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="5876579091410863" type="Boss1">
                                     <param id="0" name="Instance variable">State</param>
@@ -1119,7 +1169,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="9481016669122788">
+                        <event-block collapsed="1" sid="9481016669122788">
                             <conditions>
                                 <condition id="0" name="On function" sid="5749173329458023" type="Function">
                                     <param id="0" name="Name">&quot;HitBoss1&quot;</param>
@@ -1268,6 +1318,50 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="1225578565412903">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7909590816794206" type="Function">
+                            <param id="0" name="Name">&quot;ThrowToy&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="4637446719566043" type="System">
+                            <param id="0" name="Object to create">BossToys</param>
+                            <param id="1" name="Layer">&quot;Foreground&quot;</param>
+                            <param id="2" name="X">Boss1.X</param>
+                            <param id="3" name="Y">Boss1.Y</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="4198416259065664" type="BossToys">
+                            <param id="0" name="Y">200</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="1622492971698632" type="BossToys">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="8044815626914044" type="BossToys">
+                            <param id="0" name="Vector X">random(200) * Function.Param(0)</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="4330427098242758" type="BossToys">
+                            <param id="0" name="Vector Y">(200 + random(200) )* -1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="425718564762029" type="BossToys">
+                            <param id="0" name="Animation">&quot;Toy&quot; &amp; int( random(5) )+ 1</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2113382460326081">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="4895432382896985" type="BossToys" />
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Set collisions enabled" sid="4857199343951827" type="BossToys">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action behavior="8Direction" id="10" name="Set vector Y" sid="7856009985995148" type="BossToys">
+                            <param id="0" name="Vector Y">-50</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -1734,7 +1828,7 @@
         </event-group>
         <event-group collapsed="1" description="" sid="206210011512321" title="Crab">
             <sub-events>
-                <event-block collapsed="1" sid="9817001036806">
+                <event-block sid="9817001036806">
                     <conditions>
                         <condition id="-11" name="For Each" sid="8236300410775487" type="System">
                             <param id="0" name="Object">Crab</param>

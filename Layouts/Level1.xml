@@ -4499,7 +4499,7 @@
                         <InitialMaxSpeed>0</InitialMaxSpeed>
                         <AvailableBoost>0</AvailableBoost>
                         <IsDead>false</IsDead>
-                        <Invincible>false</Invincible>
+                        <Invincible>true</Invincible>
                         <State></State>
                         <DropMissile>false</DropMissile>
                     </instance-variables>
@@ -10636,6 +10636,67 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="BossToys" uid="240">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LinkedUID>0</LinkedUID>
+                        <Life>1</Life>
+                        <DropItem></DropItem>
+                        <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>false</MoveToActiveLayer>
+                        <IsDead>false</IsDead>
+                        <Points>100</Points>
+                        <ClawId>0</ClawId>
+                        <EnableOnScreen>false</EnableOnScreen>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>5000</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>0</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>8000</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>0</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2736</x>
+                        <y>288</y>
+                        <z>0</z>
+                        <width>29</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.517241359</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
