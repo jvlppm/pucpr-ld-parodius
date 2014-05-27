@@ -1494,6 +1494,7 @@
             <instance-variables>
                 <instance-variable name="YOffset" sid="3069040372531773" type="number" />
                 <instance-variable name="GoingUp" sid="2210966713674669" type="boolean" />
+                <instance-variable name="CanShoot" sid="5087885288623407" type="boolean" />
             </instance-variables>
         </family>
         <family name="Indicators" plugin-id="Sprite" sid="3960903977548738">
