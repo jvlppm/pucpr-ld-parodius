@@ -399,7 +399,7 @@
                                     <point x="0.833984" y="0.144531" />
                                     <point x="0.996094" y="0.984375" />
                                     <point x="0.00390625" y="0.984375" />
-                                    <point x="0.03125" y="0.699219" />
+                                    <point x="0" y="0.683594" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -429,6 +429,54 @@
             <object-type name="Stars" sid="6960931072213157">
                 <plugin id="NinePatch" />
                 <texture />
+            </object-type>
+            <object-type name="Planet" sid="4681324938921968">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="820582806880917" speed="5">
+                        <frame duration="1" hotspotX="0.545455" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Stars1" sid="8821608309840901">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8553840931127188" speed="5">
+                        <frame duration="1" hotspotX="0.517241" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Stars2" sid="9059474412222566">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5059573954312863" speed="5">
+                        <frame duration="1" hotspotX="0.52381" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Stars3" sid="3785091500973752">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8486983036425707" speed="5">
+                        <frame duration="1" hotspotX="0.526316" hotspotY="0.526316" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Stars4" sid="1708697752825163">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4938961176866105" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.526316" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ToyStars" sid="2930523852778131">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6931706479206187" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.517241" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder expanded="0" name="Enemies">
@@ -997,6 +1045,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="CanPinch" sid="3065497989039875" type="boolean" />
+                    <instance-variable name="GoingLeft" sid="203764367239068" type="boolean" />
                 </instance-variables>
                 <animation-folder expanded="1">
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2089094326316973" speed="5">
@@ -1321,6 +1370,14 @@
                 <animation framecount="2" loop="1" name="Toy5" pingpong="0" repeatcount="1" repeatto="0" sid="9283165231614795" speed="5">
                     <frame duration="1" hotspotX="0.533333" hotspotY="0.526316" />
                     <frame duration="1" hotspotX="0.533333" hotspotY="0.526316" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ChangeDirection" sid="8431274807418343">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5165843419966252" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
