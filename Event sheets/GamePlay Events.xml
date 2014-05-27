@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GamePlay Events</name>
     <events>
-        <variable constant="0" name="StartX" sid="9233377332001631" static="0" type="number">1500</variable>
+        <variable constant="0" name="StartX" sid="9233377332001631" static="0" type="number">0</variable>
         <variable constant="0" name="HighScore" sid="1551581350836536" static="0" type="number">0</variable>
         <variable constant="0" name="Score" sid="2083927557107547" static="0" type="number">0</variable>
         <include>Enemies</include>
@@ -31,7 +31,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="8255276067209778">
+                                <event-block collapsed="1" sid="8255276067209778">
                                     <conditions>
                                         <condition id="4" name="Has gamepads" sid="8623469226172422" type="Gamepad" />
                                     </conditions>

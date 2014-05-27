@@ -4499,7 +4499,7 @@
                         <InitialMaxSpeed>0</InitialMaxSpeed>
                         <AvailableBoost>0</AvailableBoost>
                         <IsDead>false</IsDead>
-                        <Invincible>true</Invincible>
+                        <Invincible>false</Invincible>
                         <State></State>
                         <DropMissile>false</DropMissile>
                     </instance-variables>
@@ -8024,6 +8024,7 @@
                         <BaseId>155</BaseId>
                         <State></State>
                         <HoldId>0</HoldId>
+                        <BringRight>true</BringRight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -8086,6 +8087,7 @@
                         <BaseId>0</BaseId>
                         <State></State>
                         <HoldId>0</HoldId>
+                        <BringRight>true</BringRight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -8148,6 +8150,7 @@
                         <BaseId>0</BaseId>
                         <State></State>
                         <HoldId>0</HoldId>
+                        <BringRight>true</BringRight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -8210,6 +8213,7 @@
                         <BaseId>0</BaseId>
                         <State></State>
                         <HoldId>0</HoldId>
+                        <BringRight>true</BringRight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -8272,6 +8276,7 @@
                         <BaseId>0</BaseId>
                         <State></State>
                         <HoldId>0</HoldId>
+                        <BringRight>true</BringRight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -8334,6 +8339,7 @@
                         <BaseId>0</BaseId>
                         <State></State>
                         <HoldId>0</HoldId>
+                        <BringRight>true</BringRight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -8396,6 +8402,7 @@
                         <BaseId>0</BaseId>
                         <State></State>
                         <HoldId>0</HoldId>
+                        <BringRight>true</BringRight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -9841,10 +9848,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3544</x>
-                        <y>8</y>
+                        <x>3512</x>
+                        <y>16</y>
                         <z>0</z>
-                        <width>16</width>
+                        <width>8</width>
                         <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -9873,6 +9880,7 @@
                         <BaseId>0</BaseId>
                         <State></State>
                         <HoldId>0</HoldId>
+                        <BringRight>true</BringRight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -10697,6 +10705,872 @@
                         <depth>0</depth>
                         <hotspotX>0.517241359</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Claw" uid="241">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LinkedUID>0</LinkedUID>
+                        <Life>5</Life>
+                        <DropItem></DropItem>
+                        <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Foreground</ActiveLayer>
+                        <MoveToActiveLayer>false</MoveToActiveLayer>
+                        <IsDead>false</IsDead>
+                        <Points>100</Points>
+                        <BaseId>0</BaseId>
+                        <State></State>
+                        <HoldId>0</HoldId>
+                        <BringRight>false</BringRight>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>75</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>330</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3648</x>
+                        <y>24</y>
+                        <z>0</z>
+                        <width>46</width>
+                        <height>37</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Claw" uid="242">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LinkedUID>0</LinkedUID>
+                        <Life>5</Life>
+                        <DropItem></DropItem>
+                        <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Foreground</ActiveLayer>
+                        <MoveToActiveLayer>false</MoveToActiveLayer>
+                        <IsDead>false</IsDead>
+                        <Points>100</Points>
+                        <BaseId>0</BaseId>
+                        <State></State>
+                        <HoldId>0</HoldId>
+                        <BringRight>false</BringRight>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>75</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>330</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3728</x>
+                        <y>24</y>
+                        <z>0</z>
+                        <width>46</width>
+                        <height>37</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Claw" uid="243">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LinkedUID>0</LinkedUID>
+                        <Life>5</Life>
+                        <DropItem></DropItem>
+                        <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Foreground</ActiveLayer>
+                        <MoveToActiveLayer>false</MoveToActiveLayer>
+                        <IsDead>false</IsDead>
+                        <Points>100</Points>
+                        <BaseId>0</BaseId>
+                        <State></State>
+                        <HoldId>0</HoldId>
+                        <BringRight>true</BringRight>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>75</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>330</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3272</x>
+                        <y>24</y>
+                        <z>0</z>
+                        <width>46</width>
+                        <height>37</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Claw" uid="244">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LinkedUID>0</LinkedUID>
+                        <Life>5</Life>
+                        <DropItem></DropItem>
+                        <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Foreground</ActiveLayer>
+                        <MoveToActiveLayer>false</MoveToActiveLayer>
+                        <IsDead>false</IsDead>
+                        <Points>100</Points>
+                        <BaseId>0</BaseId>
+                        <State></State>
+                        <HoldId>0</HoldId>
+                        <BringRight>true</BringRight>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>75</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>330</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3336</x>
+                        <y>24</y>
+                        <z>0</z>
+                        <width>46</width>
+                        <height>37</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Claw" uid="245">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LinkedUID>0</LinkedUID>
+                        <Life>5</Life>
+                        <DropItem></DropItem>
+                        <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Foreground</ActiveLayer>
+                        <MoveToActiveLayer>false</MoveToActiveLayer>
+                        <IsDead>false</IsDead>
+                        <Points>100</Points>
+                        <BaseId>0</BaseId>
+                        <State></State>
+                        <HoldId>0</HoldId>
+                        <BringRight>true</BringRight>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>75</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>330</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3256</x>
+                        <y>24</y>
+                        <z>0</z>
+                        <width>46</width>
+                        <height>37</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Doll2" uid="246">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LinkedUID>0</LinkedUID>
+                        <Life>4</Life>
+                        <DropItem></DropItem>
+                        <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>false</MoveToActiveLayer>
+                        <IsDead>false</IsDead>
+                        <Points>100</Points>
+                        <ClawId>0</ClawId>
+                        <EnableOnScreen>false</EnableOnScreen>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>80</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3632</x>
+                        <y>224</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Doll3" uid="247">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LinkedUID>0</LinkedUID>
+                        <Life>4</Life>
+                        <DropItem></DropItem>
+                        <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>false</MoveToActiveLayer>
+                        <IsDead>false</IsDead>
+                        <Points>100</Points>
+                        <ClawId>0</ClawId>
+                        <EnableOnScreen>false</EnableOnScreen>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>80</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3600</x>
+                        <y>224</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Doll2" uid="248">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LinkedUID>0</LinkedUID>
+                        <Life>4</Life>
+                        <DropItem></DropItem>
+                        <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>false</MoveToActiveLayer>
+                        <IsDead>false</IsDead>
+                        <Points>100</Points>
+                        <ClawId>0</ClawId>
+                        <EnableOnScreen>false</EnableOnScreen>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>80</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3712</x>
+                        <y>224</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Doll3" uid="249">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LinkedUID>0</LinkedUID>
+                        <Life>4</Life>
+                        <DropItem></DropItem>
+                        <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>false</MoveToActiveLayer>
+                        <IsDead>false</IsDead>
+                        <Points>100</Points>
+                        <ClawId>0</ClawId>
+                        <EnableOnScreen>false</EnableOnScreen>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>80</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3680</x>
+                        <y>224</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Doll2" uid="250">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LinkedUID>0</LinkedUID>
+                        <Life>4</Life>
+                        <DropItem></DropItem>
+                        <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>false</MoveToActiveLayer>
+                        <IsDead>false</IsDead>
+                        <Points>100</Points>
+                        <ClawId>0</ClawId>
+                        <EnableOnScreen>false</EnableOnScreen>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>80</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3784</x>
+                        <y>224</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Doll3" uid="251">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LinkedUID>0</LinkedUID>
+                        <Life>4</Life>
+                        <DropItem></DropItem>
+                        <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>false</MoveToActiveLayer>
+                        <IsDead>false</IsDead>
+                        <Points>100</Points>
+                        <ClawId>0</ClawId>
+                        <EnableOnScreen>false</EnableOnScreen>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>80</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3752</x>
+                        <y>224</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Doll2" uid="252">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LinkedUID>0</LinkedUID>
+                        <Life>4</Life>
+                        <DropItem></DropItem>
+                        <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>false</MoveToActiveLayer>
+                        <IsDead>false</IsDead>
+                        <Points>100</Points>
+                        <ClawId>0</ClawId>
+                        <EnableOnScreen>false</EnableOnScreen>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>80</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3856</x>
+                        <y>224</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Doll3" uid="253">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LinkedUID>0</LinkedUID>
+                        <Life>4</Life>
+                        <DropItem></DropItem>
+                        <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Screen</ActiveLayer>
+                        <MoveToActiveLayer>false</MoveToActiveLayer>
+                        <IsDead>false</IsDead>
+                        <Points>100</Points>
+                        <ClawId>0</ClawId>
+                        <EnableOnScreen>false</EnableOnScreen>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>80</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3824</x>
+                        <y>224</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Claw" uid="254">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LinkedUID>0</LinkedUID>
+                        <Life>5</Life>
+                        <DropItem></DropItem>
+                        <DropItemCount>1</DropItemCount>
+                        <SimpleHits>true</SimpleHits>
+                        <ActiveLayer>Foreground</ActiveLayer>
+                        <MoveToActiveLayer>false</MoveToActiveLayer>
+                        <IsDead>false</IsDead>
+                        <Points>100</Points>
+                        <BaseId>0</BaseId>
+                        <State></State>
+                        <HoldId>0</HoldId>
+                        <BringRight>true</BringRight>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>75</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>330</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3280</x>
+                        <y>24</y>
+                        <z>0</z>
+                        <width>46</width>
+                        <height>37</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
