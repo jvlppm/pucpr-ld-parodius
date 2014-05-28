@@ -67,6 +67,31 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="7419310131503202">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="7443869095268639" type="LaserIndicator">
+                                            <param id="0" name="Animation">&quot;Activated&quot;</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="268443724561024" type="LaserIndicator">
+                                            <param id="0" name="Instance variable">IsEnabled</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="8808619881449974" type="VicViper">
+                                            <param id="0" name="Instance variable">Weapon</param>
+                                            <param id="1" name="Value">&quot;Laser&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="5731256264671201" type="VicViper">
+                                            <param id="0" name="Instance variable">AvailableBoost</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action behavior="Flash" id="0" name="Flash" sid="4369920509619129" type="VicViper">
+                                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                            <param id="2" name="Duration">1.0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="1368105614542375">
                                     <conditions>
                                         <condition id="2" name="Is playing" sid="8011982763948619" type="MissileIndicator">
@@ -98,7 +123,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6208034861734636" title="Weapons">
+        <event-group description="" sid="6208034861734636" title="Weapons">
             <sub-events>
                 <event-block sid="7427928328292399">
                     <conditions>
@@ -113,7 +138,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block any="1" sid="5577929714118978">
+                        <event-block any="1" collapsed="1" sid="5577929714118978">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="6308824704014192" type="VicViper">
                                     <param id="0" name="Instance variable">Weapon</param>
@@ -187,20 +212,30 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="425555063985922">
+                        <event-block sid="6418669644892251">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="3439320888004327" type="VicViper">
-                                    <param id="0" name="Instance variable">DropMissile</param>
+                                <condition id="-7" name="Compare instance variable" sid="5437435311747993" type="VicViper">
+                                    <param id="0" name="Instance variable">Weapon</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Laser&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="1128898712131864" type="VicViper">
-                                    <param id="0" name="Object">DropMissile</param>
-                                    <param id="1" name="Layer">VicViper.LayerNumber</param>
-                                    <param id="2" name="Image point">0</param>
+                                <action id="-10" name="Set value" sid="6664592559198005" type="VicViper">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">&quot;Firing&quot;</param>
                                 </action>
-                                <action behavior="Platform" id="8" name="Set vector X" sid="437082773519141" type="DropMissile">
-                                    <param id="0" name="Vector X">50</param>
+                                <action id="0" name="Spawn another object" sid="4114481905845579" type="VicViper">
+                                    <param id="0" name="Object">Laser</param>
+                                    <param id="1" name="Layer">VicViper.LayerNumber</param>
+                                    <param id="2" name="Image point">&quot;MainWeapon&quot;</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="7540450747219893" type="Laser">
+                                    <param id="0" name="Width">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="4396102061780295" type="VicViper">
+                                    <param id="0" name="Instance variable">LastLaserId</param>
+                                    <param id="1" name="Value">Laser.UID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -256,6 +291,101 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="8384342920677016">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2416757481510977" type="VicViper">
+                            <param id="0" name="Instance variable">Weapon</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Laser&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="6953658725490706" type="LaserIndicator">
+                            <param id="0" name="Instance variable">IsEnabled</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2662770961595661">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="6247582551720361" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="4464824049688885" type="LaserIndicator">
+                            <param id="0" name="Instance variable">IsEnabled</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block collapsed="1" sid="3469102293795249">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2667069874704325" type="VicViper">
+                            <param id="0" name="Instance variable">Weapon</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Laser&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="9321854343610743" type="Laser">
+                            <param id="0" name="Y">VicViper.Y</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5290885120364966">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5187500418638851" type="VicViper">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Firing&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="4414152225328895" type="VicViper">
+                                    <param id="0" name="Instance variable">FiringMainWeapon</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="2612883181948166" type="Laser">
+                                    <param id="0" name="Unique ID">VicViper.LastLaserId</param>
+                                </condition>
+                                <condition id="-5" name="Compare width" sid="3921600236882328" type="Laser">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Width">150</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="5882745946651612" type="Laser">
+                                    <param id="0" name="Width">Laser.Width + 512 * dt</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="9957761081605521" type="Laser">
+                                    <param id="0" name="X">VicViper.ImagePointX(&quot;MainWeapon&quot;) + Laser.Width</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3075040002766478">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="833293248609097" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="3849447575275333" type="VicViper">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Firing&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="5099668276652257" type="VicViper">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">&quot;Recoil&quot;</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="8790318166073482" type="Laser">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="1699618638007348" type="System">
+                                    <param id="0" name="Seconds">1.0 * (Laser.Width / 150)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="3962426177491227" type="VicViper">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="7673029158361878">
                     <conditions>
                         <condition behavior="Platform" id="9" name="On landed" sid="6498991315252474" type="DropMissile" />
@@ -267,6 +397,42 @@
                         <action id="4" name="Set animation" sid="4831780147516786" type="DropMissile">
                             <param id="0" name="Animation">&quot;Running&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="655397985869717">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="1838454098928323" type="VicViper">
+                            <param id="0" name="Instance variable">DropMissile</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="9348107568519829" type="VicViper">
+                            <param id="0" name="Instance variable">FiringMainWeapon</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5568781616921886" type="VicViper">
+                            <param id="0" name="Instance variable">DropMissileWeaponState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="1077629260432038" type="VicViper">
+                            <param id="0" name="Instance variable">DropMissileWeaponState</param>
+                            <param id="1" name="Value">&quot;Delay&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="1128898712131864" type="VicViper">
+                            <param id="0" name="Object">DropMissile</param>
+                            <param id="1" name="Layer">VicViper.LayerNumber</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="437082773519141" type="DropMissile">
+                            <param id="0" name="Vector X">50</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="4942335742257661" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1942804246723687" type="VicViper">
+                            <param id="0" name="Instance variable">DropMissileWeaponState</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>

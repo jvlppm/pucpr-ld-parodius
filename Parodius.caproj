@@ -57,6 +57,8 @@
                 <instance-variables>
                     <instance-variable name="State" sid="8501065602324809" type="string" />
                     <instance-variable name="DropMissile" sid="9454541169193298" type="boolean" />
+                    <instance-variable name="LastLaserId" sid="4752535460797591" type="number" />
+                    <instance-variable name="DropMissileWeaponState" sid="2974719450640625" type="string" />
                 </instance-variables>
                 <animation-folder expanded="1">
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9262602033363283" speed="10">
@@ -1245,7 +1247,7 @@
                         <frame duration="1" hotspotX="0.125" hotspotY="0.625" />
                     </animation>
                     <animation framecount="1" loop="0" name="EmptyActivated" pingpong="0" repeatcount="1" repeatto="0" sid="2618176801236782" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.125" hotspotY="0.625" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1381,6 +1383,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Laser" sid="5372740630027592">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5689989941143652" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="PlayableCharacters" plugin-id="Sprite" sid="6659182174539103">
@@ -1412,10 +1422,12 @@
         <family name="Bullets" plugin-id="Sprite" sid="2334774422848744">
             <members>
                 <member>DropMissile</member>
+                <member>Laser</member>
                 <member>Missile</member>
             </members>
             <instance-variables>
                 <instance-variable name="Damage" sid="8980676089487453" type="number" />
+                <instance-variable name="DestroyBulletOnHit" sid="3423923844329667" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Bullet" sid="3047183538175411">
@@ -1440,6 +1452,7 @@
                 <member>Doll4</member>
                 <member>Doll5</member>
                 <member>Doll6</member>
+                <member>EnemyBullet</member>
                 <member>GreenHead</member>
                 <member>LittleChicken</member>
                 <member>OrangeHead</member>

@@ -20,7 +20,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="4646150867679423">
+                <event-block sid="4646150867679423">
                     <conditions>
                         <condition id="0" name="On function" sid="3634748442343289" type="Function">
                             <param id="0" name="Name">&quot;ActivateEnemy&quot;</param>
@@ -104,7 +104,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="8799271212371809">
+                <event-block sid="8799271212371809">
                     <conditions>
                         <condition id="-1" name="Compare X" sid="3013495211246622" type="Enemies">
                             <param id="0" name="Comparison">2</param>
@@ -246,7 +246,7 @@
                 </event-block>
                 <variable constant="0" name="Last" sid="3347080095428453" static="0" type="number">0</variable>
                 <comment>Destruir inimigos e grupos</comment>
-                <event-block collapsed="1" sid="6099375135136563">
+                <event-block sid="6099375135136563">
                     <conditions>
                         <condition id="0" name="On function" sid="3738993523568975" type="Function">
                             <param id="0" name="Name">&quot;Destroy&quot;</param>
@@ -328,7 +328,7 @@
                     </sub-events>
                 </event-block>
                 <comment>Atingir inimigos</comment>
-                <event-block collapsed="1" sid="3859238823017108">
+                <event-block sid="3859238823017108">
                     <conditions>
                         <condition id="0" name="On function" sid="4999532843052865" type="Function">
                             <param id="0" name="Name">&quot;Hit&quot;</param>
@@ -336,6 +336,7 @@
                         <condition id="-14" name="Pick by unique ID" sid="3832611625768376" type="Enemies">
                             <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
+                        <condition id="-3" name="Is on-screen" sid="5282312586254772" type="Enemies" />
                     </conditions>
                     <actions />
                     <sub-events>
@@ -381,7 +382,11 @@
                                             </actions>
                                         </event-block>
                                         <event-block sid="9116631676807418">
-                                            <conditions />
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="4333130684459332" type="Bullets">
+                                                    <param id="0" name="Instance variable">DestroyBulletOnHit</param>
+                                                </condition>
+                                            </conditions>
                                             <actions>
                                                 <action id="-9" name="Destroy" sid="6327204023616623" type="Bullets" />
                                             </actions>
@@ -420,9 +425,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7440015483106276" title="Heads">
+        <event-group description="" sid="7440015483106276" title="Heads">
             <sub-events>
-                <event-block collapsed="1" sid="6820986884477118">
+                <event-block sid="6820986884477118">
                     <conditions>
                         <condition id="-11" name="For Each" sid="460992147930038" type="System">
                             <param id="0" name="Object">Level1Heads</param>
@@ -479,7 +484,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="7642866608187792">
+                <event-block sid="7642866608187792">
                     <conditions>
                         <condition id="0" name="On function" sid="3484749194791813" type="Function">
                             <param id="0" name="Name">&quot;AdvanceHead&quot;</param>
@@ -513,7 +518,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="7766076010207719">
+                <event-block sid="7766076010207719">
                     <conditions>
                         <condition id="0" name="On function" sid="4973155649636127" type="Function">
                             <param id="0" name="Name">&quot;AlignHead&quot;</param>
@@ -639,7 +644,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="1758280291925947">
+                <event-block sid="1758280291925947">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="6951014644576827" type="System">
                             <param id="0" name="Interval (seconds)">0.75</param>
@@ -727,7 +732,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6301054243292651" title="BigBird">
+        <event-group description="" sid="6301054243292651" title="BigBird">
             <sub-events>
                 <event-block sid="3571859625333593">
                     <conditions>
@@ -839,7 +844,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8145193696911308" title="Boss1">
+        <event-group description="" sid="8145193696911308" title="Boss1">
             <sub-events>
                 <event-block sid="6613316875722015">
                     <conditions>
@@ -870,7 +875,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block collapsed="1" sid="8141333325562123">
+                        <event-block sid="8141333325562123">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="4554424901024545" type="Boss1">
                                     <param id="0" name="Instance variable">State</param>
@@ -979,7 +984,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block collapsed="1" sid="4686408756212598">
+                        <event-block sid="4686408756212598">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="8841947294027725" type="Boss1">
                                     <param id="0" name="Instance variable">State</param>
@@ -1069,7 +1074,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block collapsed="1" sid="6706510580682389">
+                        <event-block sid="6706510580682389">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="5876579091410863" type="Boss1">
                                     <param id="0" name="Instance variable">State</param>
@@ -1131,7 +1136,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block collapsed="1" sid="4075435788472844">
+                        <event-block sid="4075435788472844">
                             <conditions>
                                 <condition id="1" name="Is overlapping another object" sid="4302997033023519" type="Bullets">
                                     <param id="0" name="Object">Boss1</param>
@@ -1219,7 +1224,7 @@
                             <actions />
                             <sub-events>
                                 <variable constant="0" name="OriginalState" sid="2514597884428007" static="0" type="text"></variable>
-                                <event-block collapsed="1" sid="8451581245596606">
+                                <event-block sid="8451581245596606">
                                     <conditions>
                                         <condition id="-14" name="Pick by unique ID" sid="1560350895529243" type="Bullets">
                                             <param id="0" name="Unique ID">Function.Param(0)</param>
@@ -1393,7 +1398,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4574535754925802" title="Claws">
+        <event-group description="" sid="4574535754925802" title="Claws">
             <sub-events>
                 <event-block sid="1329500806156582">
                     <conditions>
@@ -1442,7 +1447,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="9969776828647289">
+                <event-block sid="9969776828647289">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="5904948230649601" type="Claw">
                             <param id="0" name="Instance variable">State</param>
@@ -1473,7 +1478,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="7708075682644504">
+                <event-block sid="7708075682644504">
                     <conditions>
                         <condition id="-11" name="For Each" sid="684794322596186" type="System">
                             <param id="0" name="Object">PlatformEnemies</param>
@@ -1549,7 +1554,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="4566225435314462">
+                <event-block sid="4566225435314462">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="3825205153464581" type="Claw">
                             <param id="0" name="Instance variable">State</param>
@@ -1761,7 +1766,7 @@
                         <action id="-24" name="Move to top" sid="189341260601636" type="ClawPole" />
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="1036544452673084">
+                <event-block sid="1036544452673084">
                     <conditions>
                         <condition id="0" name="On function" sid="1416611605046054" type="Function">
                             <param id="0" name="Name">&quot;Destroy&quot;</param>
@@ -1800,7 +1805,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="2537724499708813">
+                <event-block sid="2537724499708813">
                     <conditions>
                         <condition id="0" name="On function" sid="1219952883498393" type="Function">
                             <param id="0" name="Name">&quot;Destroy&quot;</param>
@@ -1898,7 +1903,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="206210011512321" title="Crab">
+        <event-group description="" sid="206210011512321" title="Crab">
             <sub-events>
                 <event-block sid="9817001036806">
                     <conditions>
@@ -2010,7 +2015,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6627572830634042" title="PlatformPenguin">
+        <event-group description="" sid="6627572830634042" title="PlatformPenguin">
             <sub-events>
                 <event-block sid="9817001036806">
                     <conditions>
@@ -2126,7 +2131,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7165723092744453" title="PenguinGun">
+        <event-group description="" sid="7165723092744453" title="PenguinGun">
             <sub-events>
                 <event-block sid="2041129807353332">
                     <conditions>
@@ -2237,7 +2242,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3579786134521312" title="CrazyPenguin">
+        <event-group description="" sid="3579786134521312" title="CrazyPenguin">
             <sub-events>
                 <event-block sid="3441208224771584">
                     <conditions>
