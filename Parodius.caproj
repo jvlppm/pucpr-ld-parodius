@@ -59,6 +59,7 @@
                     <instance-variable name="DropMissile" sid="9454541169193298" type="boolean" />
                     <instance-variable name="LastLaserId" sid="4752535460797591" type="number" />
                     <instance-variable name="DropMissileWeaponState" sid="2974719450640625" type="string" />
+                    <instance-variable name="ShieldActivated" sid="4178279450796036" type="boolean" />
                 </instance-variables>
                 <animation-folder expanded="1">
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9262602033363283" speed="10">
@@ -303,6 +304,15 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="FShield" sid="6766495842312068">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1424437815025346" speed="10">
+                        <frame duration="1" hotspotX="0.6875" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.6875" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder expanded="0" name="Bullets">
             <object-type name="Missile" sid="5708510566616914">
@@ -481,7 +491,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="Enemies">
+        <object-folder expanded="0" name="Enemies">
             <object-type name="BigBird" sid="3570588967487432">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -1182,7 +1192,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="HUD">
+        <object-folder expanded="1" name="HUD">
             <object-type name="SpeedIndicator" sid="6365847308617516">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
@@ -1267,6 +1277,40 @@
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8494122306565982" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="OhIndicator" sid="578051524398955">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7036371047371791" speed="5">
+                        <frame duration="1" hotspotX="0.125" hotspotY="0.625" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Activated" pingpong="0" repeatcount="1" repeatto="0" sid="1248741458879964" speed="5">
+                        <frame duration="1" hotspotX="0.125" hotspotY="0.625" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Empty" pingpong="0" repeatcount="1" repeatto="0" sid="3367301412725063" speed="5">
+                        <frame duration="1" hotspotX="0.125" hotspotY="0.625" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="EmptyActivated" pingpong="0" repeatcount="1" repeatto="0" sid="494140393579087" speed="5">
+                        <frame duration="1" hotspotX="0.125" hotspotY="0.625" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ShieldIndicator" sid="7257606230280798">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5762732413318313" speed="5">
+                        <frame duration="1" hotspotX="0.125" hotspotY="0.625" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Activated" pingpong="0" repeatcount="1" repeatto="0" sid="826337716688674" speed="5">
+                        <frame duration="1" hotspotX="0.125" hotspotY="0.625" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Empty" pingpong="0" repeatcount="1" repeatto="0" sid="9331035456589414" speed="5">
+                        <frame duration="1" hotspotX="0.125" hotspotY="0.625" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="EmptyActivated" pingpong="0" repeatcount="1" repeatto="0" sid="241832165967204" speed="5">
+                        <frame duration="1" hotspotX="0.125" hotspotY="0.625" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1515,11 +1559,14 @@
                 <member>DoubleIndicator</member>
                 <member>LaserIndicator</member>
                 <member>MissileIndicator</member>
+                <member>OhIndicator</member>
+                <member>ShieldIndicator</member>
                 <member>SpeedIndicator</member>
             </members>
             <instance-variables>
                 <instance-variable name="Boosts" sid="7554296502865399" type="number" />
                 <instance-variable name="IsEnabled" sid="5208777421557004" type="boolean" />
+                <instance-variable name="ChanceOfSkipping" sid="8056625809187559" type="number" />
             </instance-variables>
         </family>
         <family name="Platforms" plugin-id="Sprite" sid="6715186568577773">
@@ -1562,7 +1609,7 @@
             </members>
         </family>
     </families>
-    <layout-folder expanded="1">
+    <layout-folder expanded="0">
         <layout>Level1.xml</layout>
     </layout-folder>
     <event-folder expanded="0">

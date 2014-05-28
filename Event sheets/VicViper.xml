@@ -3,129 +3,292 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>VicViper</name>
     <events>
-        <event-group collapsed="1" description="" sid="7655464285447706" title="VicViper">
+        <event-group description="" sid="1151816588679161" title="VicViper Boosts">
             <sub-events>
-                <event-group description="" sid="1151816588679161" title="VicViper Boosts">
+                <event-block sid="2682703028344034">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5612769796241752" type="VicViper">
+                            <param id="0" name="Instance variable">Weapon</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Double&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="3408057461595643" type="DoubleIndicator">
+                            <param id="0" name="Instance variable">IsEnabled</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3409183346009488">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="2100761959886206" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="3997759053021888" type="DoubleIndicator">
+                            <param id="0" name="Instance variable">IsEnabled</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2633276771921851">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="3365324193255564" type="VicViper">
+                            <param id="0" name="Instance variable">DropMissile</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="5786385286136912" type="MissileIndicator">
+                            <param id="0" name="Instance variable">IsEnabled</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1451953168756452">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="6580187538875339" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="131516788386607" type="MissileIndicator">
+                            <param id="0" name="Instance variable">IsEnabled</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8384342920677016">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2416757481510977" type="VicViper">
+                            <param id="0" name="Instance variable">Weapon</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Laser&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="6953658725490706" type="LaserIndicator">
+                            <param id="0" name="Instance variable">IsEnabled</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2662770961595661">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="6247582551720361" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="4464824049688885" type="LaserIndicator">
+                            <param id="0" name="Instance variable">IsEnabled</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6102378871931641">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="6026546463094368" type="VicViper">
+                            <param id="0" name="Instance variable">ShieldActivated</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="6295215972980677" type="ShieldIndicator">
+                            <param id="0" name="Instance variable">IsEnabled</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="535186182247781">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="1742472912059123" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="5739697543740998" type="ShieldIndicator">
+                            <param id="0" name="Instance variable">IsEnabled</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8248100177816901">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9612079706182088" type="Function">
+                            <param id="0" name="Name">&quot;UseBoost&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="1388944671567413" type="VicViper">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="8248100177816901">
+                        <comment>Speed: aumenta a velocidade máxima da nave</comment>
+                        <event-block sid="9080920728569603">
                             <conditions>
-                                <condition id="0" name="On function" sid="9612079706182088" type="Function">
-                                    <param id="0" name="Name">&quot;UseBoost&quot;</param>
+                                <condition id="2" name="Is playing" sid="8377658864597999" type="SpeedIndicator">
+                                    <param id="0" name="Animation">&quot;Activated&quot;</param>
                                 </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="1388944671567413" type="VicViper">
-                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                <condition id="-8" name="Is boolean instance variable set" sid="8926955520748683" type="SpeedIndicator">
+                                    <param id="0" name="Instance variable">IsEnabled</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="9080920728569603">
-                                    <conditions>
-                                        <condition id="2" name="Is playing" sid="8377658864597999" type="SpeedIndicator">
-                                            <param id="0" name="Animation">&quot;Activated&quot;</param>
-                                        </condition>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="8926955520748683" type="SpeedIndicator">
-                                            <param id="0" name="Instance variable">IsEnabled</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="8Direction" id="4" name="Set max speed" sid="5638237667231401" type="VicViper">
-                                            <param id="0" name="Max Speed">VicViper.8Direction.MaxSpeed + VicViper.InitialMaxSpeed / (VicViper.SpeedBoosts + 2)</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="8388071523445467" type="VicViper">
-                                            <param id="0" name="Instance variable">AvailableBoost</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action behavior="Flash" id="0" name="Flash" sid="3049177828510464" type="VicViper">
-                                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                            <param id="2" name="Duration">1.0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="5884232175010957">
-                                    <conditions>
-                                        <condition id="2" name="Is playing" sid="8150255220208178" type="DoubleIndicator">
-                                            <param id="0" name="Animation">&quot;Activated&quot;</param>
-                                        </condition>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="6694816126434617" type="DoubleIndicator">
-                                            <param id="0" name="Instance variable">IsEnabled</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="151756081265288" type="VicViper">
-                                            <param id="0" name="Instance variable">Weapon</param>
-                                            <param id="1" name="Value">&quot;Double&quot;</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="8178264384273842" type="VicViper">
-                                            <param id="0" name="Instance variable">AvailableBoost</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action behavior="Flash" id="0" name="Flash" sid="4423437778160901" type="VicViper">
-                                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                            <param id="2" name="Duration">1.0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="7419310131503202">
-                                    <conditions>
-                                        <condition id="2" name="Is playing" sid="7443869095268639" type="LaserIndicator">
-                                            <param id="0" name="Animation">&quot;Activated&quot;</param>
-                                        </condition>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="268443724561024" type="LaserIndicator">
-                                            <param id="0" name="Instance variable">IsEnabled</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="8808619881449974" type="VicViper">
-                                            <param id="0" name="Instance variable">Weapon</param>
-                                            <param id="1" name="Value">&quot;Laser&quot;</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="5731256264671201" type="VicViper">
-                                            <param id="0" name="Instance variable">AvailableBoost</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action behavior="Flash" id="0" name="Flash" sid="4369920509619129" type="VicViper">
-                                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                            <param id="2" name="Duration">1.0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="1368105614542375">
-                                    <conditions>
-                                        <condition id="2" name="Is playing" sid="8011982763948619" type="MissileIndicator">
-                                            <param id="0" name="Animation">&quot;Activated&quot;</param>
-                                        </condition>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="9773828521482435" type="MissileIndicator">
-                                            <param id="0" name="Instance variable">IsEnabled</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="5328715839661909" type="VicViper">
-                                            <param id="0" name="Instance variable">DropMissile</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="587371555285426" type="VicViper">
-                                            <param id="0" name="Instance variable">AvailableBoost</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action behavior="Flash" id="0" name="Flash" sid="9979089339501012" type="VicViper">
-                                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                            <param id="2" name="Duration">1.0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action behavior="8Direction" id="4" name="Set max speed" sid="5638237667231401" type="VicViper">
+                                    <param id="0" name="Max Speed">VicViper.8Direction.MaxSpeed + VicViper.InitialMaxSpeed / (VicViper.SpeedBoosts + 2)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8388071523445467" type="VicViper">
+                                    <param id="0" name="Instance variable">AvailableBoost</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="3049177828510464" type="VicViper">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Double: soltar míssil ao atirar</comment>
+                        <event-block sid="5884232175010957">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="8150255220208178" type="DoubleIndicator">
+                                    <param id="0" name="Animation">&quot;Activated&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="6694816126434617" type="DoubleIndicator">
+                                    <param id="0" name="Instance variable">IsEnabled</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="151756081265288" type="VicViper">
+                                    <param id="0" name="Instance variable">Weapon</param>
+                                    <param id="1" name="Value">&quot;Double&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8178264384273842" type="VicViper">
+                                    <param id="0" name="Instance variable">AvailableBoost</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="4423437778160901" type="VicViper">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Laser</comment>
+                        <event-block sid="7419310131503202">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="7443869095268639" type="LaserIndicator">
+                                    <param id="0" name="Animation">&quot;Activated&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="268443724561024" type="LaserIndicator">
+                                    <param id="0" name="Instance variable">IsEnabled</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="8808619881449974" type="VicViper">
+                                    <param id="0" name="Instance variable">Weapon</param>
+                                    <param id="1" name="Value">&quot;Laser&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5731256264671201" type="VicViper">
+                                    <param id="0" name="Instance variable">AvailableBoost</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="4369920509619129" type="VicViper">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Missile</comment>
+                        <event-block sid="1368105614542375">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="8011982763948619" type="MissileIndicator">
+                                    <param id="0" name="Animation">&quot;Activated&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="9773828521482435" type="MissileIndicator">
+                                    <param id="0" name="Instance variable">IsEnabled</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="5328715839661909" type="VicViper">
+                                    <param id="0" name="Instance variable">DropMissile</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="587371555285426" type="VicViper">
+                                    <param id="0" name="Instance variable">AvailableBoost</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="9979089339501012" type="VicViper">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>OH! reinicia o status da nave</comment>
+                        <event-block sid="7771503754807158">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="6520637942254467" type="OhIndicator">
+                                    <param id="0" name="Animation">&quot;Activated&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="6567234435480139" type="OhIndicator">
+                                    <param id="0" name="Instance variable">IsEnabled</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="6556644267346904" type="VicViper">
+                                    <param id="0" name="Instance variable">DropMissile</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8217482077715352" type="VicViper">
+                                    <param id="0" name="Instance variable">AvailableBoost</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="6386679280485824" type="VicViper">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="2766839582706738" type="VicViper">
+                                    <param id="0" name="Instance variable">Weapon</param>
+                                    <param id="1" name="Value">&quot;DoubleMissile&quot;</param>
+                                </action>
+                                <action behavior="8Direction" id="4" name="Set max speed" sid="4033412224433443" type="VicViper">
+                                    <param id="0" name="Max Speed">VicViper.InitialMaxSpeed</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="886788337830327" type="VicViper">
+                                    <param id="0" name="Instance variable">ShieldActivated</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>F-Shield</comment>
+                        <event-block sid="5076693065669263">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="6015073088767947" type="ShieldIndicator">
+                                    <param id="0" name="Animation">&quot;Activated&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="7195211904360337" type="ShieldIndicator">
+                                    <param id="0" name="Instance variable">IsEnabled</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="4056747173680186" type="VicViper">
+                                    <param id="0" name="Instance variable">ShieldActivated</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="7767960704243985" type="VicViper">
+                                    <param id="0" name="Instance variable">AvailableBoost</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="7074938434114143" type="VicViper">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
-                </event-group>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6208034861734636" title="Weapons">
+        <event-group description="" sid="6208034861734636" title="VicViper Weapons">
             <sub-events>
-                <event-block sid="7427928328292399">
+                <event-block collapsed="1" sid="7427928328292399">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="9627002337337865" type="VicViper">
                             <param id="0" name="Instance variable">FiringMainWeapon</param>
@@ -240,82 +403,6 @@
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="2682703028344034">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="5612769796241752" type="VicViper">
-                            <param id="0" name="Instance variable">Weapon</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Double&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="3408057461595643" type="DoubleIndicator">
-                            <param id="0" name="Instance variable">IsEnabled</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3409183346009488">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="2100761959886206" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="3997759053021888" type="DoubleIndicator">
-                            <param id="0" name="Instance variable">IsEnabled</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2633276771921851">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="3365324193255564" type="VicViper">
-                            <param id="0" name="Instance variable">DropMissile</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="5786385286136912" type="MissileIndicator">
-                            <param id="0" name="Instance variable">IsEnabled</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1451953168756452">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="6580187538875339" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="131516788386607" type="MissileIndicator">
-                            <param id="0" name="Instance variable">IsEnabled</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="8384342920677016">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="2416757481510977" type="VicViper">
-                            <param id="0" name="Instance variable">Weapon</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Laser&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="6953658725490706" type="LaserIndicator">
-                            <param id="0" name="Instance variable">IsEnabled</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2662770961595661">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="6247582551720361" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="4464824049688885" type="LaserIndicator">
-                            <param id="0" name="Instance variable">IsEnabled</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
                 </event-block>
                 <event-block collapsed="1" sid="3469102293795249">
                     <conditions>
@@ -453,6 +540,90 @@
                 </action>
                 <action id="-9" name="Destroy" sid="6513270439315053" type="DropMissile" />
             </actions>
+        </event-block>
+        <event-block sid="2832717174759767">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="9743078943752621" type="VicViper">
+                    <param id="0" name="Instance variable">ShieldActivated</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="4847574161546477" type="FShield">
+                    <param id="0" name="X">VicViper.X</param>
+                    <param id="1" name="Y">VicViper.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3160618907420075">
+            <conditions>
+                <condition id="-22" name="Else" sid="949827230502071" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="3520466613759614" type="FShield">
+                    <param id="0" name="X">VicViper.X</param>
+                    <param id="1" name="Y">-100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block collapsed="1" sid="9840457638151487">
+            <conditions>
+                <condition id="0" name="On function" sid="6572356062098739" type="Function">
+                    <param id="0" name="Name">&quot;HitPlayer&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="4144563227734113" type="VicViper">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2552419382511831">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7147384716321553" type="VicViper">
+                            <param id="0" name="Instance variable">IsDead</param>
+                        </condition>
+                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="7551974319908075" type="VicViper" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2603653125917747" type="VicViper">
+                            <param id="0" name="Instance variable">Invincible</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2060296611635504">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="2771216914877539" type="VicViper">
+                                    <param id="0" name="Instance variable">ShieldActivated</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="7126321762033588" type="VicViper">
+                                    <param id="0" name="Instance variable">ShieldActivated</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="6919153645754155" type="VicViper">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9199842494079167">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3047181871496896" type="System" />
+                            </conditions>
+                            <actions>
+                                <action breakpoint="1" id="-13" name="Set boolean" sid="7511055025931058" type="PlayableCharacters">
+                                    <param id="0" name="Instance variable">IsDead</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="5981263584667588" type="PlayableCharacters">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

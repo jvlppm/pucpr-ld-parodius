@@ -8,7 +8,7 @@
         <variable constant="0" name="Score" sid="2083927557107547" static="0" type="number">0</variable>
         <include>Enemies</include>
         <include>VicViper</include>
-        <event-group collapsed="1" description="" sid="8850219158393638" title="Playable Characters">
+        <event-group description="" sid="8850219158393638" title="Playable Characters">
             <sub-events>
                 <event-group description="" sid="7673411034528074" title="Controls">
                     <sub-events>
@@ -31,7 +31,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block collapsed="1" sid="8255276067209778">
+                                <event-block sid="8255276067209778">
                                     <conditions>
                                         <condition id="4" name="Has gamepads" sid="8623469226172422" type="Gamepad" />
                                     </conditions>
@@ -511,40 +511,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="7378511717838868">
-                    <conditions>
-                        <condition id="0" name="On function" sid="1348057993038503" type="Function">
-                            <param id="0" name="Name">&quot;HitPlayer&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="2538279333602285" type="PlayableCharacters">
-                            <param id="0" name="Unique ID">Function.Param(0)</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="8283613455529618">
-                            <conditions>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5860951892025675" type="PlayableCharacters">
-                                    <param id="0" name="Instance variable">IsDead</param>
-                                </condition>
-                                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="548486895986768" type="PlayableCharacters" />
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1358335959562953" type="PlayableCharacters">
-                                    <param id="0" name="Instance variable">Invincible</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action breakpoint="1" id="-13" name="Set boolean" sid="2617941295510843" type="PlayableCharacters">
-                                    <param id="0" name="Instance variable">IsDead</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="9617771723588168" type="PlayableCharacters">
-                                    <param id="0" name="Animation">&quot;Death&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="6132420569273493" title="Items">
@@ -621,6 +587,28 @@
                             <param id="1" name="Value">100</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="985544517318655">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2034084410721529" type="Indicators">
+                                    <param id="0" name="Instance variable">Boosts</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">PlayableCharacters.AvailableBoost</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="7090894863756589" type="System">
+                                    <param id="0" name="First value">random(100)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">Indicators.ChanceOfSkipping</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="9023103269821149" type="PlayableCharacters">
+                                    <param id="0" name="Instance variable">AvailableBoost</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -731,7 +719,7 @@
                         <condition id="-7" name="Compare instance variable" sid="2607054070878619" type="PlayableCharacters">
                             <param id="0" name="Instance variable">AvailableBoost</param>
                             <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">4</param>
+                            <param id="2" name="Value">6</param>
                         </condition>
                     </conditions>
                     <actions>
