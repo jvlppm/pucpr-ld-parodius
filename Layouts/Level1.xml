@@ -334,7 +334,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Planet" uid="255">
+                <instance type="Planet1" uid="255">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -356,7 +356,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Planet" uid="256">
+                <instance type="Planet1" uid="256">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -620,7 +620,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Planet" uid="269">
+                <instance type="Planet1" uid="269">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -5117,7 +5117,7 @@
                         <InitialMaxSpeed>0</InitialMaxSpeed>
                         <AvailableBoost>0</AvailableBoost>
                         <IsDead>false</IsDead>
-                        <Invincible>false</Invincible>
+                        <Invincible>true</Invincible>
                         <State></State>
                         <DropMissile>false</DropMissile>
                         <LastLaserId>0</LastLaserId>
@@ -12486,6 +12486,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="BossExplosion" uid="328">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>168</x>
+                        <y>-376</y>
+                        <z>0</z>
+                        <width>88</width>
+                        <height>82</height>
+                        <depth>0</depth>
+                        <hotspotX>4.545454502</hotspotX>
+                        <hotspotY>-3.121951103</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -12637,7 +12659,7 @@
                     <properties>
                         <character-width>8</character-width>
                         <character-height>8</character-height>
-                        <character-set>1234567890HIP</character-set>
+                        <character-set>1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ</character-set>
                         <text>1P</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
@@ -12670,7 +12692,7 @@
                     <properties>
                         <character-width>8</character-width>
                         <character-height>8</character-height>
-                        <character-set>1234567890HIP</character-set>
+                        <character-set>1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ</character-set>
                         <text>HI</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
@@ -12703,7 +12725,7 @@
                     <properties>
                         <character-width>8</character-width>
                         <character-height>8</character-height>
-                        <character-set>1234567890HIP</character-set>
+                        <character-set>1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ</character-set>
                         <text>00000000</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
@@ -12736,7 +12758,7 @@
                     <properties>
                         <character-width>8</character-width>
                         <character-height>8</character-height>
-                        <character-set>1234567890HIP</character-set>
+                        <character-set>1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ</character-set>
                         <text>00000000</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
@@ -12841,6 +12863,39 @@
                         <depth>0</depth>
                         <hotspotX>0.125</hotspotX>
                         <hotspotY>0.625</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Label" uid="329">
+                    <properties>
+                        <character-width>8</character-width>
+                        <character-height>8</character-height>
+                        <character-set>1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ-</character-set>
+                        <text>X - S</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <Binding></Binding>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>200</x>
+                        <y>211</y>
+                        <z>0</z>
+                        <width>56</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

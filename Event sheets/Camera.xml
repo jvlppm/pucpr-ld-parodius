@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Camera</name>
+    <events>
+        <event-block sid="3477757709207761">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="978756881795997" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="901778775364343" type="Camera">
+                    <param id="0" name="X">Camera.X + dt * Camera.Speed</param>
+                </action>
+                <action id="-1" name="Set X" sid="5343449634599872" type="BlackOverlay">
+                    <param id="0" name="X">ViewportLeft(BlackOverlay.LayerNumber)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9074360930823764">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7941237386360295" type="Camera">
+                    <param id="0" name="Object">Checkpoint</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9465627504618735" type="System">
+                    <param id="0" name="Variable">StartX</param>
+                    <param id="1" name="Value">Camera.X</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4295351306000478">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9101019611063767" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="1122019492810851" type="BlackOverlay" />
+            </actions>
+            <sub-events>
+                <event-block sid="9501658091771462">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7723755822870365" type="System">
+                            <param id="0" name="Variable">StartX</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="9978216053757174" type="Camera">
+                            <param id="0" name="X">StartX</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

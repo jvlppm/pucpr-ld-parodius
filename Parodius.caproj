@@ -36,6 +36,7 @@
         <height>224</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
+    <first-layout>StartScreen</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -341,9 +342,17 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Laser" sid="5372740630027592">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5689989941143652" speed="5">
+                        <frame duration="1" hotspotX="1" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder expanded="0" name="Scenery">
-            <object-folder expanded="0" name="Level1">
+            <object-folder expanded="1" name="Level1">
                 <object-type name="CircoBillboard" sid="9413054710168224">
                     <plugin id="Sprite" />
                     <animation-folder expanded="1">
@@ -442,7 +451,7 @@
                 <plugin id="NinePatch" />
                 <texture />
             </object-type>
-            <object-type name="Planet" sid="4681324938921968">
+            <object-type name="Planet1" sid="4681324938921968">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="820582806880917" speed="5">
@@ -490,8 +499,64 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Planet2" sid="6555374520157897">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4998046135999292" speed="5">
+                        <frame duration="1" hotspotX="0.545455" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Stars10" sid="2576924419840137">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4766627049754215" speed="5">
+                        <frame duration="1" hotspotX="0.529412" hotspotY="0.52381" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Stars5" sid="9915956737948503">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9353563140203596" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Stars7" sid="7204940584416421">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7155433963841812" speed="5">
+                        <frame duration="1" hotspotX="0.518519" hotspotY="0.518519" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Stars6" sid="9493784650961682">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1881010296482535" speed="5">
+                        <frame duration="1" hotspotX="0.52" hotspotY="0.52381" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Stars8" sid="2168866300194724">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9842832771457697" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Stars9" sid="9359902759590183">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5909607718053576" speed="5">
+                        <frame duration="1" hotspotX="0.481481" hotspotY="0.483871" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
-        <object-folder expanded="0" name="Enemies">
+        <object-folder expanded="1" name="Enemies">
             <object-type name="BigBird" sid="3570588967487432">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -795,6 +860,7 @@
                     </animation>
                     <animation framecount="2" loop="1" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="5144507356928858" speed="8">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Explosion" x="0.458333" y="0.716418" />
                             <collision-poly>
                                 <point x="0.291667" y="0.21875" />
                                 <point x="0.5" y="0.078125" />
@@ -807,6 +873,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.504854" hotspotY="0.5">
+                            <image-point name="Explosion" x="0.456311" y="0.716418" />
                             <collision-poly>
                                 <point x="0.291667" y="0.21875" />
                                 <point x="0.5" y="0.078125" />
@@ -1191,8 +1258,17 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="BossExplosion" sid="6854983876610748">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6130064190747687" speed="5">
+                        <frame duration="1" hotspotX="4.54545" hotspotY="-3.12195" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
-        <object-folder expanded="1" name="HUD">
+        <object-folder expanded="0" name="HUD">
             <object-type name="SpeedIndicator" sid="6365847308617516">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
@@ -1314,6 +1390,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Logo" sid="1904011897923613">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7787133567817159" speed="5">
+                        <frame duration="1" hotspotX="0.502513" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="Keyboard" sid="1116132545238104">
             <plugin id="Keyboard" />
@@ -1427,11 +1511,12 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Laser" sid="5372740630027592">
+        <object-type name="Arrow" sid="6864221185762686">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5689989941143652" speed="5">
-                    <frame duration="1" hotspotX="1" hotspotY="0" />
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6822206704548866" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -1539,6 +1624,7 @@
         </family>
         <family name="Explosions" plugin-id="Sprite" sid="8147156184982895">
             <members>
+                <member>BossExplosion</member>
                 <member>SimpleExplosion</member>
                 <member>SmallHit</member>
             </members>
@@ -1609,13 +1695,16 @@
             </members>
         </family>
     </families>
-    <layout-folder expanded="0">
+    <layout-folder expanded="1">
         <layout>Level1.xml</layout>
+        <layout>StartScreen.xml</layout>
     </layout-folder>
-    <event-folder expanded="0">
+    <event-folder expanded="1">
         <event-sheet>GamePlay Events.xml</event-sheet>
         <event-sheet>Enemies.xml</event-sheet>
         <event-sheet>VicViper.xml</event-sheet>
+        <event-sheet>Camera.xml</event-sheet>
+        <event-sheet>StartScreen.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />
